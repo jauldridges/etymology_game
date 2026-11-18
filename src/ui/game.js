@@ -12,6 +12,7 @@
 //   puzzle      a puzzle id to play outside the schedule (for testing)
 //   shareUrl    a link added to the end of the share text
 //   theme       'light' | 'dark' to force a theme (default: follows the device)
+//   data        { schedule, puzzles: { <id>: <key file> } } to skip fetching (play.html uses this)
 //
 // The page's own URL may also set ?puzzle=<id> and ?date=YYYY-MM-DD for testing.
 import { preparePuzzle, LANGUAGE_NAMES } from '../engine/puzzle.js';
@@ -93,7 +94,12 @@ export async function mountGame(container, options = {}) {
   container.innerHTML = '<div class="rg-wrap"><p class="rg-muted">Loading…</p></div>';
 
   const cache = new Map();
+  const data = options.data; // { schedule, puzzles: { id: keyFile } } when bundled into one page
   async function loadPuzzle(id) {
+    if (!cache.has(id) && data) {
+      if (!data.puzzles[id]) throw new Error(`Could not load puzzle “${id}”.`);
+      cache.set(id, Promise.resolve(preparePuzzle(data.puzzles[id])));
+    }
     if (!cache.has(id)) {
       cache.set(id, fetch(`${keysUrl}${encodeURIComponent(id)}.json`).then((r) => {
         if (!r.ok) throw new Error(`Could not load puzzle “${id}”.`);
@@ -103,8 +109,8 @@ export async function mountGame(container, options = {}) {
     return cache.get(id);
   }
 
-  let schedule = { days: [] };
-  try {
+  let schedule = data?.schedule ?? { days: [] };
+  if (!data) try {
     const r = await fetch(`${keysUrl}schedule.json`);
     if (r.ok) schedule = await r.json();
   } catch { /* the game still works with ?puzzle= */ }

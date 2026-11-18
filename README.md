@@ -4,7 +4,11 @@ A daily word puzzle: one ancient root, and as many modern words grown from it as
 
 The full design is in [docs/design.md](docs/design.md). The original drafts of the answer keys are in [docs/draft-keys.md](docs/draft-keys.md).
 
-## Run it
+## Play it
+
+**Double-click `play.html`.** It holds the whole game and every puzzle in one file and needs nothing else. After changing anything in `src/` or `keys/`, rebuild it with `npm run build`.
+
+## Develop it
 
 You need Node 18 or later. There are no dependencies and no build step.
 
@@ -13,6 +17,7 @@ npm run serve        # http://localhost:8080
 npm test             # matching, scoring, share, schedule and checker tests
 npm run check        # checks every key file
 npm run e2e          # phone-sized play-through (needs Playwright + Chromium)
+npm run build        # rebuild play.html
 ```
 
 For testing, the URL accepts `?date=2026-11-19` to pretend it is that day, and `?puzzle=ferre` to play any key outside the schedule.

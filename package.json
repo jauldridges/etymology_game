@@ -9,6 +9,7 @@
     "test": "node --test test/*.test.js",
     "serve": "node tools/serve.mjs",
     "import-drafts": "node tools/import-drafts.mjs",
-    "e2e": "node test/e2e.mjs"
+    "e2e": "node test/e2e.mjs",
+    "build": "node tools/build-standalone.mjs"
   }
 }

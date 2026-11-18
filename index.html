@@ -10,6 +10,12 @@
 </head>
 <body>
   <div id="app"></div>
+  <script>
+    // Opened straight from disk, browsers block the game's modules and word lists.
+    if (location.protocol === 'file:') {
+      document.getElementById('app').innerHTML = '<p style="font-family: Georgia, serif; font-size: 18px; max-width: 30em; margin: 40px auto; padding: 0 16px">This page needs a local server. To play without one, open <a href="play.html"><b>play.html</b></a> instead. Or run <code>npm run serve</code> and visit http://localhost:8080.</p>';
+    }
+  </script>
   <script type="module">
     import { mountGame } from './src/ui/game.js';
     mountGame(document.getElementById('app'), { keysUrl: './keys/' });

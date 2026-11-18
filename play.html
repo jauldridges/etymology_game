@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Roots</title>
+<!-- Built by tools/build-standalone.mjs. Do not edit by hand; edit src/ and keys/, then rebuild. -->
+<style>html, body { margin: 0; height: 100%; } body { background: #f7f3ea; } @media (prefers-color-scheme: dark) { body { background: #1c1a17; } }
+/* Roots game. Every rule is scoped under .roots-game so the game can sit
+   inside a host page (the practice app) without leaking styles. */
+.roots-game {
+  --paper: #f7f3ea;
+  --card: #fffdf8;
+  --ink: #2a2620;
+  --ink-soft: #5f574b;
+  --ink-faint: #8a8172;
+  --rule: #ddd4c3;
+  --accent: #6b4a2b;
+  --accent-ink: #fffdf8;
+  --found: #2f5d3a;
+  --found-bg: #e6efe4;
+  --warn: #8a4b14;
+  --warn-bg: #f6e9d8;
+  --focus: #b07a3c;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Noto Serif", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.5;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+@media (prefers-color-scheme: dark) {
+  .roots-game:not([data-theme="light"]) {
+    --paper: #1c1a17; --card: #24211d; --ink: #ece5d8; --ink-soft: #bdb3a3; --ink-faint: #8f8676;
+    --rule: #3a352e; --accent: #d9b48a; --accent-ink: #1c1a17; --found: #9fd0a6; --found-bg: #23332a;
+    --warn: #e6b37c; --warn-bg: #3a2c1e; --focus: #d9b48a;
+  }
+}
+.roots-game[data-theme="dark"] {
+  --paper: #1c1a17; --card: #24211d; --ink: #ece5d8; --ink-soft: #bdb3a3; --ink-faint: #8f8676;
+  --rule: #3a352e; --accent: #d9b48a; --accent-ink: #1c1a17; --found: #9fd0a6; --found-bg: #23332a;
+  --warn: #e6b37c; --warn-bg: #3a2c1e; --focus: #d9b48a;
+}
+
+.roots-game *, .roots-game *::before, .roots-game *::after { box-sizing: border-box; }
+.roots-game .rg-wrap { max-width: 560px; margin: 0 auto; padding: 20px 16px 48px; }
+.roots-game h1, .roots-game h2, .roots-game h3 { font-weight: 500; line-height: 1.2; margin: 0; }
+.roots-game p { margin: 0; }
+.roots-game button { font: inherit; color: inherit; cursor: pointer; }
+.roots-game :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.roots-game .rg-muted { color: var(--ink-soft); }
+.roots-game .rg-small { font-size: 15px; }
+.roots-game .rg-sans { font-family: var(--sans); }
+.roots-game .rg-visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Header */
+.roots-game .rg-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 20px; }
+.roots-game .rg-brand { font-size: 20px; letter-spacing: 0.04em; font-variant: small-caps; }
+.roots-game .rg-link { background: none; border: 0; padding: 4px 0; color: var(--accent); text-decoration: underline; text-underline-offset: 3px; font-size: 16px; }
+
+/* Buttons */
+.roots-game .rg-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; padding: 10px 20px; border-radius: 10px;
+  border: 1px solid var(--accent); background: var(--accent); color: var(--accent-ink);
+  font-family: var(--sans); font-size: 16px; font-weight: 600;
+}
+.roots-game .rg-btn.rg-ghost { background: transparent; color: var(--accent); }
+.roots-game .rg-btn:disabled { opacity: 0.5; cursor: default; }
+.roots-game .rg-btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.roots-game .rg-btn-row .rg-btn { flex: 1 1 140px; }
+
+/* Root card */
+.roots-game .rg-card { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 22px 20px; }
+.roots-game .rg-kicker { font-family: var(--sans); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); }
+.roots-game .rg-root { font-size: 52px; line-height: 1.1; margin: 8px 0 2px; font-style: italic; overflow-wrap: anywhere; }
+.roots-game .rg-root[lang="grc"] { font-style: normal; }
+.roots-game .rg-translit { font-size: 20px; color: var(--ink-soft); font-style: italic; }
+.roots-game .rg-meaning { font-size: 22px; margin-top: 8px; }
+.roots-game .rg-parts { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 16px; color: var(--ink-soft); }
+.roots-game .rg-parts i { color: var(--ink); }
+.roots-game .rg-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; padding: 0; list-style: none; }
+.roots-game .rg-tag { font-family: var(--sans); font-size: 14px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--rule); }
+.roots-game .rg-draft { margin-top: 16px; font-family: var(--sans); font-size: 13px; color: var(--warn); background: var(--warn-bg); border-radius: 8px; padding: 8px 10px; }
+.roots-game .rg-section { margin-top: 24px; }
+.roots-game .rg-settings { margin-top: 28px; border-top: 1px solid var(--rule); padding-top: 16px; font-size: 16px; }
+.roots-game .rg-settings label { display: block; margin-bottom: 6px; }
+.roots-game select { font: inherit; font-family: var(--sans); font-size: 16px; padding: 8px; border-radius: 8px; border: 1px solid var(--rule); background: var(--card); color: var(--ink); max-width: 100%; }
+
+/* Play */
+.roots-game .rg-play-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
+.roots-game .rg-play-root { font-size: 26px; font-style: italic; }
+.roots-game .rg-play-root small { font-size: 16px; font-style: normal; color: var(--ink-soft); margin-left: 6px; }
+.roots-game .rg-timer { font-family: var(--sans); font-variant-numeric: tabular-nums; font-weight: 700; font-size: 20px; }
+.roots-game .rg-timer.rg-low { color: var(--warn); }
+.roots-game .rg-form { display: flex; gap: 8px; }
+.roots-game .rg-input {
+  flex: 1; min-width: 0; font: inherit; font-size: 22px; padding: 10px 14px; min-height: 54px;
+  border-radius: 10px; border: 2px solid var(--rule); background: var(--card); color: var(--ink);
+}
+.roots-game .rg-input:focus { border-color: var(--focus); outline: none; }
+.roots-game .rg-accents { display: flex; gap: 6px; margin-top: 10px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: thin; align-items: center; }
+.roots-game .rg-accents-note { flex: none; font-family: var(--sans); font-size: 12px; color: var(--ink-faint); width: 58px; line-height: 1.2; }
+.roots-game .rg-key {
+  flex: none; min-width: 40px; min-height: 40px; border-radius: 8px; border: 1px solid var(--rule);
+  background: var(--card); font-size: 19px; padding: 0 6px;
+}
+.roots-game .rg-feedback { min-height: 52px; margin-top: 10px; font-size: 16px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.roots-game .rg-feedback .rg-mark { font-family: var(--sans); font-weight: 700; }
+.roots-game .rg-feedback.rg-good { color: var(--found); }
+.roots-game .rg-feedback.rg-close { color: var(--warn); }
+.roots-game .rg-feedback .rg-link { font-size: 15px; }
+
+/* Rank bar */
+.roots-game .rg-rank { margin: 8px 0 18px; }
+.roots-game .rg-result .rg-rank { margin-top: 16px; }
+.roots-game .rg-rank-line { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; }
+.roots-game .rg-rank-name { font-size: 20px; }
+.roots-game .rg-bar { position: relative; height: 10px; border-radius: 999px; background: var(--rule); margin-top: 8px; overflow: hidden; }
+.roots-game .rg-bar-fill { position: absolute; inset: 0 auto 0 0; background: var(--accent); border-radius: 999px; transition: width 0.3s ease; }
+.roots-game .rg-ticks { position: relative; height: 18px; font-family: var(--sans); font-size: 11px; color: var(--ink-faint); }
+.roots-game .rg-ticks span { position: absolute; top: 3px; transform: translateX(-50%); }
+.roots-game .rg-ticks span::before { content: ""; position: absolute; left: 50%; top: -3px; width: 1px; height: 3px; background: var(--ink-faint); }
+
+/* Tabs and found list */
+.roots-game .rg-tabs { display: flex; border-bottom: 1px solid var(--rule); overflow-x: auto; }
+.roots-game .rg-tab {
+  flex: 1 0 auto; border: 0; background: none; padding: 8px 6px; min-height: 48px; font-family: var(--sans); font-size: 14px;
+  color: var(--ink-soft); border-bottom: 3px solid transparent; white-space: nowrap; display: flex; flex-direction: column; align-items: center;
+}
+.roots-game .rg-tab-count { font-size: 13px; font-variant-numeric: tabular-nums; color: var(--ink-faint); }
+.roots-game .rg-tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); font-weight: 600; }
+.roots-game .rg-found { list-style: none; padding: 12px 0 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.roots-game .rg-found li { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 3px 10px; font-size: 17px; }
+.roots-game .rg-found li.rg-new { border-color: var(--found); }
+.roots-game .rg-badge { font-family: var(--sans); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin-left: 6px; }
+.roots-game .rg-empty { color: var(--ink-faint); font-style: italic; padding-top: 12px; font-size: 16px; }
+.roots-game .rg-finish { margin-top: 28px; display: flex; justify-content: center; }
+
+/* Reveal */
+.roots-game .rg-result { text-align: center; }
+.roots-game .rg-result .rg-rank-name { font-size: 34px; display: block; margin: 4px 0; }
+.roots-game .rg-share { margin-top: 18px; text-align: left; }
+.roots-game .rg-share pre { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 15px; background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; white-space: pre-wrap; margin: 0 0 10px; }
+.roots-game .rg-lang-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--rule); padding-bottom: 6px; margin-top: 28px; }
+.roots-game .rg-lang-head h2 { font-size: 24px; }
+.roots-game .rg-words { list-style: none; padding: 0; margin: 0; }
+.roots-game .rg-words li { padding: 10px 0; border-bottom: 1px dashed var(--rule); display: grid; grid-template-columns: 76px 1fr; gap: 2px 10px; }
+.roots-game .rg-status { font-family: var(--sans); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding-top: 4px; }
+.roots-game .rg-status.rg-is-found { color: var(--found); }
+.roots-game .rg-status.rg-is-missed { color: var(--ink-faint); }
+.roots-game .rg-word { font-size: 19px; }
+.roots-game li.rg-was-found .rg-word { font-weight: 600; }
+.roots-game .rg-gloss { color: var(--ink-soft); font-size: 15px; font-style: italic; margin-left: 4px; }
+.roots-game .rg-path { grid-column: 2; font-size: 15px; color: var(--ink-soft); }
+.roots-game .rg-context { margin-top: 20px; font-size: 16px; color: var(--ink-soft); border-left: 3px solid var(--rule); padding-left: 12px; }
+.roots-game .rg-nr li { grid-template-columns: 1fr; }
+.roots-game .rg-nr .rg-path { grid-column: 1; }
+.roots-game .rg-suggest { margin-top: 28px; }
+.roots-game .rg-suggest form { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.roots-game .rg-suggest .rg-input { font-size: 18px; min-height: 48px; flex: 1 1 180px; }
+
+/* Archive */
+.roots-game .rg-archive { list-style: none; padding: 0; margin: 16px 0 0; }
+.roots-game .rg-archive li { border-bottom: 1px solid var(--rule); }
+.roots-game .rg-archive button { width: 100%; text-align: left; background: none; border: 0; padding: 14px 4px; display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.roots-game .rg-archive .rg-ar-root { font-style: italic; font-size: 20px; }
+
+.roots-game .rg-toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--ink); color: var(--paper); font-family: var(--sans); font-size: 15px; padding: 10px 16px; border-radius: 10px; z-index: 10; }
+@media (prefers-reduced-motion: reduce) { .roots-game .rg-bar-fill { transition: none; } }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+(() => {
+// ---- src/engine/normalize.js
+// Turns typed text and key words into a comparable form.
+// Ignores capitals and accent marks, as the design requires. Also treats
+// hyphens like spaces and drops apostrophes, so "chef d'oeuvre",
+// "chef-d'œuvre" and "Chef-d’Œuvre" all match. It never touches word endings:
+// plurals and verb forms come only from each entry's variants list.
+function normalize(text) {
+  return String(text)
+    .toLowerCase()
+    .replace(/œ/g, 'oe')
+    .replace(/æ/g, 'ae')
+    .replace(/ß/g, 'ss')
+    .normalize('NFD')
+    .replace(/\p{M}/gu, '')
+    .replace(/['’‘ʼ`´]/g, '')
+    .replace(/[-‐‑–—_]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+// ---- src/engine/puzzle.js
+
+const LANGUAGE_NAMES = {
+  en: 'English', es: 'Spanish', pt: 'Portuguese', fr: 'French',
+  de: 'German', nl: 'Dutch', sv: 'Swedish',
+};
+
+const DEFAULT_TIERS = {
+  core: { label: 'Core', scoring: 'always' },
+  bonus: { label: 'Bonus', scoring: 'bonus' },
+};
+
+function entryId(entry) {
+  return `${entry.root ?? ''}|${entry.lang}|${entry.word}`;
+}
+
+// Takes a key file as written on disk and returns a puzzle ready to play:
+// a single-root puzzle and a bundle look the same afterwards (`roots` is always
+// a list), every entry has an `id`, and lookups by typed text are indexed.
+function preparePuzzle(raw) {
+  const roots = raw.roots ?? [{ id: raw.id, ...raw.root }];
+  const defaultRoot = roots[0].id;
+  const tiers = { ...DEFAULT_TIERS, ...(raw.tiers ?? {}) };
+
+  const entries = raw.entries.map((e) => {
+    const entry = { variants: [], ...e, root: e.root ?? defaultRoot };
+    return { ...entry, id: entryId(entry) };
+  });
+
+  const index = new Map();
+  for (const entry of entries) {
+    for (const form of new Set([entry.word, ...entry.variants].map(normalize))) {
+      if (!index.has(form)) index.set(form, []);
+      index.get(form).push(entry);
+    }
+  }
+
+  const notRelated = raw.notRelated ?? [];
+  const notRelatedIndex = new Map();
+  for (const item of notRelated) {
+    const form = normalize(item.word);
+    if (!notRelatedIndex.has(form)) notRelatedIndex.set(form, []);
+    notRelatedIndex.get(form).push(item);
+  }
+
+  return {
+    ...raw,
+    roots,
+    tiers,
+    entries,
+    entriesById: new Map(entries.map((e) => [e.id, e])),
+    notRelated,
+    index,
+    notRelatedIndex,
+  };
+}
+
+// ---- src/engine/match.js
+
+// Checks one typed word against a prepared puzzle.
+// `found` is a Set of entry ids the player already has.
+// Returns one of:
+//   { kind: 'empty' }
+//   { kind: 'new', entries, alreadyFound }   at least one entry newly credited
+//   { kind: 'repeat', entries }              every matching entry already found
+//   { kind: 'notRelated', items }            a listed lookalike
+//   { kind: 'unknown', text }                not in this puzzle
+function checkGuess(puzzle, typed, found) {
+  const form = normalize(typed);
+  if (!form) return { kind: 'empty' };
+
+  const matches = puzzle.index.get(form);
+  if (matches) {
+    const fresh = matches.filter((e) => !found.has(e.id));
+    const alreadyFound = matches.filter((e) => found.has(e.id));
+    if (fresh.length) return { kind: 'new', entries: fresh, alreadyFound };
+    return { kind: 'repeat', entries: matches };
+  }
+
+  const lookalikes = puzzle.notRelatedIndex.get(form);
+  if (lookalikes) return { kind: 'notRelated', items: lookalikes };
+
+  return { kind: 'unknown', text: typed.trim() };
+}
+
+// ---- src/engine/score.js
+const RANKS = [
+  { name: 'Seed', min: 0 },
+  { name: 'Sprout', min: 10 },
+  { name: 'Shoot', min: 25 },
+  { name: 'Branch', min: 40 },
+  { name: 'Trunk', min: 55 },
+  { name: 'Canopy', min: 70 },
+  { name: 'Taproot', min: 90 },
+];
+
+// How bonus-tier words score. The design leaves this open, so it is a setting.
+//   off      accepted and shown, but not scored
+//   extra    count toward the score only, so a result can pass 100%
+//   counted  count toward the score and the total, like core words
+const BONUS_MODES = ['off', 'extra', 'counted'];
+
+function rankFor(percent) {
+  let rank = RANKS[0];
+  for (const r of RANKS) if (percent >= r.min) rank = r;
+  return rank;
+}
+
+function nextRank(percent) {
+  return RANKS.find((r) => r.min > percent) ?? null;
+}
+
+// Whether an entry adds to the found count and to the total, under a bonus mode.
+function entryWeight(puzzle, entry, bonusMode) {
+  const scoring = puzzle.tiers[entry.tier]?.scoring ?? 'always';
+  if (scoring !== 'bonus') return { counts: true, inTotal: true, bonus: false };
+  if (bonusMode === 'counted') return { counts: true, inTotal: true, bonus: true };
+  if (bonusMode === 'extra') return { counts: true, inTotal: false, bonus: true };
+  return { counts: false, inTotal: false, bonus: true };
+}
+
+function computeScore(puzzle, found, bonusMode = 'off') {
+  const perLang = {};
+  for (const lang of puzzle.languages) perLang[lang] = { found: 0, total: 0 };
+  let foundCount = 0;
+  let total = 0;
+  let bonusFound = 0;
+
+  for (const entry of puzzle.entries) {
+    const w = entryWeight(puzzle, entry, bonusMode);
+    const lang = (perLang[entry.lang] ??= { found: 0, total: 0 });
+    const isFound = found.has(entry.id);
+    if (w.inTotal) { total++; lang.total++; }
+    if (isFound && w.bonus) bonusFound++;
+    if (isFound && w.counts) {
+      if (w.inTotal) foundCount++;
+      lang.found++;
+    }
+  }
+
+  // In "extra" mode, bonus finds sit on top of the core score.
+  const extra = bonusMode === 'extra' ? bonusFound : 0;
+  const scored = foundCount + extra;
+  const percent = total ? (scored / total) * 100 : 0;
+  return {
+    found: scored,
+    coreFound: foundCount,
+    bonusFound,
+    extra,
+    total,
+    percent,
+    percentShown: Math.floor(percent),
+    rank: rankFor(percent),
+    next: nextRank(percent),
+    perLang,
+  };
+}
+
+// ---- src/engine/share.js
+const GAME_NAME = 'Roots';
+const BAR_CELLS = 8;
+
+function bar(found, total) {
+  if (!total) return '□'.repeat(BAR_CELLS);
+  let filled = Math.round((found / total) * BAR_CELLS);
+  if (found > 0 && filled === 0) filled = 1;
+  filled = Math.min(filled, BAR_CELLS);
+  return '■'.repeat(filled) + '□'.repeat(BAR_CELLS - filled);
+}
+
+// The spoiler-free result: puzzle number, root, rank, score, one bar per language.
+function buildShareText({ number, rootLabel, score, languages, blitz = false, url }) {
+  const head = [`${GAME_NAME}${number ? ` #${number}` : ''} · ${rootLabel}`];
+  if (blitz) head.push('60s blitz');
+  const extra = score.extra ? ` +${score.extra} bonus` : '';
+  const lines = [
+    head.join(' · '),
+    `${score.rank.name} · ${score.found - score.extra} of ${score.total} words (${score.percentShown}%)${extra}`,
+    ...languages.map((lang) => {
+      const l = score.perLang[lang] ?? { found: 0, total: 0 };
+      return `${lang.toUpperCase()} ${bar(l.found, l.total)}`;
+    }),
+  ];
+  if (url) lines.push(url);
+  return lines.join('\n');
+}
+
+// ---- src/engine/schedule.js
+// The schedule file lists one puzzle per date:
+//   { "days": [ { "date": "2026-11-18", "puzzle": "caput" }, ... ] }
+// The puzzle number is the entry's position in the list, starting at 1.
+
+function dateKey(date) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
+}
+
+function numberedDays(schedule) {
+  return [...schedule.days]
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .map((day, i) => ({ ...day, number: i + 1 }));
+}
+
+// Today's puzzle: the latest scheduled day on or before today. If the schedule
+// has not started yet, the first day is used so the game is never empty.
+function puzzleForDate(schedule, today) {
+  const days = numberedDays(schedule);
+  if (!days.length) return null;
+  let pick = null;
+  for (const day of days) if (day.date <= today) pick = day;
+  return pick ?? days[0];
+}
+
+// Past and present puzzles, newest first. Future puzzles stay hidden.
+function archive(schedule, today) {
+  return numberedDays(schedule).filter((d) => d.date <= today).reverse();
+}
+
+// ---- src/ui/game.js
+// Roots: the game as one self-contained piece.
+//
+//   import { mountGame } from './src/ui/game.js';
+//   mountGame(document.getElementById('app'), { keysUrl: './keys/' });
+//
+// Options (all optional):
+//   keysUrl     where schedule.json and the puzzle files live (default ./keys/)
+//   storage     an object with getItem/setItem (default: localStorage, if usable)
+//   onFlag      called with { puzzle, word, lang, date } when a player says a word
+//               belongs; without it, flags are kept in storage for export
+//   today       'YYYY-MM-DD' to override the date (default: the player's local date)
+//   puzzle      a puzzle id to play outside the schedule (for testing)
+//   shareUrl    a link added to the end of the share text
+//   theme       'light' | 'dark' to force a theme (default: follows the device)
+//   data        { schedule, puzzles: { <id>: <key file> } } to skip fetching (play.html uses this)
+//
+// The page's own URL may also set ?puzzle=<id> and ?date=YYYY-MM-DD for testing.
+
+
+
+
+
+const BLITZ_SECONDS = 60;
+const STORE = 'roots:v1:';
+const ACCENTS = {
+  en: [],
+  es: ['á', 'é', 'í', 'ó', 'ú', 'ñ', 'ü'],
+  pt: ['á', 'é', 'í', 'ó', 'ú', 'ã', 'õ', 'â', 'ê', 'ô', 'ç', 'à'],
+  fr: ['é', 'è', 'ê', 'à', 'â', 'ç', 'î', 'ô', 'û', 'ë', 'ï', 'œ'],
+  de: ['ä', 'ö', 'ü', 'ß'],
+  nl: ['é', 'ë', 'ï'],
+  sv: ['å', 'ä', 'ö'],
+};
+const ROOT_LANG_ATTR = { latin: 'la', greek: 'grc', germanic: 'ang' };
+const FAMILY_NAMES = { latin: 'Latin', greek: 'Ancient Greek', germanic: 'Old English' };
+const BONUS_LABELS = {
+  off: 'Bonus words are accepted but not scored',
+  extra: 'Bonus words add to the score (can pass 100%)',
+  counted: 'Bonus words count like any other word',
+};
+
+const h = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const langName = (l) => LANGUAGE_NAMES[l] ?? l;
+
+function makeStore(custom) {
+  let backing = custom;
+  if (!backing) {
+    try { backing = window.localStorage; backing.getItem('x'); } catch { backing = null; }
+  }
+  const memory = new Map();
+  return {
+    get(key, fallback) {
+      try {
+        const raw = backing ? backing.getItem(STORE + key) : memory.get(key);
+        return raw == null ? fallback : JSON.parse(raw);
+      } catch { return fallback; }
+    },
+    set(key, value) {
+      const raw = JSON.stringify(value);
+      try { if (backing) backing.setItem(STORE + key, raw); else memory.set(key, raw); } catch { memory.set(key, raw); }
+    },
+  };
+}
+
+async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch { /* ignore */ }
+    ta.remove();
+    return ok;
+  }
+}
+
+async function mountGame(container, options = {}) {
+  const params = new URLSearchParams(globalThis.location?.search ?? '');
+  const keysUrl = (options.keysUrl ?? './keys/').replace(/\/?$/, '/');
+  const store = makeStore(options.storage);
+  const today = options.today ?? params.get('date') ?? dateKey(new Date());
+  const freePuzzle = options.puzzle ?? params.get('puzzle');
+
+  container.classList.add('roots-game');
+  if (options.theme) container.dataset.theme = options.theme;
+  container.innerHTML = '<div class="rg-wrap"><p class="rg-muted">Loading…</p></div>';
+
+  const cache = new Map();
+  const data = options.data; // { schedule, puzzles: { id: keyFile } } when bundled into one page
+  async function loadPuzzle(id) {
+    if (!cache.has(id) && data) {
+      if (!data.puzzles[id]) throw new Error(`Could not load puzzle “${id}”.`);
+      cache.set(id, Promise.resolve(preparePuzzle(data.puzzles[id])));
+    }
+    if (!cache.has(id)) {
+      cache.set(id, fetch(`${keysUrl}${encodeURIComponent(id)}.json`).then((r) => {
+        if (!r.ok) throw new Error(`Could not load puzzle “${id}”.`);
+        return r.json();
+      }).then(preparePuzzle));
+    }
+    return cache.get(id);
+  }
+
+  let schedule = data?.schedule ?? { days: [] };
+  if (!data) try {
+    const r = await fetch(`${keysUrl}schedule.json`);
+    if (r.ok) schedule = await r.json();
+  } catch { /* the game still works with ?puzzle= */ }
+
+  const settings = { bonusMode: 'off', ...store.get('settings', {}) };
+  let timer = null;
+  let game = null; // { day, puzzle, saveKey, progress }
+
+  const wrap = (inner) => { container.innerHTML = `<div class="rg-wrap">${inner}</div>`; };
+  const header = (right = '') => `
+    <header class="rg-top"><span class="rg-brand">${h(GAME_NAME)}</span>${right}</header>`;
+
+  function toast(msg) {
+    container.querySelector('.rg-toast')?.remove();
+    const t = document.createElement('div');
+    t.className = 'rg-toast';
+    t.setAttribute('role', 'status');
+    t.textContent = msg;
+    container.appendChild(t);
+    setTimeout(() => t.remove(), 2200);
+  }
+
+  function stopTimer() { if (timer) { clearInterval(timer); timer = null; } }
+
+  function rootLabel(puzzle) {
+    return puzzle.roots.map((r) => r.transliteration).join(' + ');
+  }
+
+  function saveProgress() { store.set(game.saveKey, game.progress); }
+
+  function score() {
+    return computeScore(game.puzzle, new Set(game.progress.found), settings.bonusMode);
+  }
+
+  async function openDay(day) {
+    stopTimer();
+    try {
+      const puzzle = await loadPuzzle(day.puzzle);
+      const saveKey = `progress:${day.date ?? 'free'}:${puzzle.id}`;
+      const progress = { found: [], mode: null, blitzEndsAt: null, finished: false, ...store.get(saveKey, {}) };
+      game = { day, puzzle, saveKey, progress };
+      if (progress.mode === 'blitz' && !progress.finished && progress.blitzEndsAt && Date.now() >= progress.blitzEndsAt) {
+        progress.finished = true;
+        saveProgress();
+      }
+      renderToday();
+    } catch (e) {
+      wrap(`${header()}<p>${h(e.message)}</p>`);
+    }
+  }
+
+  // ---------- Today ----------
+  function formsHtml(root) {
+    if (root.family === 'germanic') {
+      return `<p class="rg-parts">Written as ${root.writtenForms.map((f) =>
+        `${h(f.language)} <i lang="${ROOT_LANG_ATTR.germanic}">${h(f.form)}</i>${f.note ? ` (${h(f.note)})` : ''}`).join(' · ')}</p>`;
+    }
+    if (root.family === 'greek') {
+      return `<p class="rg-parts">Forms: ${root.principalParts.map((p, i) =>
+        `<i lang="grc">${h(p)}</i> <span class="rg-muted">(${h(root.principalPartsTransliterated?.[i] ?? '')})</span>`).join(', ')}</p>`;
+    }
+    return `<p class="rg-parts">Forms: <i lang="la">${root.principalParts.map(h).join(', ')}</i></p>`;
+  }
+
+  function renderToday() {
+    stopTimer();
+    const { day, puzzle, progress } = game;
+    const s = score();
+    const root = puzzle.roots[0];
+    const started = progress.found.length > 0 || progress.mode;
+    const total = s.total;
+    const dateLine = day.number
+      ? `No. ${day.number} · ${new Date(`${day.date}T12:00:00`).toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' })}`
+      : 'Practice puzzle';
+
+    let actions;
+    if (progress.finished) {
+      actions = `<button class="rg-btn" data-act="reveal">See your result</button>`;
+    } else if (started) {
+      actions = `<button class="rg-btn" data-act="continue">Continue</button>`;
+    } else {
+      actions = `<button class="rg-btn" data-act="start">Start</button>
+        <button class="rg-btn rg-ghost" data-act="blitz">60-second blitz</button>`;
+    }
+
+    wrap(`${header('<button class="rg-link" data-act="archive">Past puzzles</button>')}
+      <main>
+        <section class="rg-card" aria-labelledby="rg-root">
+          <p class="rg-kicker">${h(dateLine)}</p>
+          ${puzzle.roots.map((r) => `
+            <h1 id="rg-root" class="rg-root" lang="${ROOT_LANG_ATTR[r.family] ?? ''}">${h(r.form)}</h1>
+            ${r.transliteration !== r.form ? `<p class="rg-translit">${h(r.transliteration)}</p>` : ''}
+            <p class="rg-meaning">“${h(r.meaning)}” <span class="rg-muted rg-small">· ${h(FAMILY_NAMES[r.family] ?? '')}</span></p>
+            ${formsHtml(r)}`).join('')}
+          <ul class="rg-tags" aria-label="Languages in play">
+            ${puzzle.languages.map((l) => `<li class="rg-tag">${h(langName(l))}</li>`).join('')}
+          </ul>
+          ${puzzle.status !== 'ready' ? '<p class="rg-draft">Test puzzle: this word list has not been checked yet.</p>' : ''}
+        </section>
+        <section class="rg-section">
+          <p>Find as many words as you can that grow from <i>${h(root.transliteration)}</i>, in any of these languages. There are <strong>${total}</strong> to find${puzzle.difficulty ? ` · ${h(puzzle.difficulty[0].toUpperCase() + puzzle.difficulty.slice(1))}` : ''}.</p>
+          ${started && !progress.finished ? `<p class="rg-muted rg-small" style="margin-top:6px">So far: ${s.found} of ${total} words, ${h(s.rank.name)}.</p>` : ''}
+          <div class="rg-btn-row" style="margin-top:16px">${actions}</div>
+        </section>
+        <section class="rg-settings">
+          <label for="rg-bonus">Bonus words (real but indirect descendants)</label>
+          <select id="rg-bonus">${BONUS_MODES.map((m) => `<option value="${m}" ${m === settings.bonusMode ? 'selected' : ''}>${h(BONUS_LABELS[m])}</option>`).join('')}</select>
+        </section>
+      </main>`);
+
+    container.querySelector('#rg-bonus').addEventListener('change', (e) => {
+      settings.bonusMode = e.target.value;
+      store.set('settings', settings);
+      renderToday();
+    });
+    bind({
+      archive: renderArchive,
+      reveal: renderReveal,
+      continue: renderPlay,
+      start: () => { progress.mode = 'untimed'; saveProgress(); renderPlay(); },
+      blitz: () => {
+        progress.mode = 'blitz';
+        progress.blitzEndsAt = Date.now() + BLITZ_SECONDS * 1000;
+        saveProgress();
+        renderPlay();
+      },
+    });
+  }
+
+  function bind(actions) {
+    container.querySelectorAll('[data-act]').forEach((el) => {
+      const fn = actions[el.dataset.act];
+      if (fn) el.addEventListener('click', fn);
+    });
+  }
+
+  // ---------- Play ----------
+  function rankBarHtml(s, { compact = false } = {}) {
+    const pct = Math.min(100, s.percent);
+    const need = s.next ? Math.max(1, Math.ceil((s.next.min * s.total) / 100) - s.found) : 0;
+    const nextLine = s.next ? `${need} more to ${h(s.next.name)}` : 'Top rank';
+    const bar = `
+      <div class="rg-bar" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${s.percentShown}">
+        <div class="rg-bar-fill" style="width:${pct}%"></div>
+      </div>
+      <div class="rg-ticks" aria-hidden="true">${RANKS.slice(1).map((r) => `<span style="left:${r.min}%">${r.min}</span>`).join('')}</div>`;
+    if (compact) return `${bar}<p class="rg-muted rg-small">${nextLine}</p>`;
+    return `
+      <div class="rg-rank-line">
+        <span><span class="rg-rank-name">${h(s.rank.name)}</span> <span class="rg-muted">· ${s.found} of ${s.total} (${s.percentShown}%)</span></span>
+        <span class="rg-muted rg-small">${nextLine}</span>
+      </div>${bar}`;
+  }
+
+  function renderPlay() {
+    const { puzzle, progress } = game;
+    if (progress.finished) return renderReveal();
+    const accents = [...new Set(puzzle.languages.flatMap((l) => ACCENTS[l] ?? []))];
+    let tab = puzzle.languages[0];
+    const freshIds = new Set();
+
+    wrap(`
+      <div class="rg-play-head">
+        <span class="rg-play-root" lang="${ROOT_LANG_ATTR[puzzle.roots[0].family] ?? ''}">${h(puzzle.roots[0].form)}<small>“${h(puzzle.roots[0].meaning)}”</small></span>
+        ${progress.mode === 'blitz' ? '<span class="rg-timer" aria-live="off"></span>' : '<button class="rg-link" data-act="home">Puzzle info</button>'}
+      </div>
+      <div class="rg-rank"></div>
+      <form class="rg-form" autocomplete="off">
+        <label class="rg-visually-hidden" for="rg-word">Type a word</label>
+        <input id="rg-word" class="rg-input" type="text" inputmode="text" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="send" placeholder="Type a word">
+        <button class="rg-btn" type="submit">Enter</button>
+      </form>
+      ${accents.length ? `<div class="rg-accents" aria-label="Accented letters (optional: words match without them)"><span class="rg-accents-note">Accents optional</span>${accents.map((a) => `<button type="button" class="rg-key" data-char="${h(a)}">${h(a)}</button>`).join('')}</div>` : ''}
+      <div class="rg-feedback" aria-live="polite"></div>
+      <div class="rg-tabs" role="tablist" aria-label="Found words by language"></div>
+      <div class="rg-panel" role="tabpanel"></div>
+      <div class="rg-finish"><button class="rg-btn rg-ghost" data-act="finish">Finish and see all words</button></div>`);
+
+    const input = container.querySelector('#rg-word');
+    const feedback = container.querySelector('.rg-feedback');
+    const rankEl = container.querySelector('.rg-rank');
+    const tabsEl = container.querySelector('.rg-tabs');
+    const panel = container.querySelector('.rg-panel');
+
+    function drawScore() {
+      const s = score();
+      rankEl.innerHTML = rankBarHtml(s);
+      tabsEl.innerHTML = puzzle.languages.map((l) => {
+        const pl = s.perLang[l];
+        return `<button class="rg-tab" role="tab" data-lang="${l}" aria-selected="${l === tab}">${h(langName(l))}<span class="rg-tab-count">${pl.found} / ${pl.total}</span></button>`;
+      }).join('');
+      tabsEl.querySelectorAll('.rg-tab').forEach((b) => b.addEventListener('click', () => { tab = b.dataset.lang; drawScore(); }));
+      const found = new Set(progress.found);
+      const words = puzzle.entries.filter((e) => e.lang === tab && found.has(e.id));
+      // Most recent first.
+      words.sort((a, b) => progress.found.indexOf(b.id) - progress.found.indexOf(a.id));
+      panel.innerHTML = words.length
+        ? `<ul class="rg-found">${words.map((e) => {
+            const tier = puzzle.tiers[e.tier];
+            const badge = tier?.scoring === 'bonus' ? `<span class="rg-badge">bonus</span>` : '';
+            return `<li class="${freshIds.has(e.id) ? 'rg-new' : ''}">${h(e.word)}${badge}</li>`;
+          }).join('')}</ul>`
+        : `<p class="rg-empty">No ${h(langName(tab))} words yet.</p>`;
+    }
+
+    function say(cls, html) {
+      feedback.className = `rg-feedback ${cls}`;
+      feedback.innerHTML = html;
+    }
+
+    function submit() {
+      const typed = input.value;
+      const result = checkGuess(puzzle, typed, new Set(progress.found));
+      input.value = '';
+      if (result.kind === 'empty') return;
+      if (result.kind === 'new') {
+        freshIds.clear();
+        for (const e of result.entries) { progress.found.push(e.id); freshIds.add(e.id); }
+        saveProgress();
+        const langs = [...new Set(result.entries.map((e) => e.lang))];
+        if (!langs.includes(tab)) tab = langs[0];
+        const bonusOnly = result.entries.every((e) => puzzle.tiers[e.tier]?.scoring === 'bonus');
+        const note = bonusOnly
+          ? (settings.bonusMode === 'off' ? ' · bonus word (not scored)' : ' · bonus word')
+          : '';
+        say('rg-good', `<span class="rg-mark">✓ Found</span> <span><strong>${h(result.entries[0].word)}</strong> in ${langs.map(langName).join(', ')}${note}</span>`);
+      } else if (result.kind === 'repeat') {
+        say('', `<span class="rg-mark">↺</span> <span>Already found: <strong>${h(result.entries[0].word)}</strong></span>`);
+      } else if (result.kind === 'notRelated') {
+        say('rg-close', `<span class="rg-mark">≈</span> <span>Close, but <strong>${h(typed.trim())}</strong> is not from this root.</span>`);
+      } else {
+        say('', `<span class="rg-mark">·</span> <span><strong>${h(result.text)}</strong> is not in this puzzle.</span> <button type="button" class="rg-link" data-belongs="${h(result.text)}">It belongs</button>`);
+        feedback.querySelector('[data-belongs]').addEventListener('click', (e) => {
+          flagWord(e.target.dataset.belongs, null);
+          say('', '<span class="rg-mark">✓</span> <span>Thanks. Sent for review.</span>');
+          input.focus();
+        });
+      }
+      drawScore();
+      input.focus();
+    }
+
+    container.querySelector('.rg-form').addEventListener('submit', (e) => { e.preventDefault(); submit(); });
+    container.querySelectorAll('.rg-key').forEach((k) => {
+      // Keep focus (and the phone keyboard) in the word box.
+      k.addEventListener('pointerdown', (e) => e.preventDefault());
+      k.addEventListener('click', () => {
+        const { selectionStart: a = input.value.length, selectionEnd: b = input.value.length } = input;
+        input.value = input.value.slice(0, a) + k.dataset.char + input.value.slice(b);
+        const pos = a + k.dataset.char.length;
+        input.focus();
+        input.setSelectionRange(pos, pos);
+      });
+    });
+    bind({ home: renderToday, finish: finish });
+
+    if (progress.mode === 'blitz') {
+      const timerEl = container.querySelector('.rg-timer');
+      const tick = () => {
+        const left = Math.max(0, Math.ceil((progress.blitzEndsAt - Date.now()) / 1000));
+        timerEl.textContent = `0:${String(left).padStart(2, '0')}`;
+        timerEl.classList.toggle('rg-low', left <= 10);
+        timerEl.setAttribute('aria-label', `${left} seconds left`);
+        if (left <= 0) finish();
+      };
+      tick();
+      timer = setInterval(tick, 250);
+    }
+
+    drawScore();
+    input.focus();
+  }
+
+  function finish() {
+    stopTimer();
+    game.progress.finished = true;
+    saveProgress();
+    const s = score();
+    store.set(`result:${game.day.date ?? 'free'}:${game.puzzle.id}`, { rank: s.rank.name, percent: s.percentShown });
+    renderReveal();
+  }
+
+  // ---------- Flag a word ----------
+  function flagWord(word, lang) {
+    const flag = { puzzle: game.puzzle.id, word: word.trim(), lang, date: today };
+    if (!flag.word) return;
+    if (options.onFlag) {
+      try { options.onFlag(flag); } catch { /* host error; keep a local copy below */ }
+    }
+    const flags = store.get('flags', []);
+    flags.push(flag);
+    store.set('flags', flags);
+  }
+
+  // ---------- Reveal ----------
+  function renderReveal() {
+    stopTimer();
+    const { day, puzzle, progress } = game;
+    const s = score();
+    const found = new Set(progress.found);
+    const share = buildShareText({
+      number: day.number, rootLabel: rootLabel(puzzle), score: s, languages: puzzle.languages,
+      blitz: progress.mode === 'blitz', url: options.shareUrl,
+    });
+    const tierOrder = Object.keys(puzzle.tiers);
+    const myFlags = store.get('flags', []).filter((f) => f.puzzle === puzzle.id);
+
+    const langSections = puzzle.languages.map((l) => {
+      const entries = puzzle.entries.filter((e) => e.lang === l)
+        .sort((a, b) => tierOrder.indexOf(a.tier) - tierOrder.indexOf(b.tier));
+      const pl = s.perLang[l];
+      return `
+        <section>
+          <div class="rg-lang-head"><h2>${h(langName(l))}</h2><span class="rg-muted rg-small">${pl.found} of ${pl.total} found</span></div>
+          <ul class="rg-words">${entries.map((e) => {
+            const isFound = found.has(e.id);
+            const tier = puzzle.tiers[e.tier];
+            const badge = e.tier !== 'core' ? `<span class="rg-badge">${h(tier?.label ?? e.tier)}</span>` : '';
+            return `<li class="${isFound ? 'rg-was-found' : ''}">
+              <span class="rg-status ${isFound ? 'rg-is-found' : 'rg-is-missed'}">${isFound ? '✓ Found' : '○ Missed'}</span>
+              <span><span class="rg-word">${h(e.word)}</span>${e.gloss ? `<span class="rg-gloss">(${h(e.gloss)})</span>` : ''}${badge}</span>
+              <span class="rg-path">${h(e.path)}</span>
+            </li>`;
+          }).join('')}</ul>
+        </section>`;
+    }).join('');
+
+    wrap(`${header('<button class="rg-link" data-act="archive">Past puzzles</button>')}
+      <main>
+        <section class="rg-card rg-result">
+          <p class="rg-kicker">${day.number ? `No. ${day.number} · ` : ''}${h(rootLabel(puzzle))} · “${h(puzzle.roots[0].meaning)}”${progress.mode === 'blitz' ? ' · blitz' : ''}</p>
+          <span class="rg-rank-name">${h(s.rank.name)}</span>
+          <p>${s.found - s.extra} of ${s.total} words · ${s.percentShown}%${s.extra ? ` · +${s.extra} bonus` : ''}</p>
+          ${s.bonusFound && settings.bonusMode === 'off' ? `<p class="rg-muted rg-small">Plus ${s.bonusFound} bonus ${s.bonusFound === 1 ? 'word' : 'words'}, not scored.</p>` : ''}
+          <div class="rg-rank" style="text-align:left">${rankBarHtml(s, { compact: true })}</div>
+          <div class="rg-share">
+            <pre aria-label="Shareable result">${h(share)}</pre>
+            <div class="rg-btn-row"><button class="rg-btn" data-act="copy">Copy result</button></div>
+          </div>
+        </section>
+        ${puzzle.context ? `<p class="rg-context">${h(puzzle.context)}</p>` : ''}
+        ${langSections}
+        ${puzzle.notRelated.length ? `
+          <section>
+            <div class="rg-lang-head"><h2>Not related</h2><span class="rg-muted rg-small">Lookalikes</span></div>
+            <ul class="rg-words rg-nr">${puzzle.notRelated.map((n) => `
+              <li><span><span class="rg-word">${h(n.word)}</span>${n.sense ? `<span class="rg-gloss">(${h(n.sense)})</span>` : ''} <span class="rg-badge">${h(langName(n.lang))}</span></span>
+              <span class="rg-path">${h(n.why[0].toUpperCase() + n.why.slice(1))}.</span></li>`).join('')}
+            </ul>
+          </section>` : ''}
+        <section class="rg-suggest">
+          <h2 style="font-size:22px">Missing a word?</h2>
+          <p class="rg-muted rg-small">If a word belongs here, tell us. Suggestions are checked before they join the list.</p>
+          <form autocomplete="off">
+            <label class="rg-visually-hidden" for="rg-suggest-word">Word</label>
+            <input id="rg-suggest-word" class="rg-input" type="text" autocapitalize="off" spellcheck="false" placeholder="Word">
+            <label class="rg-visually-hidden" for="rg-suggest-lang">Language</label>
+            <select id="rg-suggest-lang">${puzzle.languages.map((l) => `<option value="${l}">${h(langName(l))}</option>`).join('')}</select>
+            <button class="rg-btn" type="submit">Suggest</button>
+          </form>
+          ${myFlags.length ? `<p class="rg-muted rg-small" style="margin-top:10px">You have suggested ${myFlags.length} ${myFlags.length === 1 ? 'word' : 'words'} for this puzzle. ${options.onFlag ? '' : '<button class="rg-link" data-act="export">Copy suggestions</button>'}</p>` : ''}
+        </section>
+        <div class="rg-finish"><button class="rg-btn rg-ghost" data-act="archive">Past puzzles</button></div>
+      </main>`);
+
+    container.querySelector('.rg-suggest form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const w = container.querySelector('#rg-suggest-word').value;
+      if (!w.trim()) return;
+      flagWord(w, container.querySelector('#rg-suggest-lang').value);
+      renderReveal();
+      toast('Thanks. Sent for review.');
+    });
+    bind({
+      archive: renderArchive,
+      copy: async () => toast((await copyText(share)) ? 'Result copied' : 'Could not copy; select the text instead'),
+      export: async () => {
+        const text = JSON.stringify(store.get('flags', []), null, 2);
+        toast((await copyText(text)) ? 'Suggestions copied' : 'Could not copy');
+      },
+    });
+    window.scrollTo?.(0, 0);
+  }
+
+  // ---------- Archive ----------
+  async function renderArchive() {
+    stopTimer();
+    const days = archive(schedule, today);
+    const rows = await Promise.all(days.map(async (d) => {
+      let p = null;
+      try { p = await loadPuzzle(d.puzzle); } catch { /* skip broken */ }
+      const result = store.get(`result:${d.date}:${d.puzzle}`, null);
+      return { d, p, result };
+    }));
+    wrap(`${header('<button class="rg-link" data-act="back">Today</button>')}
+      <main>
+        <h1 style="font-size:28px">Past puzzles</h1>
+        <ul class="rg-archive">${rows.filter((r) => r.p).map(({ d, p, result }) => `
+          <li><button data-date="${h(d.date)}">
+            <span><span class="rg-muted rg-small rg-sans">No. ${d.number}</span><br><span class="rg-ar-root">${h(rootLabel(p))}</span> <span class="rg-muted">“${h(p.roots[0].meaning)}”</span></span>
+            <span class="rg-muted rg-small">${result ? `${h(result.rank)} · ${result.percent}%` : h(new Date(`${d.date}T12:00:00`).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }))}</span>
+          </button></li>`).join('') || '<li class="rg-empty">No past puzzles yet.</li>'}
+        </ul>
+      </main>`);
+    container.querySelectorAll('[data-date]').forEach((b) => b.addEventListener('click', () => {
+      openDay(days.find((d) => d.date === b.dataset.date));
+    }));
+    bind({ back: openToday });
+  }
+
+  function openToday() {
+    if (freePuzzle) return openDay({ puzzle: freePuzzle, date: null, number: null });
+    const day = puzzleForDate(schedule, today);
+    if (!day) return wrap(`${header()}<p>No puzzle is scheduled.</p>`);
+    return openDay(day);
+  }
+
+  await openToday();
+  return {
+    destroy() { stopTimer(); container.innerHTML = ''; container.classList.remove('roots-game'); },
+    days: () => numberedDays(schedule),
+  };
+}
+
+const ROOTS_DATA = {"schedule":{"note":"One puzzle per date. The puzzle number is the position in this list. The three starter puzzles come first, then the four other drafts in difficulty order.","days":[{"date":"2026-11-18","puzzle":"caput"},{"date":"2026-11-19","puzzle":"graphein"},{"date":"2026-11-20","puzzle":"hus"},{"date":"2026-11-21","puzzle":"bonus"},{"date":"2026-11-22","puzzle":"mittere"},{"date":"2026-11-23","puzzle":"ferre"},{"date":"2026-11-24","puzzle":"dare"}]},"puzzles":{"bonus":{"id":"bonus","status":"draft","root":{"form":"bonus","transliteration":"bonus","family":"latin","meaning":"good","principalParts":["bonus","bona","bonum"],"stems":["bon-","ben-"]},"languages":["en","es","pt","fr"],"difficulty":"easy","tiers":{"core":{"label":"Core","scoring":"always"},"bene":{"label":"bene- words","scoring":"always"}},"entries":[{"word":"bonus","lang":"en","tier":"core","path":"Latin bonus → English","variants":[],"reviewed":false},{"word":"bonanza","lang":"en","tier":"core","path":"Latin bonus → English","variants":[],"reviewed":false},{"word":"bounty","lang":"en","tier":"core","path":"Latin bonus → English","variants":[],"reviewed":false},{"word":"bountiful","lang":"en","tier":"core","path":"Latin bonus → English","variants":[],"reviewed":false},{"word":"debonair","lang":"en","tier":"core","path":"Latin bonus → English","variants":[],"reviewed":false},{"word":"bonhomie","lang":"en","tier":"core","path":"Latin bonus → English","variants":[],"reviewed":false},{"word":"bonbon","lang":"en","tier":"core","path":"Latin bonus → English","variants":[],"reviewed":false},{"word":"bona fide","lang":"en","tier":"core","path":"Latin bonus → English","variants":[],"reviewed":false},{"word":"bon voyage","lang":"en","tier":"core","path":"Latin bonus → English","variants":[],"reviewed":false},{"word":"bon appétit","lang":"en","tier":"core","path":"Latin bonus → English","variants":[],"reviewed":false},{"word":"bon mot","lang":"en","tier":"core","path":"Latin bonus → English","variants":[],"reviewed":false},{"word":"benefit","lang":"en","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → English","variants":[],"reviewed":false},{"word":"beneficial","lang":"en","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → English","variants":[],"reviewed":false},{"word":"beneficiary","lang":"en","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → English","variants":[],"reviewed":false},{"word":"benefactor","lang":"en","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → English","variants":[],"reviewed":false},{"word":"benefice","lang":"en","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → English","variants":[],"reviewed":false},{"word":"beneficent","lang":"en","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → English","variants":[],"reviewed":false},{"word":"benevolent","lang":"en","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → English","variants":[],"reviewed":false},{"word":"benevolence","lang":"en","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → English","variants":[],"reviewed":false},{"word":"benediction","lang":"en","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → English","variants":[],"reviewed":false},{"word":"benedict","lang":"en","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → English","variants":[],"reviewed":false},{"word":"benign","lang":"en","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → English","variants":[],"reviewed":false},{"word":"nota bene","lang":"en","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → English","variants":[],"reviewed":false},{"word":"bueno","lang":"es","tier":"core","path":"Latin bonus → Spanish","variants":[],"reviewed":false},{"word":"buen","lang":"es","tier":"core","path":"Latin bonus → Spanish","variants":[],"reviewed":false},{"word":"bondad","lang":"es","tier":"core","path":"Latin bonus → Spanish","variants":[],"reviewed":false},{"word":"bondadoso","lang":"es","tier":"core","path":"Latin bonus → Spanish","variants":[],"reviewed":false},{"word":"bonito","lang":"es","tier":"core","path":"Latin bonus → Spanish","variants":[],"reviewed":false},{"word":"bonanza","lang":"es","tier":"core","path":"Latin bonus → Spanish","variants":[],"reviewed":false},{"word":"bono","lang":"es","tier":"core","path":"Latin bonus → Spanish","variants":[],"reviewed":false},{"word":"bonificar","lang":"es","tier":"core","path":"Latin bonus → Spanish","variants":[],"reviewed":false},{"word":"bonificación","lang":"es","tier":"core","path":"Latin bonus → Spanish","variants":[],"reviewed":false},{"word":"bombón","lang":"es","tier":"core","path":"Latin bonus → Spanish","variants":[],"reviewed":false},{"word":"bien","lang":"es","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Spanish","variants":[],"reviewed":false},{"word":"bienestar","lang":"es","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Spanish","variants":[],"reviewed":false},{"word":"bienvenido","lang":"es","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Spanish","variants":[],"reviewed":false},{"word":"bienhechor","lang":"es","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Spanish","variants":[],"reviewed":false},{"word":"beneficio","lang":"es","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Spanish","variants":[],"reviewed":false},{"word":"beneficiar","lang":"es","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Spanish","variants":[],"reviewed":false},{"word":"beneficiario","lang":"es","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Spanish","variants":[],"reviewed":false},{"word":"benéfico","lang":"es","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Spanish","variants":[],"reviewed":false},{"word":"benevolencia","lang":"es","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Spanish","variants":[],"reviewed":false},{"word":"bendecir","lang":"es","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Spanish","variants":[],"reviewed":false},{"word":"bendición","lang":"es","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Spanish","variants":[],"reviewed":false},{"word":"benigno","lang":"es","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Spanish","variants":[],"reviewed":false},{"word":"bom","lang":"pt","tier":"core","path":"Latin bonus → Portuguese","variants":[],"reviewed":false},{"word":"boa","lang":"pt","tier":"core","path":"Latin bonus → Portuguese","variants":[],"reviewed":false},{"word":"bondade","lang":"pt","tier":"core","path":"Latin bonus → Portuguese","variants":[],"reviewed":false},{"word":"bonito","lang":"pt","tier":"core","path":"Latin bonus → Portuguese","variants":[],"reviewed":false},{"word":"bonança","lang":"pt","tier":"core","path":"Latin bonus → Portuguese","variants":[],"reviewed":false},{"word":"bónus","lang":"pt","tier":"core","path":"Latin bonus → Portuguese","variants":["bônus"],"reviewed":false},{"word":"bonificar","lang":"pt","tier":"core","path":"Latin bonus → Portuguese","variants":[],"reviewed":false},{"word":"bonificação","lang":"pt","tier":"core","path":"Latin bonus → Portuguese","variants":[],"reviewed":false},{"word":"bombom","lang":"pt","tier":"core","path":"Latin bonus → Portuguese","variants":[],"reviewed":false},{"word":"bonomia","lang":"pt","tier":"core","path":"Latin bonus → Portuguese","variants":[],"reviewed":false},{"word":"bem","lang":"pt","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Portuguese","variants":[],"reviewed":false},{"word":"bem-estar","lang":"pt","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Portuguese","variants":[],"reviewed":false},{"word":"bem-vindo","lang":"pt","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Portuguese","variants":[],"reviewed":false},{"word":"benfeitor","lang":"pt","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Portuguese","variants":[],"reviewed":false},{"word":"benefício","lang":"pt","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Portuguese","variants":[],"reviewed":false},{"word":"beneficiar","lang":"pt","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Portuguese","variants":[],"reviewed":false},{"word":"beneficiário","lang":"pt","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Portuguese","variants":[],"reviewed":false},{"word":"benéfico","lang":"pt","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Portuguese","variants":[],"reviewed":false},{"word":"benevolência","lang":"pt","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Portuguese","variants":[],"reviewed":false},{"word":"bendizer","lang":"pt","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Portuguese","variants":[],"reviewed":false},{"word":"bênção","lang":"pt","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Portuguese","variants":[],"reviewed":false},{"word":"benigno","lang":"pt","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → Portuguese","variants":[],"reviewed":false},{"word":"bon","lang":"fr","tier":"core","path":"Latin bonus → French","variants":[],"reviewed":false},{"word":"bonne","lang":"fr","tier":"core","path":"Latin bonus → French","variants":[],"reviewed":false},{"word":"bonté","lang":"fr","tier":"core","path":"Latin bonus → French","variants":[],"reviewed":false},{"word":"bonheur","lang":"fr","tier":"core","path":"Latin bonus → French","variants":[],"reviewed":false},{"word":"bonbon","lang":"fr","tier":"core","path":"Latin bonus → French","variants":[],"reviewed":false},{"word":"bonbonnière","lang":"fr","tier":"core","path":"Latin bonus → French","variants":[],"reviewed":false},{"word":"bonhomie","lang":"fr","tier":"core","path":"Latin bonus → French","variants":[],"reviewed":false},{"word":"bonifier","lang":"fr","tier":"core","path":"Latin bonus → French","variants":[],"reviewed":false},{"word":"bonification","lang":"fr","tier":"core","path":"Latin bonus → French","variants":[],"reviewed":false},{"word":"bonus","lang":"fr","tier":"core","path":"Latin bonus → French","variants":[],"reviewed":false},{"word":"bonjour","lang":"fr","tier":"core","path":"Latin bonus → French","variants":[],"reviewed":false},{"word":"bonsoir","lang":"fr","tier":"core","path":"Latin bonus → French","variants":[],"reviewed":false},{"word":"débonnaire","lang":"fr","tier":"core","path":"Latin bonus → French","variants":[],"reviewed":false},{"word":"embonpoint","lang":"fr","tier":"core","path":"Latin bonus → French","variants":[],"reviewed":false},{"word":"bien","lang":"fr","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → French","variants":[],"reviewed":false},{"word":"bien-être","lang":"fr","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → French","variants":[],"reviewed":false},{"word":"bienvenue","lang":"fr","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → French","variants":[],"reviewed":false},{"word":"bienfaiteur","lang":"fr","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → French","variants":[],"reviewed":false},{"word":"bienfait","lang":"fr","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → French","variants":[],"reviewed":false},{"word":"bienveillance","lang":"fr","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → French","variants":[],"reviewed":false},{"word":"bénéfice","lang":"fr","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → French","variants":[],"reviewed":false},{"word":"bénéficier","lang":"fr","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → French","variants":[],"reviewed":false},{"word":"bénéficiaire","lang":"fr","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → French","variants":[],"reviewed":false},{"word":"bénéfique","lang":"fr","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → French","variants":[],"reviewed":false},{"word":"bénir","lang":"fr","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → French","variants":[],"reviewed":false},{"word":"bénédiction","lang":"fr","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → French","variants":[],"reviewed":false},{"word":"bénin","lang":"fr","tier":"bene","path":"Latin bene, “well” (the adverb of bonus) → French","variants":[],"reviewed":false}],"notRelated":[{"word":"ameliorate","lang":"en","why":"from melior or optimus (“better”, “best”), which come from different roots","reviewed":false},{"word":"optimum","lang":"en","why":"from melior or optimus (“better”, “best”), which come from different roots","reviewed":false},{"word":"mejor","lang":"es","why":"from melior or optimus (“better”, “best”), which come from different roots","reviewed":false},{"word":"meilleur","lang":"fr","why":"from melior or optimus (“better”, “best”), which come from different roots","reviewed":false},{"word":"boon","lang":"en","why":"from Old Norse, not Latin","reviewed":false},{"word":"bond","lang":"en","why":"unrelated, despite the look","reviewed":false},{"word":"bonfire","lang":"en","why":"originally a “bone fire”","reviewed":false},{"word":"bonito","lang":"en","sense":"the fish","why":"unrelated, despite the look","reviewed":false}],"notes":["Draft: Stems: *bon-* and *ben-* (from the adverb *bene*, \"well\"). Languages: English, Spanish, Portuguese, French.","Draft: *Melior* and *optimus* (the comparative and superlative of *bonus*) come from different roots, so *ameliorate, optimum, mejor, meilleur* do not belong here. They would make good puzzles of their own.","Draft: Lookalikes to exclude: *boon* (a favor, Old Norse), *bond*, *bonfire* (\"bone fire\"), and *bonito* the fish.","Draft: Uncertain and left out: English *bonny* (probably from French *bon*) and *boon companion*.","Draft: The *bene-* words are compounds with *facere*, *dicere* and *velle* (*benefit, benediction, benevolent*), so they could also appear in puzzles for those verbs.","Import: the draft lists “note bene”; corrected to “nota bene”.","Import: Portuguese “bônus” is another spelling of “bónus”; kept as a variant."]},"caput":{"id":"caput","status":"draft","root":{"form":"caput","transliteration":"caput","family":"latin","meaning":"head","principalParts":["caput","capitis"],"stems":["capit-"]},"languages":["en","es","pt","fr"],"difficulty":"easy","tiers":{"core":{"label":"Core","scoring":"always"},"bonus":{"label":"Bonus","scoring":"bonus"}},"entries":[{"word":"chief","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"chieftain","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"chef","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"capital","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"capitalism","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"capitalist","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"capitalize","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"captain","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"chapter","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"achieve","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"achievement","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"mischief","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"kerchief","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"handkerchief","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"decapitate","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"decapitation","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"capitulate","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"capitulation","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"recapitulate","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"recapitulation","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"precipice","lang":"en","tier":"core","path":"Latin prae + caput → praeceps, “headfirst” → English","variants":[],"reviewed":false},{"word":"precipitate","lang":"en","tier":"core","path":"Latin prae + caput → praeceps, “headfirst” → English","variants":[],"reviewed":false},{"word":"precipitation","lang":"en","tier":"core","path":"Latin prae + caput → praeceps, “headfirst” → English","variants":[],"reviewed":false},{"word":"precipitous","lang":"en","tier":"core","path":"Latin prae + caput → praeceps, “headfirst” → English","variants":[],"reviewed":false},{"word":"biceps","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"triceps","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"quadriceps","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"occipital","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"cape","lang":"en","tier":"core","gloss":"headland","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"cadet","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"caddie","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"cabbage","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"per capita","lang":"en","tier":"core","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"cattle","lang":"en","tier":"bonus","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"chattel","lang":"en","tier":"bonus","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"capitol","lang":"en","tier":"bonus","path":"Latin caput → English","variants":[],"reviewed":false},{"word":"corporal","lang":"en","tier":"bonus","gloss":"military rank","path":"Latin caput → Italian capo, “head” → caporale → English","variants":[],"reviewed":false},{"word":"cabeza","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"cabezudo","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"cabecera","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"cabecilla","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"cabecear","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"encabezar","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"cabo","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"acabar","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"capataz","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"jefe","lang":"es","tier":"core","path":"Latin caput → French chef → Spanish","variants":[],"reviewed":false},{"word":"chef","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"capitán","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"capital","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"capitalismo","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"capitalista","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"capitalizar","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"capitel","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"capítulo","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"capitular","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"recapitular","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"decapitar","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"caudillo","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"cabildo","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"precipicio","lang":"es","tier":"core","path":"Latin prae + caput → praeceps, “headfirst” → Spanish","variants":[],"reviewed":false},{"word":"precipitar","lang":"es","tier":"core","path":"Latin prae + caput → praeceps, “headfirst” → Spanish","variants":[],"reviewed":false},{"word":"bíceps","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"tríceps","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"cuádriceps","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"occipital","lang":"es","tier":"core","path":"Latin caput → Spanish","variants":[],"reviewed":false},{"word":"cabeça","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"cabeçalho","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"cabeceira","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"cabecear","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"cabecilha","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"encabeçar","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"cabo","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"acabar","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"capataz","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"chefe","lang":"pt","tier":"core","path":"Latin caput → French chef → Portuguese","variants":[],"reviewed":false},{"word":"chef","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"capitão","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"capital","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"capitalismo","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"capitalista","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"capitalizar","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"capitel","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"capítulo","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"capitular","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"recapitular","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"decapitar","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"caudilho","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"precipício","lang":"pt","tier":"core","path":"Latin prae + caput → praeceps, “headfirst” → Portuguese","variants":[],"reviewed":false},{"word":"precipitar","lang":"pt","tier":"core","path":"Latin prae + caput → praeceps, “headfirst” → Portuguese","variants":[],"reviewed":false},{"word":"bíceps","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"tríceps","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"quadríceps","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"occipital","lang":"pt","tier":"core","path":"Latin caput → Portuguese","variants":[],"reviewed":false},{"word":"chef","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"chef-d'œuvre","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"chapitre","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"chapiteau","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"chevet","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"achever","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"achèvement","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"couvre-chef","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"capitaine","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"capital","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"capitale","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"capitalisme","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"capitaliste","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"capitulation","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"capituler","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"récapituler","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"décapiter","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"décapitation","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"cheptel","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"cadet","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"caboche","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"cap","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"caporal","lang":"fr","tier":"core","path":"Latin caput → Italian capo, “head” → caporale → French","variants":[],"reviewed":false},{"word":"précipice","lang":"fr","tier":"core","path":"Latin prae + caput → praeceps, “headfirst” → French","variants":[],"reviewed":false},{"word":"précipiter","lang":"fr","tier":"core","path":"Latin prae + caput → praeceps, “headfirst” → French","variants":[],"reviewed":false},{"word":"précipitation","lang":"fr","tier":"core","path":"Latin prae + caput → praeceps, “headfirst” → French","variants":[],"reviewed":false},{"word":"biceps","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"triceps","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"quadriceps","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false},{"word":"occipital","lang":"fr","tier":"core","path":"Latin caput → French","variants":[],"reviewed":false}],"notRelated":[{"word":"capture","lang":"en","why":"from Latin capere, “take”, a different root","reviewed":false},{"word":"capable","lang":"en","why":"from Latin capere, “take”, a different root","reviewed":false},{"word":"accept","lang":"en","why":"from Latin capere, “take”, a different root","reviewed":false},{"word":"receive","lang":"en","why":"from Latin capere, “take”, a different root","reviewed":false},{"word":"cap","lang":"en","why":"from Late Latin cappa, not caput","reviewed":false},{"word":"cape","lang":"en","sense":"cloak","why":"from Late Latin cappa, not caput","reviewed":false},{"word":"caper","lang":"en","why":"from Latin caper, “goat”","reviewed":false},{"word":"Capricorn","lang":"en","why":"from Latin caper, “goat”","reviewed":false}],"notes":["Draft: Stem: *capit-*. Languages: English, Spanish, Portuguese, French. About 120 entries, so the larger families may be trimmed to fit a puzzle of about 100.","Draft: *Capere* (\"take\": *capture, capable, accept, receive*) is a different root and the biggest trap in this family. None of those words belong here.","Draft: English *cap* and *cape* (cloak) come from Late Latin *cappa*, whose origin is uncertain, so they are excluded. *Cape* (headland) does come from *caput*.","Draft: *Caper* and *Capricorn* come from *caper* (\"goat\") and are excluded.","Draft: *Precipice* and *precipitate* come from *praeceps* (*prae* + *caput*, \"headfirst\"). This surprises players and makes a good reveal.","Draft: *Corporal* (rank) comes from Italian *caporale*, from *capo* (\"head\"); it is bonus-tier because it is easily confused with *corporal* (of the body). *Capitol* is bonus-tier because the origin of *Capitolium* is debated.","Draft: Spanish *jefe* and Portuguese *chefe* came through French *chef*.","Draft: To verify: *cabildo, caudillo* (from *capitellum*), *capataz, caboche, cheptel*, and English *cadet* and *caddie*."]},"dare":{"id":"dare","status":"draft","root":{"form":"dare","transliteration":"dare","family":"latin","meaning":"give","principalParts":["dō","dare","dedī","datum"],"stems":["da-","dat-","ded-","-dit-","-dere"]},"languages":["en","es","pt","fr"],"difficulty":"hardest","tiers":{"core":{"label":"Core","scoring":"always"},"compounds":{"label":"Compounds","scoring":"always","note":"Open question: count the -dere compounds as core or bonus? Set scoring to \"bonus\" to try the other way."}},"entries":[{"word":"data","lang":"en","tier":"core","path":"Latin dare → English","variants":[],"reviewed":false},{"word":"datum","lang":"en","tier":"core","path":"Latin dare → English","variants":[],"reviewed":false},{"word":"date","lang":"en","tier":"core","gloss":"calendar date","path":"Latin dare → English","variants":[],"reviewed":false},{"word":"dative","lang":"en","tier":"core","path":"Latin dare → English","variants":[],"reviewed":false},{"word":"donate","lang":"en","tier":"core","path":"Latin dare → English","variants":[],"reviewed":false},{"word":"donation","lang":"en","tier":"core","path":"Latin dare → English","variants":[],"reviewed":false},{"word":"donor","lang":"en","tier":"core","path":"Latin dare → English","variants":[],"reviewed":false},{"word":"pardon","lang":"en","tier":"core","path":"Latin dare → English","variants":[],"reviewed":false},{"word":"condone","lang":"en","tier":"core","path":"Latin dare → English","variants":[],"reviewed":false},{"word":"dowry","lang":"en","tier":"core","path":"Latin dare → English","variants":[],"reviewed":false},{"word":"endow","lang":"en","tier":"core","path":"Latin dare → English","variants":[],"reviewed":false},{"word":"add","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"addition","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"additive","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"edit","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"edition","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"editor","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"tradition","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"traitor","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"treason","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"betray","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"extradite","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"extradition","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"render","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"rendition","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"surrender","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"rent","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"vend","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"vendor","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"perdition","lang":"en","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → English","variants":[],"reviewed":false},{"word":"mandate","lang":"en","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → English","variants":[],"reviewed":false},{"word":"mandatory","lang":"en","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → English","variants":[],"reviewed":false},{"word":"command","lang":"en","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → English","variants":[],"reviewed":false},{"word":"commander","lang":"en","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → English","variants":[],"reviewed":false},{"word":"demand","lang":"en","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → English","variants":[],"reviewed":false},{"word":"commend","lang":"en","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → English","variants":[],"reviewed":false},{"word":"recommend","lang":"en","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → English","variants":[],"reviewed":false},{"word":"dar","lang":"es","tier":"core","path":"Latin dare → Spanish","variants":[],"reviewed":false},{"word":"dato","lang":"es","tier":"core","path":"Latin dare → Spanish","variants":[],"reviewed":false},{"word":"datar","lang":"es","tier":"core","path":"Latin dare → Spanish","variants":[],"reviewed":false},{"word":"dado","lang":"es","tier":"core","path":"Latin dare → Spanish","variants":[],"reviewed":false},{"word":"dativo","lang":"es","tier":"core","path":"Latin dare → Spanish","variants":[],"reviewed":false},{"word":"dádiva","lang":"es","tier":"core","path":"Latin dare → Spanish","variants":[],"reviewed":false},{"word":"donar","lang":"es","tier":"core","path":"Latin dare → Spanish","variants":[],"reviewed":false},{"word":"donación","lang":"es","tier":"core","path":"Latin dare → Spanish","variants":[],"reviewed":false},{"word":"donante","lang":"es","tier":"core","path":"Latin dare → Spanish","variants":[],"reviewed":false},{"word":"perdonar","lang":"es","tier":"core","path":"Latin dare → Spanish","variants":[],"reviewed":false},{"word":"perdón","lang":"es","tier":"core","path":"Latin dare → Spanish","variants":[],"reviewed":false},{"word":"condonar","lang":"es","tier":"core","path":"Latin dare → Spanish","variants":[],"reviewed":false},{"word":"dote","lang":"es","tier":"core","path":"Latin dare → Spanish","variants":[],"reviewed":false},{"word":"dotar","lang":"es","tier":"core","path":"Latin dare → Spanish","variants":[],"reviewed":false},{"word":"adición","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"editar","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"edición","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"editor","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"tradición","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"traidor","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"traición","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"extradición","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"rendir","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"renta","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"rendición","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"vender","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"venta","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"vendedor","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"perder","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"pérdida","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"perdición","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"esconder","lang":"es","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Spanish","variants":[],"reviewed":false},{"word":"mandar","lang":"es","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → Spanish","variants":[],"reviewed":false},{"word":"mandato","lang":"es","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → Spanish","variants":[],"reviewed":false},{"word":"comandar","lang":"es","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → Spanish","variants":[],"reviewed":false},{"word":"demandar","lang":"es","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → Spanish","variants":[],"reviewed":false},{"word":"recomendar","lang":"es","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → Spanish","variants":[],"reviewed":false},{"word":"encomendar","lang":"es","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → Spanish","variants":[],"reviewed":false},{"word":"dar","lang":"pt","tier":"core","path":"Latin dare → Portuguese","variants":[],"reviewed":false},{"word":"dado","lang":"pt","tier":"core","path":"Latin dare → Portuguese","variants":[],"reviewed":false},{"word":"data","lang":"pt","tier":"core","path":"Latin dare → Portuguese","variants":[],"reviewed":false},{"word":"dativo","lang":"pt","tier":"core","path":"Latin dare → Portuguese","variants":[],"reviewed":false},{"word":"dádiva","lang":"pt","tier":"core","path":"Latin dare → Portuguese","variants":[],"reviewed":false},{"word":"doar","lang":"pt","tier":"core","path":"Latin dare → Portuguese","variants":[],"reviewed":false},{"word":"doação","lang":"pt","tier":"core","path":"Latin dare → Portuguese","variants":[],"reviewed":false},{"word":"doador","lang":"pt","tier":"core","path":"Latin dare → Portuguese","variants":[],"reviewed":false},{"word":"perdoar","lang":"pt","tier":"core","path":"Latin dare → Portuguese","variants":[],"reviewed":false},{"word":"perdão","lang":"pt","tier":"core","path":"Latin dare → Portuguese","variants":[],"reviewed":false},{"word":"dote","lang":"pt","tier":"core","path":"Latin dare → Portuguese","variants":[],"reviewed":false},{"word":"dotar","lang":"pt","tier":"core","path":"Latin dare → Portuguese","variants":[],"reviewed":false},{"word":"adição","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"editar","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"edição","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"editor","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"tradição","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"traidor","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"trair","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"traição","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"extradição","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"render","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"renda","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"rendição","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"vender","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"venda","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"vendedor","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"perder","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"perda","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"perdição","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"esconder","lang":"pt","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → Portuguese","variants":[],"reviewed":false},{"word":"mandar","lang":"pt","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → Portuguese","variants":[],"reviewed":false},{"word":"mandato","lang":"pt","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → Portuguese","variants":[],"reviewed":false},{"word":"comandar","lang":"pt","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → Portuguese","variants":[],"reviewed":false},{"word":"demanda","lang":"pt","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → Portuguese","variants":[],"reviewed":false},{"word":"recomendar","lang":"pt","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → Portuguese","variants":[],"reviewed":false},{"word":"encomendar","lang":"pt","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → Portuguese","variants":[],"reviewed":false},{"word":"donner","lang":"fr","tier":"core","path":"Latin dare → French","variants":[],"reviewed":false},{"word":"don","lang":"fr","tier":"core","path":"Latin dare → French","variants":[],"reviewed":false},{"word":"donation","lang":"fr","tier":"core","path":"Latin dare → French","variants":[],"reviewed":false},{"word":"donateur","lang":"fr","tier":"core","path":"Latin dare → French","variants":[],"reviewed":false},{"word":"donneur","lang":"fr","tier":"core","path":"Latin dare → French","variants":[],"reviewed":false},{"word":"donnée","lang":"fr","tier":"core","path":"Latin dare → French","variants":[],"reviewed":false},{"word":"date","lang":"fr","tier":"core","path":"Latin dare → French","variants":[],"reviewed":false},{"word":"datif","lang":"fr","tier":"core","path":"Latin dare → French","variants":[],"reviewed":false},{"word":"dé","lang":"fr","tier":"core","gloss":"die","path":"Latin dare → French","variants":[],"reviewed":false},{"word":"pardonner","lang":"fr","tier":"core","path":"Latin dare → French","variants":[],"reviewed":false},{"word":"pardon","lang":"fr","tier":"core","path":"Latin dare → French","variants":[],"reviewed":false},{"word":"dot","lang":"fr","tier":"core","path":"Latin dare → French","variants":[],"reviewed":false},{"word":"doter","lang":"fr","tier":"core","path":"Latin dare → French","variants":[],"reviewed":false},{"word":"dotation","lang":"fr","tier":"core","path":"Latin dare → French","variants":[],"reviewed":false},{"word":"addition","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"éditer","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"édition","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"éditeur","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"tradition","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"traître","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"trahir","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"trahison","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"extrader","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"extradition","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"rendre","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"rente","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"rendu","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"reddition","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"vendre","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"vente","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"vendeur","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"perdre","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"perte","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"perdition","lang":"fr","tier":"compounds","path":"Latin compound in -dere, “put”, which merged with dare → French","variants":[],"reviewed":false},{"word":"mandat","lang":"fr","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → French","variants":[],"reviewed":false},{"word":"commander","lang":"fr","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → French","variants":[],"reviewed":false},{"word":"commande","lang":"fr","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → French","variants":[],"reviewed":false},{"word":"demander","lang":"fr","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → French","variants":[],"reviewed":false},{"word":"demande","lang":"fr","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → French","variants":[],"reviewed":false},{"word":"recommander","lang":"fr","tier":"compounds","path":"Latin manus, “hand”, + dare, “put in someone’s hand” → French","variants":[],"reviewed":false}],"notRelated":[{"word":"dare","lang":"en","why":"a native English word, not from Latin","reviewed":false},{"word":"give","lang":"en","why":"a native English word, not from Latin","reviewed":false},{"word":"date","lang":"en","sense":"the fruit","why":"from Greek, not from dare","reviewed":false},{"word":"dose","lang":"en","why":"from Greek didōmi, a cousin of dare, not a descendant","reviewed":false},{"word":"antidote","lang":"en","why":"from Greek didōmi, a cousin of dare, not a descendant","reviewed":false},{"word":"anecdote","lang":"en","why":"from Greek didōmi, a cousin of dare, not a descendant","reviewed":false},{"word":"añadir","lang":"es","why":"from Latin adnectere, not from dare","reviewed":false}],"notes":["Draft: Stems: *da-*, *dat-*, *ded-*; compounds use *-dit-* and *-dere*. Languages: English, Spanish, Portuguese, French. About 120 entries; the compound tier may become its own puzzle.","Draft: The compounds (*add, edit, tradition, render, vend, perdition*) look like *dare* compounds but come from a second Latin verb, *-dere* (\"put\"), that merged with *dare*. Many dictionaries file them under *dare* anyway. Whether they count as core is an open question.","Draft: *Mandate, command, demand, commend, recommend* are *manus* + *dare* (\"put in someone's hand\").","Draft: Lookalikes to exclude: English *dare* and *give* (Germanic); *date* the fruit (Greek); *dose, antidote, anecdote* (Greek *didōmi*, a cousin, not a descendant); Spanish *añadir*, which comes from *adnectere*, not *addere*.","Draft: To verify: Spanish *dado* and French *dé* (\"die\") from *datum*, and English *betray* via *tradere*."]},"ferre":{"id":"ferre","status":"draft","root":{"form":"ferre","transliteration":"ferre","family":"latin","meaning":"carry","principalParts":["ferō","ferre","tulī","lātum"],"stems":["fer-","lat-","tul-"]},"languages":["en","es","pt","fr"],"difficulty":"hard","tiers":{"core":{"label":"Core","scoring":"always"},"bonus":{"label":"Bonus","scoring":"bonus"}},"entries":[{"word":"transfer","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"refer","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"reference","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"referee","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"confer","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"conference","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"defer","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"deference","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"differ","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"difference","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"infer","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"inference","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"offer","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"prefer","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"preference","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"suffer","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"suffering","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"proffer","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"fertile","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"fertility","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"circumference","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"conifer","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"Lucifer","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"vociferous","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"translate","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"translation","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"relate","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"relation","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"relative","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"collate","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"collation","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"elate","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"ablative","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"superlative","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"dilate","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"prelate","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"oblate","lang":"en","tier":"core","path":"Latin ferre → English","variants":[],"reviewed":false},{"word":"legislate","lang":"en","tier":"bonus","path":"Latin lex, “law”, + lātor, “proposer” (from ferre) → English","variants":[],"reviewed":false},{"word":"transferir","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"referir","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"referencia","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"conferir","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"conferencia","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"diferir","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"diferencia","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"inferir","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"ofrecer","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"ofrenda","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"preferir","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"preferencia","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"sufrir","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"sufrimiento","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"proferir","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"fértil","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"fertilidad","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"circunferencia","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"conífero","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"Lucifer","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"trasladar","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"traslación","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"relación","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"relatar","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"relativo","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"colación","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"ablativo","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"superlativo","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"dilatar","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"prelado","lang":"es","tier":"core","path":"Latin ferre → Spanish","variants":[],"reviewed":false},{"word":"oblea","lang":"es","tier":"core","path":"Latin oblāta, “offering” (from ferre) → Spanish","variants":[],"reviewed":false},{"word":"legislación","lang":"es","tier":"bonus","path":"Latin lex, “law”, + lātor, “proposer” (from ferre) → Spanish","variants":[],"reviewed":false},{"word":"transferir","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"referir","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"referência","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"conferir","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"conferência","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"diferir","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"diferença","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"inferir","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"oferecer","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"oferta","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"oferenda","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"preferir","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"preferência","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"sofrer","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"sofrimento","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"proferir","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"fértil","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"fertilidade","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"circunferência","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"conífero","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"trasladar","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"translação","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"relação","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"relatar","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"relativo","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"colação","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"ablativo","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"superlativo","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"dilatar","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"prelado","lang":"pt","tier":"core","path":"Latin ferre → Portuguese","variants":[],"reviewed":false},{"word":"legislação","lang":"pt","tier":"bonus","path":"Latin lex, “law”, + lātor, “proposer” (from ferre) → Portuguese","variants":[],"reviewed":false},{"word":"transférer","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"référer","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"référence","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"conférer","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"conférence","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"différer","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"différence","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"inférer","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"offrir","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"offre","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"offrande","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"préférer","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"préférence","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"souffrir","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"souffrance","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"proférer","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"fertile","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"circonférence","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"conifère","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"Lucifer","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"translation","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"relation","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"relater","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"relatif","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"collation","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"ablatif","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"superlatif","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"dilater","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"prélat","lang":"fr","tier":"core","path":"Latin ferre → French","variants":[],"reviewed":false},{"word":"oublie","lang":"fr","tier":"core","path":"Latin oblāta, “offering” (from ferre) → French","variants":[],"reviewed":false},{"word":"législation","lang":"fr","tier":"bonus","path":"Latin lex, “law”, + lātor, “proposer” (from ferre) → French","variants":[],"reviewed":false}],"notRelated":[{"word":"tolerate","lang":"en","why":"shares an old root with tulī, but does not come from ferre","reviewed":false},{"word":"extol","lang":"en","why":"from a separate verb, tollere","reviewed":false}],"notes":["Draft: Stems: *fer-*, *lat-* (from the supine), *tul-*. Languages: English, Spanish, Portuguese, French.","Draft: Many English words come from the *lat-* stem (*relate, translate, elate*), which players will not expect from *ferre*. This makes a good reveal.","Draft: *Tolerate* shares a root with *tulī* but does not descend from *ferre*; *extol* comes from the separate verb *tollere*. Both are left out.","Draft: *Legislate* comes from *lex* plus *lātor* (\"proposer\"), so it is bonus-tier.","Draft: Spanish *oblea* and French *oublie* (\"wafer\") come from *oblāta* (\"offering\")."]},"graphein":{"id":"graphein","status":"draft","root":{"form":"γράφω","transliteration":"graphō","family":"greek","meaning":"write","principalParts":["γράφω","γράψω","ἔγραψα","γέγραφα","γέγραμμαι","ἐγράφην"],"principalPartsTransliterated":["graphō","grapsō","egrapsa","gegrapha","gegrammai","egraphēn"],"stems":["graph-","gram-"]},"languages":["en","es","pt","fr"],"difficulty":"medium","tiers":{"core":{"label":"Core","scoring":"always"},"technical":{"label":"Technical","scoring":"always","note":"First tier to cut if the puzzle is too large."},"bonus":{"label":"Bonus","scoring":"bonus"}},"entries":[{"word":"graph","lang":"en","tier":"core","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"graphic","lang":"en","tier":"core","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"graphics","lang":"en","tier":"core","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"graphite","lang":"en","tier":"core","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"paragraph","lang":"en","tier":"core","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"autograph","lang":"en","tier":"core","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"biography","lang":"en","tier":"core","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"autobiography","lang":"en","tier":"core","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"geography","lang":"en","tier":"core","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"photograph","lang":"en","tier":"core","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"photography","lang":"en","tier":"core","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"telegraph","lang":"en","tier":"core","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"telegram","lang":"en","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → English","variants":[],"reviewed":false},{"word":"grammar","lang":"en","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → English","variants":[],"reviewed":false},{"word":"grammatical","lang":"en","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → English","variants":[],"reviewed":false},{"word":"program","lang":"en","tier":"core","path":"Greek pro-, “before”, + γράμμα (gramma), “something written” → English","variants":[],"reviewed":false},{"word":"programmer","lang":"en","tier":"core","path":"Greek pro-, “before”, + γράμμα (gramma), “something written” → English","variants":[],"reviewed":false},{"word":"diagram","lang":"en","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → English","variants":[],"reviewed":false},{"word":"epigram","lang":"en","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → English","variants":[],"reviewed":false},{"word":"anagram","lang":"en","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → English","variants":[],"reviewed":false},{"word":"monogram","lang":"en","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → English","variants":[],"reviewed":false},{"word":"hologram","lang":"en","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → English","variants":[],"reviewed":false},{"word":"kilogram","lang":"en","tier":"core","path":"Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → English","variants":[],"reviewed":false},{"word":"gram","lang":"en","tier":"core","path":"Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → English","variants":[],"reviewed":false},{"word":"calligraphy","lang":"en","tier":"core","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"choreography","lang":"en","tier":"core","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"bibliography","lang":"en","tier":"core","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"grapheme","lang":"en","tier":"technical","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"graphology","lang":"en","tier":"technical","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"grammarian","lang":"en","tier":"technical","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → English","variants":[],"reviewed":false},{"word":"cryptogram","lang":"en","tier":"technical","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → English","variants":[],"reviewed":false},{"word":"seismograph","lang":"en","tier":"technical","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"stenography","lang":"en","tier":"technical","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"typography","lang":"en","tier":"technical","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"lithograph","lang":"en","tier":"technical","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"ethnography","lang":"en","tier":"technical","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"demography","lang":"en","tier":"technical","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"cartography","lang":"en","tier":"technical","path":"Latin carta, “map”, + Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"pictogram","lang":"en","tier":"technical","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → English","variants":[],"reviewed":false},{"word":"ideogram","lang":"en","tier":"technical","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → English","variants":[],"reviewed":false},{"word":"gramophone","lang":"en","tier":"technical","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → English","variants":[],"reviewed":false},{"word":"epigraph","lang":"en","tier":"technical","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"orthography","lang":"en","tier":"technical","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"glamour","lang":"en","tier":"bonus","path":"Greek γράμμα (gramma) → English grammar → Scottish glamour → English","variants":[],"reviewed":false},{"word":"graffiti","lang":"en","tier":"bonus","path":"Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"graft","lang":"en","tier":"bonus","path":"Latin graphium, “stylus”, from Greek γράφω (graphō) → English","variants":[],"reviewed":false},{"word":"gráfico","lang":"es","tier":"core","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"gráfica","lang":"es","tier":"core","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"grafito","lang":"es","tier":"core","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"párrafo","lang":"es","tier":"core","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"autógrafo","lang":"es","tier":"core","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"biografía","lang":"es","tier":"core","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"autobiografía","lang":"es","tier":"core","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"geografía","lang":"es","tier":"core","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"fotografía","lang":"es","tier":"core","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"fotografiar","lang":"es","tier":"core","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"telégrafo","lang":"es","tier":"core","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"telegrama","lang":"es","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish","variants":[],"reviewed":false},{"word":"gramática","lang":"es","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish","variants":[],"reviewed":false},{"word":"gramatical","lang":"es","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish","variants":[],"reviewed":false},{"word":"programa","lang":"es","tier":"core","path":"Greek pro-, “before”, + γράμμα (gramma), “something written” → Spanish","variants":[],"reviewed":false},{"word":"programar","lang":"es","tier":"core","path":"Greek pro-, “before”, + γράμμα (gramma), “something written” → Spanish","variants":[],"reviewed":false},{"word":"programador","lang":"es","tier":"core","path":"Greek pro-, “before”, + γράμμα (gramma), “something written” → Spanish","variants":[],"reviewed":false},{"word":"diagrama","lang":"es","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish","variants":[],"reviewed":false},{"word":"epigrama","lang":"es","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish","variants":[],"reviewed":false},{"word":"anagrama","lang":"es","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish","variants":[],"reviewed":false},{"word":"monograma","lang":"es","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish","variants":[],"reviewed":false},{"word":"holograma","lang":"es","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish","variants":[],"reviewed":false},{"word":"kilogramo","lang":"es","tier":"core","path":"Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → Spanish","variants":[],"reviewed":false},{"word":"gramo","lang":"es","tier":"core","path":"Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → Spanish","variants":[],"reviewed":false},{"word":"caligrafía","lang":"es","tier":"core","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"coreografía","lang":"es","tier":"core","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"bibliografía","lang":"es","tier":"core","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"grafía","lang":"es","tier":"technical","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"grafología","lang":"es","tier":"technical","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"criptograma","lang":"es","tier":"technical","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish","variants":[],"reviewed":false},{"word":"sismógrafo","lang":"es","tier":"technical","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"taquigrafía","lang":"es","tier":"technical","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"tipografía","lang":"es","tier":"technical","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"litografía","lang":"es","tier":"technical","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"etnografía","lang":"es","tier":"technical","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"demografía","lang":"es","tier":"technical","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"cartografía","lang":"es","tier":"technical","path":"Latin carta, “map”, + Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"pictograma","lang":"es","tier":"technical","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish","variants":[],"reviewed":false},{"word":"ideograma","lang":"es","tier":"technical","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish","variants":[],"reviewed":false},{"word":"gramófono","lang":"es","tier":"technical","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish","variants":[],"reviewed":false},{"word":"epígrafe","lang":"es","tier":"technical","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"ortografía","lang":"es","tier":"technical","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"telegrafiar","lang":"es","tier":"technical","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"grafiti","lang":"es","tier":"bonus","path":"Greek γράφω (graphō) → Spanish","variants":[],"reviewed":false},{"word":"gráfico","lang":"pt","tier":"core","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"gráfica","lang":"pt","tier":"core","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"grafite","lang":"pt","tier":"core","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"parágrafo","lang":"pt","tier":"core","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"autógrafo","lang":"pt","tier":"core","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"biografia","lang":"pt","tier":"core","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"autobiografia","lang":"pt","tier":"core","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"geografia","lang":"pt","tier":"core","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"fotografia","lang":"pt","tier":"core","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"fotografar","lang":"pt","tier":"core","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"telégrafo","lang":"pt","tier":"core","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"telegrama","lang":"pt","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese","variants":[],"reviewed":false},{"word":"gramática","lang":"pt","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese","variants":[],"reviewed":false},{"word":"gramatical","lang":"pt","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese","variants":[],"reviewed":false},{"word":"programa","lang":"pt","tier":"core","path":"Greek pro-, “before”, + γράμμα (gramma), “something written” → Portuguese","variants":[],"reviewed":false},{"word":"programar","lang":"pt","tier":"core","path":"Greek pro-, “before”, + γράμμα (gramma), “something written” → Portuguese","variants":[],"reviewed":false},{"word":"programador","lang":"pt","tier":"core","path":"Greek pro-, “before”, + γράμμα (gramma), “something written” → Portuguese","variants":[],"reviewed":false},{"word":"diagrama","lang":"pt","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese","variants":[],"reviewed":false},{"word":"epigrama","lang":"pt","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese","variants":[],"reviewed":false},{"word":"anagrama","lang":"pt","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese","variants":[],"reviewed":false},{"word":"monograma","lang":"pt","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese","variants":[],"reviewed":false},{"word":"holograma","lang":"pt","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese","variants":[],"reviewed":false},{"word":"quilograma","lang":"pt","tier":"core","path":"Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → Portuguese","variants":[],"reviewed":false},{"word":"grama","lang":"pt","tier":"core","path":"Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → Portuguese","variants":[],"reviewed":false},{"word":"caligrafia","lang":"pt","tier":"core","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"coreografia","lang":"pt","tier":"core","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"bibliografia","lang":"pt","tier":"core","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"grafia","lang":"pt","tier":"technical","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"grafologia","lang":"pt","tier":"technical","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"criptograma","lang":"pt","tier":"technical","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese","variants":[],"reviewed":false},{"word":"sismógrafo","lang":"pt","tier":"technical","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"taquigrafia","lang":"pt","tier":"technical","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"tipografia","lang":"pt","tier":"technical","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"litografia","lang":"pt","tier":"technical","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"etnografia","lang":"pt","tier":"technical","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"demografia","lang":"pt","tier":"technical","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"cartografia","lang":"pt","tier":"technical","path":"Latin carta, “map”, + Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"pictograma","lang":"pt","tier":"technical","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese","variants":[],"reviewed":false},{"word":"ideograma","lang":"pt","tier":"technical","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese","variants":[],"reviewed":false},{"word":"gramofone","lang":"pt","tier":"technical","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese","variants":[],"reviewed":false},{"word":"epígrafe","lang":"pt","tier":"technical","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"ortografia","lang":"pt","tier":"technical","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"telegrafar","lang":"pt","tier":"technical","path":"Greek γράφω (graphō) → Portuguese","variants":[],"reviewed":false},{"word":"graphique","lang":"fr","tier":"core","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"graphite","lang":"fr","tier":"core","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"paragraphe","lang":"fr","tier":"core","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"autographe","lang":"fr","tier":"core","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"biographie","lang":"fr","tier":"core","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"autobiographie","lang":"fr","tier":"core","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"géographie","lang":"fr","tier":"core","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"photographie","lang":"fr","tier":"core","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"photographier","lang":"fr","tier":"core","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"télégraphe","lang":"fr","tier":"core","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"télégramme","lang":"fr","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → French","variants":[],"reviewed":false},{"word":"grammaire","lang":"fr","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → French","variants":[],"reviewed":false},{"word":"grammatical","lang":"fr","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → French","variants":[],"reviewed":false},{"word":"programme","lang":"fr","tier":"core","path":"Greek pro-, “before”, + γράμμα (gramma), “something written” → French","variants":[],"reviewed":false},{"word":"programmer","lang":"fr","tier":"core","path":"Greek pro-, “before”, + γράμμα (gramma), “something written” → French","variants":[],"reviewed":false},{"word":"programmeur","lang":"fr","tier":"core","path":"Greek pro-, “before”, + γράμμα (gramma), “something written” → French","variants":[],"reviewed":false},{"word":"diagramme","lang":"fr","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → French","variants":[],"reviewed":false},{"word":"épigramme","lang":"fr","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → French","variants":[],"reviewed":false},{"word":"anagramme","lang":"fr","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → French","variants":[],"reviewed":false},{"word":"monogramme","lang":"fr","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → French","variants":[],"reviewed":false},{"word":"hologramme","lang":"fr","tier":"core","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → French","variants":[],"reviewed":false},{"word":"kilogramme","lang":"fr","tier":"core","path":"Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → French","variants":[],"reviewed":false},{"word":"gramme","lang":"fr","tier":"core","path":"Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → French","variants":[],"reviewed":false},{"word":"calligraphie","lang":"fr","tier":"core","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"chorégraphie","lang":"fr","tier":"core","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"bibliographie","lang":"fr","tier":"core","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"greffe","lang":"fr","tier":"bonus","path":"Latin graphium, “stylus”, from Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"greffer","lang":"fr","tier":"bonus","path":"Latin graphium, “stylus”, from Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"graphie","lang":"fr","tier":"technical","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"graphologie","lang":"fr","tier":"technical","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"graphème","lang":"fr","tier":"technical","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"cryptogramme","lang":"fr","tier":"technical","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → French","variants":[],"reviewed":false},{"word":"sismographe","lang":"fr","tier":"technical","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"sténographie","lang":"fr","tier":"technical","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"typographie","lang":"fr","tier":"technical","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"lithographie","lang":"fr","tier":"technical","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"ethnographie","lang":"fr","tier":"technical","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"démographie","lang":"fr","tier":"technical","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"cartographie","lang":"fr","tier":"technical","path":"Latin carta, “map”, + Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"pictogramme","lang":"fr","tier":"technical","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → French","variants":[],"reviewed":false},{"word":"idéogramme","lang":"fr","tier":"technical","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → French","variants":[],"reviewed":false},{"word":"gramophone","lang":"fr","tier":"technical","path":"Greek γράμμα (gramma), “letter, something written”, from γράφω → French","variants":[],"reviewed":false},{"word":"épigraphe","lang":"fr","tier":"technical","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"orthographe","lang":"fr","tier":"technical","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"télégraphier","lang":"fr","tier":"technical","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"graffiti","lang":"fr","tier":"bonus","path":"Greek γράφω (graphō) → French","variants":[],"reviewed":false},{"word":"grimoire","lang":"fr","tier":"bonus","path":"Greek γράμμα (gramma) → French grammaire → grimoire","variants":[],"reviewed":false}],"notRelated":[{"word":"carve","lang":"en","why":"a very distant cousin from a far older root, not a descendant","reviewed":false},{"word":"grave","lang":"en","why":"unrelated, despite the look","reviewed":false},{"word":"engrave","lang":"en","why":"unrelated, despite the look","reviewed":false},{"word":"grab","lang":"en","why":"unrelated, despite the look","reviewed":false},{"word":"grape","lang":"en","why":"unrelated, despite the look","reviewed":false}],"notes":["Draft: Principal parts: γράφω, γράψω, ἔγραψα, γέγραφα, γέγραμμαι, ἐγράφην (*graphō, grapsō, egrapsa, gegrapha, gegrammai, egraphēn*). The *graph-* words come from the present stem; the *gram-* words come from the perfect *gegrammai* and the noun *gramma*.","Draft: Stems: *graph-* and *gram-* (from *gramma*, \"letter, something written\"). Languages: English, Spanish, Portuguese, French. This family is very large, about 200 entries across the four languages. A puzzle uses about 100, so the technical tier is the first to be cut.","Draft: *Gram* (the unit) comes from Greek *gramma* by way of Late Latin, where it meant \"a small weight.\" *Kilogram* is built on it.","Draft: *Program* is *pro-* + *gramma* (\"written beforehand\"). *Cartography* is a hybrid of Latin *carta* and Greek.","Draft: *Glamour* is a Scottish alteration of *grammar*, and *grimoire* is French for the same word. *Graft* and French *greffe* come from *graphium* (\"stylus\"). All are bonus-tier because the link is indirect.","Draft: English *carve* is a distant cousin through Proto-Indo-European, not a descendant, and is excluded. *Grave, engrave, grab* and *grape* are unrelated.","Draft: To verify: *glamour, grimoire, graft/greffe*, and the Spanish and Portuguese *grafiti* and *grafite*, which share spellings with *graffiti* and *graphite*.","Import: French “greffe” is core in the draft table but bonus-tier in its Flags; moved to bonus. Confirm.","Import: French “greffer” is core in the draft table but bonus-tier in its Flags; moved to bonus. Confirm."]},"hus":{"id":"hus","status":"draft","root":{"form":"hūs","transliteration":"hūs","family":"germanic","meaning":"house","writtenForms":[{"language":"Old English","form":"hūs"},{"language":"Old Norse","form":"hús"},{"language":"Old High German","form":"hūs"},{"language":"Gothic","form":"-hūs","note":"in gudhūs, “temple”"}],"stems":["hūs"]},"languages":["en","de","nl","sv"],"difficulty":"medium","tiers":{"core":{"label":"Core","scoring":"always"}},"context":"House, Haus, huis and hus are cousins: none comes from another. They share an older ancestor, reconstructed as Proto-Germanic *hūsą, which was never written down.","entries":[{"word":"house","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"housing","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"household","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"housewife","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"housework","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"housekeeper","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"houseboat","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"housefly","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"warehouse","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"courthouse","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"farmhouse","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"doghouse","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"greenhouse","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"lighthouse","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"outhouse","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"hothouse","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"workhouse","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"madhouse","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"slaughterhouse","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"townhouse","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"clubhouse","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"treehouse","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"playhouse","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"birdhouse","lang":"en","tier":"core","path":"Old English hūs → English","variants":[],"reviewed":false},{"word":"husband","lang":"en","tier":"core","path":"Old Norse húsbóndi, “master of the house” → English","variants":[],"reviewed":false},{"word":"hussy","lang":"en","tier":"core","path":"Old English hūs → housewife → shortened to hussy","variants":[],"reviewed":false},{"word":"hustings","lang":"en","tier":"core","path":"Old Norse húsþing, “house assembly” → English","variants":[],"reviewed":false},{"word":"Haus","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Häuschen","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"häuslich","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Hausfrau","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Hausmann","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Haushalt","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Hausaufgabe","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Hausarzt","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Hausmeister","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Haustier","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Haustür","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Rathaus","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Krankenhaus","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Gasthaus","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Warenhaus","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Kaufhaus","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Bauernhaus","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Treibhaus","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Gewächshaus","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"Gehäuse","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"hausen","lang":"de","tier":"core","path":"Old High German hūs → German","variants":[],"reviewed":false},{"word":"huis","lang":"nl","tier":"core","path":"Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)","variants":[],"reviewed":false},{"word":"huisje","lang":"nl","tier":"core","path":"Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)","variants":[],"reviewed":false},{"word":"huiselijk","lang":"nl","tier":"core","path":"Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)","variants":[],"reviewed":false},{"word":"huisvrouw","lang":"nl","tier":"core","path":"Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)","variants":[],"reviewed":false},{"word":"huisman","lang":"nl","tier":"core","path":"Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)","variants":[],"reviewed":false},{"word":"huishouden","lang":"nl","tier":"core","path":"Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)","variants":[],"reviewed":false},{"word":"huiswerk","lang":"nl","tier":"core","path":"Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)","variants":[],"reviewed":false},{"word":"huisarts","lang":"nl","tier":"core","path":"Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)","variants":[],"reviewed":false},{"word":"huisdier","lang":"nl","tier":"core","path":"Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)","variants":[],"reviewed":false},{"word":"ziekenhuis","lang":"nl","tier":"core","path":"Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)","variants":[],"reviewed":false},{"word":"stadhuis","lang":"nl","tier":"core","path":"Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)","variants":[],"reviewed":false},{"word":"gasthuis","lang":"nl","tier":"core","path":"Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)","variants":[],"reviewed":false},{"word":"warenhuis","lang":"nl","tier":"core","path":"Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)","variants":[],"reviewed":false},{"word":"huisvesten","lang":"nl","tier":"core","path":"Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)","variants":[],"reviewed":false},{"word":"behuizing","lang":"nl","tier":"core","path":"Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)","variants":[],"reviewed":false},{"word":"hus","lang":"sv","tier":"core","path":"Old Norse hús → Swedish","variants":[],"reviewed":false},{"word":"husdjur","lang":"sv","tier":"core","path":"Old Norse hús → Swedish","variants":[],"reviewed":false},{"word":"hushåll","lang":"sv","tier":"core","path":"Old Norse hús → Swedish","variants":[],"reviewed":false},{"word":"sjukhus","lang":"sv","tier":"core","path":"Old Norse hús → Swedish","variants":[],"reviewed":false},{"word":"stadshus","lang":"sv","tier":"core","path":"Old Norse hús → Swedish","variants":[],"reviewed":false},{"word":"bostadshus","lang":"sv","tier":"core","path":"Old Norse hús → Swedish","variants":[],"reviewed":false},{"word":"husvagn","lang":"sv","tier":"core","path":"Old Norse hús → Swedish","variants":[],"reviewed":false},{"word":"husmor","lang":"sv","tier":"core","path":"Old Norse hús → Swedish","variants":[],"reviewed":false},{"word":"husrum","lang":"sv","tier":"core","path":"Old Norse hús → Swedish","variants":[],"reviewed":false},{"word":"husarrest","lang":"sv","tier":"core","path":"Old Norse hús → Swedish","variants":[],"reviewed":false}],"notRelated":[{"word":"hut","lang":"en","why":"may share a far older root with house, but the link lies beyond the written record","reviewed":false},{"word":"hood","lang":"en","why":"may share a far older root with house, but the link lies beyond the written record","reviewed":false},{"word":"hide","lang":"en","sense":"conceal","why":"may share a far older root with house, but the link lies beyond the written record","reviewed":false},{"word":"hose","lang":"en","why":"a separate word","reviewed":false},{"word":"Hose","lang":"de","sense":"trousers","why":"a separate word","reviewed":false}],"notes":["Draft: Germanic cousins puzzle. Written forms: Old English *hūs*, Old Norse *hús*, Old High German *hūs*, and Gothic *-hūs* (in *gudhūs*, \"temple\"). The reveal may show the reconstructed Proto-Germanic ancestor \\*hūsą as extra context. Languages: English, German, Dutch, Swedish. About 85 entries.","Draft: This is a cousins puzzle. *House, Haus, huis* and *hus* share an ancestor; none comes from another. *Husband* and *hustings* are different: they come directly from Old Norse *húsbóndi* (\"master of the house\") and *húsþing* (\"house assembly\"). *Hussy* is a shortening of *housewife*.","Draft: Germanic languages build compounds freely, so the family is unlimited. The key lists only compounds found in a standard learner's dictionary.","Draft: Distant cousins left out: *hut*, *hide* (conceal) and *hood* may share a far older root with *house*, but the link lies beyond the written evidence. The reveal can mention it. *Hose* and German *Hose* (\"trousers\") are a separate word.","Draft: Danish and Norwegian *hus* are also cousins, but are not in this puzzle's language set.","Draft: The German, Dutch and Swedish entries need a check by a fluent reader before use."]},"mittere":{"id":"mittere","status":"draft","root":{"form":"mittere","transliteration":"mittere","family":"latin","meaning":"send","principalParts":["mittō","mittere","mīsī","missum"],"stems":["mitt-","miss-"]},"languages":["en","es","pt","fr"],"difficulty":"hard","tiers":{"core":{"label":"Core","scoring":"always"},"bonus":{"label":"Bonus","scoring":"bonus"}},"entries":[{"word":"admit","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"commit","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"committee","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"commission","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"permit","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"permission","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"submit","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"submission","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"transmit","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"transmission","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"remit","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"remittance","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"emit","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"emission","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"omit","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"omission","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"intermittent","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"intermission","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"promise","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"compromise","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"dismiss","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"mission","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"missionary","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"missile","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"missive","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"message","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"messenger","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"premise","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"surmise","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"demise","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"emissary","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"remiss","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"manumit","lang":"en","tier":"core","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"mess","lang":"en","tier":"bonus","gloss":"a meal","path":"Latin missus, “a course sent to the table” (from mittere) → English","variants":[],"reviewed":false},{"word":"Mass","lang":"en","tier":"bonus","path":"Latin mittere → English","variants":[],"reviewed":false},{"word":"meter","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"prometer","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"promesa","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"cometer","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"someter","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"sumisión","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"permitir","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"permiso","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"admitir","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"admisión","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"emitir","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"emisión","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"omitir","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"omisión","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"transmitir","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"transmisión","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"remitir","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"remesa","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"misión","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"misil","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"misa","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"mensaje","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"mensajero","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"compromiso","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"comisión","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"premisa","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"intermitente","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"emisario","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"dimitir","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"dimisión","lang":"es","tier":"core","path":"Latin mittere → Spanish","variants":[],"reviewed":false},{"word":"meter","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"prometer","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"promessa","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"cometer","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"submeter","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"submissão","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"permitir","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"permissão","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"admitir","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"admissão","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"emitir","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"emissão","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"omitir","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"omissão","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"transmitir","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"transmissão","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"remeter","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"remessa","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"missão","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"míssil","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"missa","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"mensagem","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"mensageiro","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"compromisso","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"comissão","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"premissa","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"intermitente","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"emissário","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"demitir","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"demissão","lang":"pt","tier":"core","path":"Latin mittere → Portuguese","variants":[],"reviewed":false},{"word":"mettre","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"promettre","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"promesse","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"commettre","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"soumettre","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"soumission","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"permettre","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"permission","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"admettre","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"admission","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"émettre","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"émission","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"omettre","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"omission","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"transmettre","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"transmission","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"remettre","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"remise","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"mission","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"missile","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"messe","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"message","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"messager","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"compromis","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"commission","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"prémisse","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"intermittent","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"émissaire","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"démettre","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"démission","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"mets","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false},{"word":"mise","lang":"fr","tier":"core","path":"Latin mittere → French","variants":[],"reviewed":false}],"notRelated":[],"notes":["Draft: Stems: *mitt-* and *miss-*. Languages: English, Spanish, Portuguese, French.","Draft: English *mess* (from *missus*, a course sent to the table) and *Mass* are real but indirect, so they sit in the bonus tier.","Draft: Spanish and Portuguese *meter* (\"to put in\") has drifted far in meaning but is a genuine descendant."]}}};
+mountGame(document.getElementById('app'), { data: ROOTS_DATA });
+})();
+</script>
+</body>
+</html>
