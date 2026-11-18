@@ -54,6 +54,14 @@
       "word": "graph",
       "lang": "en",
       "tier": "core",
+      "definition": "a diagram that shows data",
+      "morphemes": [
+        {
+          "part": "graph",
+          "meaning": "write, draw",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -62,6 +70,18 @@
       "word": "graphic",
       "lang": "en",
       "tier": "core",
+      "definition": "relating to drawing or images; vivid and detailed",
+      "morphemes": [
+        {
+          "part": "graph",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ic",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -70,6 +90,18 @@
       "word": "graphics",
       "lang": "en",
       "tier": "core",
+      "definition": "images made for print or screens",
+      "morphemes": [
+        {
+          "part": "graph",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ics",
+          "meaning": "the art of"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -78,6 +110,18 @@
       "word": "graphite",
       "lang": "en",
       "tier": "core",
+      "definition": "the soft black carbon in pencils",
+      "morphemes": [
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ite",
+          "meaning": "a mineral"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -86,6 +130,19 @@
       "word": "paragraph",
       "lang": "en",
       "tier": "core",
+      "definition": "a block of text on one topic",
+      "source": "Greek paragraphos, a mark written beside the text",
+      "morphemes": [
+        {
+          "part": "para-",
+          "meaning": "beside"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -94,6 +151,18 @@
       "word": "autograph",
       "lang": "en",
       "tier": "core",
+      "definition": "a famous person’s signature",
+      "morphemes": [
+        {
+          "part": "auto-",
+          "meaning": "self"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -102,6 +171,22 @@
       "word": "biography",
       "lang": "en",
       "tier": "core",
+      "definition": "the story of a person’s life",
+      "morphemes": [
+        {
+          "part": "bio-",
+          "meaning": "life"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-y",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -110,6 +195,26 @@
       "word": "autobiography",
       "lang": "en",
       "tier": "core",
+      "definition": "the story of a person’s life, written by that person",
+      "morphemes": [
+        {
+          "part": "auto-",
+          "meaning": "self"
+        },
+        {
+          "part": "bio-",
+          "meaning": "life"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-y",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -118,6 +223,22 @@
       "word": "geography",
       "lang": "en",
       "tier": "core",
+      "definition": "the study of the earth’s lands and places",
+      "morphemes": [
+        {
+          "part": "geo-",
+          "meaning": "earth"
+        },
+        {
+          "part": "graph",
+          "meaning": "write, describe",
+          "root": true
+        },
+        {
+          "part": "-y",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -126,6 +247,18 @@
       "word": "photograph",
       "lang": "en",
       "tier": "core",
+      "definition": "a picture made with a camera",
+      "morphemes": [
+        {
+          "part": "photo-",
+          "meaning": "light"
+        },
+        {
+          "part": "graph",
+          "meaning": "write, draw",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -134,6 +267,22 @@
       "word": "photography",
       "lang": "en",
       "tier": "core",
+      "definition": "the art of taking photographs",
+      "morphemes": [
+        {
+          "part": "photo-",
+          "meaning": "light"
+        },
+        {
+          "part": "graph",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-y",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -142,6 +291,18 @@
       "word": "telegraph",
       "lang": "en",
       "tier": "core",
+      "definition": "a system for sending messages over wires",
+      "morphemes": [
+        {
+          "part": "tele-",
+          "meaning": "far"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -150,6 +311,18 @@
       "word": "telegram",
       "lang": "en",
       "tier": "core",
+      "definition": "a message sent by telegraph",
+      "morphemes": [
+        {
+          "part": "tele-",
+          "meaning": "far"
+        },
+        {
+          "part": "gram",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
       "variants": [],
       "reviewed": false
@@ -158,6 +331,19 @@
       "word": "grammar",
       "lang": "en",
       "tier": "core",
+      "definition": "the rules of a language",
+      "source": "Greek grammatikē, “the art of letters”",
+      "morphemes": [
+        {
+          "part": "gramm",
+          "meaning": "letter",
+          "root": true
+        },
+        {
+          "part": "-ar",
+          "meaning": "the art of"
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
       "variants": [],
       "reviewed": false
@@ -166,6 +352,18 @@
       "word": "grammatical",
       "lang": "en",
       "tier": "core",
+      "definition": "following the rules of grammar",
+      "morphemes": [
+        {
+          "part": "grammat",
+          "meaning": "letter",
+          "root": true
+        },
+        {
+          "part": "-ical",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
       "variants": [],
       "reviewed": false
@@ -174,6 +372,19 @@
       "word": "program",
       "lang": "en",
       "tier": "core",
+      "definition": "a plan of events; a set of computer instructions",
+      "source": "Greek programma, “a public notice”",
+      "morphemes": [
+        {
+          "part": "pro-",
+          "meaning": "before"
+        },
+        {
+          "part": "gram",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → English",
       "variants": [],
       "reviewed": false
@@ -182,6 +393,22 @@
       "word": "programmer",
       "lang": "en",
       "tier": "core",
+      "definition": "a person who writes computer programs",
+      "morphemes": [
+        {
+          "part": "pro-",
+          "meaning": "before"
+        },
+        {
+          "part": "gram",
+          "meaning": "something written",
+          "root": true
+        },
+        {
+          "part": "-er",
+          "meaning": "a person who"
+        }
+      ],
       "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → English",
       "variants": [],
       "reviewed": false
@@ -190,6 +417,18 @@
       "word": "diagram",
       "lang": "en",
       "tier": "core",
+      "definition": "a simple drawing that explains something",
+      "morphemes": [
+        {
+          "part": "dia-",
+          "meaning": "through, across"
+        },
+        {
+          "part": "gram",
+          "meaning": "something drawn",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
       "variants": [],
       "reviewed": false
@@ -198,6 +437,18 @@
       "word": "epigram",
       "lang": "en",
       "tier": "core",
+      "definition": "a short, witty saying",
+      "morphemes": [
+        {
+          "part": "epi-",
+          "meaning": "upon"
+        },
+        {
+          "part": "gram",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
       "variants": [],
       "reviewed": false
@@ -206,6 +457,18 @@
       "word": "anagram",
       "lang": "en",
       "tier": "core",
+      "definition": "a word made by rearranging the letters of another",
+      "morphemes": [
+        {
+          "part": "ana-",
+          "meaning": "back, again"
+        },
+        {
+          "part": "gram",
+          "meaning": "letter",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
       "variants": [],
       "reviewed": false
@@ -214,6 +477,18 @@
       "word": "monogram",
       "lang": "en",
       "tier": "core",
+      "definition": "a design made from a person’s initials",
+      "morphemes": [
+        {
+          "part": "mono-",
+          "meaning": "one"
+        },
+        {
+          "part": "gram",
+          "meaning": "letter",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
       "variants": [],
       "reviewed": false
@@ -222,6 +497,18 @@
       "word": "hologram",
       "lang": "en",
       "tier": "core",
+      "definition": "a three-dimensional image made with lasers",
+      "morphemes": [
+        {
+          "part": "holo-",
+          "meaning": "whole"
+        },
+        {
+          "part": "gram",
+          "meaning": "something drawn",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
       "variants": [],
       "reviewed": false
@@ -230,6 +517,18 @@
       "word": "kilogram",
       "lang": "en",
       "tier": "core",
+      "definition": "a thousand grams",
+      "morphemes": [
+        {
+          "part": "kilo-",
+          "meaning": "thousand"
+        },
+        {
+          "part": "gram",
+          "meaning": "a small weight",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → English",
       "variants": [],
       "reviewed": false
@@ -238,6 +537,15 @@
       "word": "gram",
       "lang": "en",
       "tier": "core",
+      "definition": "a small unit of weight",
+      "source": "Late Latin gramma, “a small weight”",
+      "morphemes": [
+        {
+          "part": "gram",
+          "meaning": "something written; a small weight",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → English",
       "variants": [],
       "reviewed": false
@@ -246,6 +554,22 @@
       "word": "calligraphy",
       "lang": "en",
       "tier": "core",
+      "definition": "the art of beautiful handwriting",
+      "morphemes": [
+        {
+          "part": "calli-",
+          "meaning": "beautiful"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-y",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -254,6 +578,22 @@
       "word": "choreography",
       "lang": "en",
       "tier": "core",
+      "definition": "the art of planning dance steps",
+      "morphemes": [
+        {
+          "part": "choreo-",
+          "meaning": "dance"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-y",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -262,6 +602,22 @@
       "word": "bibliography",
       "lang": "en",
       "tier": "core",
+      "definition": "a list of books or sources",
+      "morphemes": [
+        {
+          "part": "biblio-",
+          "meaning": "book"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-y",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -270,6 +626,18 @@
       "word": "grapheme",
       "lang": "en",
       "tier": "technical",
+      "definition": "the smallest unit of a writing system, such as a letter",
+      "morphemes": [
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-eme",
+          "meaning": "a unit"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -278,6 +646,18 @@
       "word": "graphology",
       "lang": "en",
       "tier": "technical",
+      "definition": "the study of handwriting",
+      "morphemes": [
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ology",
+          "meaning": "the study of"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -286,6 +666,18 @@
       "word": "grammarian",
       "lang": "en",
       "tier": "technical",
+      "definition": "an expert in grammar",
+      "morphemes": [
+        {
+          "part": "grammar",
+          "meaning": "the rules of a language",
+          "root": true
+        },
+        {
+          "part": "-ian",
+          "meaning": "a person who"
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
       "variants": [],
       "reviewed": false
@@ -294,6 +686,18 @@
       "word": "cryptogram",
       "lang": "en",
       "tier": "technical",
+      "definition": "a message in code",
+      "morphemes": [
+        {
+          "part": "crypto-",
+          "meaning": "hidden"
+        },
+        {
+          "part": "gram",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
       "variants": [],
       "reviewed": false
@@ -302,6 +706,18 @@
       "word": "seismograph",
       "lang": "en",
       "tier": "technical",
+      "definition": "an instrument that records earthquakes",
+      "morphemes": [
+        {
+          "part": "seismo-",
+          "meaning": "earthquake"
+        },
+        {
+          "part": "graph",
+          "meaning": "write, record",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -310,6 +726,22 @@
       "word": "stenography",
       "lang": "en",
       "tier": "technical",
+      "definition": "writing in shorthand",
+      "morphemes": [
+        {
+          "part": "steno-",
+          "meaning": "narrow"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-y",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -318,6 +750,22 @@
       "word": "typography",
       "lang": "en",
       "tier": "technical",
+      "definition": "the style and arrangement of printed letters",
+      "morphemes": [
+        {
+          "part": "typo-",
+          "meaning": "type, mark"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-y",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -326,6 +774,18 @@
       "word": "lithograph",
       "lang": "en",
       "tier": "technical",
+      "definition": "a print made from a flat stone or metal plate",
+      "morphemes": [
+        {
+          "part": "litho-",
+          "meaning": "stone"
+        },
+        {
+          "part": "graph",
+          "meaning": "write, draw",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -334,6 +794,22 @@
       "word": "ethnography",
       "lang": "en",
       "tier": "technical",
+      "definition": "the study of peoples and their customs",
+      "morphemes": [
+        {
+          "part": "ethno-",
+          "meaning": "people, nation"
+        },
+        {
+          "part": "graph",
+          "meaning": "write, describe",
+          "root": true
+        },
+        {
+          "part": "-y",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -342,6 +818,22 @@
       "word": "demography",
       "lang": "en",
       "tier": "technical",
+      "definition": "the study of populations",
+      "morphemes": [
+        {
+          "part": "demo-",
+          "meaning": "people"
+        },
+        {
+          "part": "graph",
+          "meaning": "write, describe",
+          "root": true
+        },
+        {
+          "part": "-y",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -350,6 +842,22 @@
       "word": "cartography",
       "lang": "en",
       "tier": "technical",
+      "definition": "the making of maps",
+      "morphemes": [
+        {
+          "part": "carto-",
+          "meaning": "map (from Latin)"
+        },
+        {
+          "part": "graph",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-y",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Latin carta, “map”, + Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -358,6 +866,18 @@
       "word": "pictogram",
       "lang": "en",
       "tier": "technical",
+      "definition": "a picture used as a symbol",
+      "morphemes": [
+        {
+          "part": "picto-",
+          "meaning": "painted (from Latin)"
+        },
+        {
+          "part": "gram",
+          "meaning": "something drawn",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
       "variants": [],
       "reviewed": false
@@ -366,6 +886,18 @@
       "word": "ideogram",
       "lang": "en",
       "tier": "technical",
+      "definition": "a symbol that stands for an idea",
+      "morphemes": [
+        {
+          "part": "ideo-",
+          "meaning": "idea"
+        },
+        {
+          "part": "gram",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
       "variants": [],
       "reviewed": false
@@ -374,6 +906,18 @@
       "word": "gramophone",
       "lang": "en",
       "tier": "technical",
+      "definition": "an old record player",
+      "morphemes": [
+        {
+          "part": "gramo",
+          "meaning": "something written",
+          "root": true
+        },
+        {
+          "part": "-phone",
+          "meaning": "sound"
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
       "variants": [],
       "reviewed": false
@@ -382,6 +926,18 @@
       "word": "epigraph",
       "lang": "en",
       "tier": "technical",
+      "definition": "a quotation at the start of a book or chapter",
+      "morphemes": [
+        {
+          "part": "epi-",
+          "meaning": "upon"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -390,6 +946,22 @@
       "word": "orthography",
       "lang": "en",
       "tier": "technical",
+      "definition": "correct spelling; a spelling system",
+      "morphemes": [
+        {
+          "part": "ortho-",
+          "meaning": "correct"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-y",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -398,6 +970,19 @@
       "word": "glamour",
       "lang": "en",
       "tier": "bonus",
+      "definition": "exciting, attractive charm",
+      "source": "Scots glamour, an altered form of grammar",
+      "morphemes": [
+        {
+          "part": "glam",
+          "meaning": "grammar, learning (once meant magic spells)",
+          "root": true
+        },
+        {
+          "part": "-our",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράμμα (gramma) → English grammar → Scottish glamour → English",
       "variants": [],
       "reviewed": false
@@ -406,6 +991,19 @@
       "word": "graffiti",
       "lang": "en",
       "tier": "bonus",
+      "definition": "writing or drawings scratched or painted on walls",
+      "source": "Italian graffiti, “scratchings”",
+      "morphemes": [
+        {
+          "part": "graff",
+          "meaning": "scratch, write",
+          "root": true
+        },
+        {
+          "part": "-iti",
+          "meaning": "more than one"
+        }
+      ],
       "path": "Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -414,6 +1012,15 @@
       "word": "graft",
       "lang": "en",
       "tier": "bonus",
+      "definition": "a shoot joined to another plant; to join one living thing to another",
+      "source": "Old French grafe, “stylus”, for the shoot’s shape",
+      "morphemes": [
+        {
+          "part": "graft",
+          "meaning": "stylus, writing tool",
+          "root": true
+        }
+      ],
       "path": "Latin graphium, “stylus”, from Greek γράφω (graphō) → English",
       "variants": [],
       "reviewed": false
@@ -422,6 +1029,18 @@
       "word": "gráfico",
       "lang": "es",
       "tier": "core",
+      "definition": "graphic; a chart",
+      "morphemes": [
+        {
+          "part": "graf",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ico",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -430,6 +1049,18 @@
       "word": "gráfica",
       "lang": "es",
       "tier": "core",
+      "definition": "a graph",
+      "morphemes": [
+        {
+          "part": "graf",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ica",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -438,6 +1069,18 @@
       "word": "grafito",
       "lang": "es",
       "tier": "core",
+      "definition": "the soft black carbon in pencils",
+      "morphemes": [
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ito",
+          "meaning": "a mineral"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -446,6 +1089,19 @@
       "word": "párrafo",
       "lang": "es",
       "tier": "core",
+      "definition": "a paragraph",
+      "source": "Greek paragraphos",
+      "morphemes": [
+        {
+          "part": "para-",
+          "meaning": "beside"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -454,6 +1110,18 @@
       "word": "autógrafo",
       "lang": "es",
       "tier": "core",
+      "definition": "an autograph",
+      "morphemes": [
+        {
+          "part": "auto-",
+          "meaning": "self"
+        },
+        {
+          "part": "grafo",
+          "meaning": "write",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -462,6 +1130,22 @@
       "word": "biografía",
       "lang": "es",
       "tier": "core",
+      "definition": "a biography",
+      "morphemes": [
+        {
+          "part": "bio-",
+          "meaning": "life"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ía",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -470,6 +1154,26 @@
       "word": "autobiografía",
       "lang": "es",
       "tier": "core",
+      "definition": "an autobiography",
+      "morphemes": [
+        {
+          "part": "auto-",
+          "meaning": "self"
+        },
+        {
+          "part": "bio-",
+          "meaning": "life"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ía",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -478,6 +1182,22 @@
       "word": "geografía",
       "lang": "es",
       "tier": "core",
+      "definition": "geography",
+      "morphemes": [
+        {
+          "part": "geo-",
+          "meaning": "earth"
+        },
+        {
+          "part": "graf",
+          "meaning": "write, describe",
+          "root": true
+        },
+        {
+          "part": "-ía",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -486,6 +1206,22 @@
       "word": "fotografía",
       "lang": "es",
       "tier": "core",
+      "definition": "a photograph; photography",
+      "morphemes": [
+        {
+          "part": "foto-",
+          "meaning": "light"
+        },
+        {
+          "part": "graf",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ía",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -494,6 +1230,22 @@
       "word": "fotografiar",
       "lang": "es",
       "tier": "core",
+      "definition": "to photograph",
+      "morphemes": [
+        {
+          "part": "foto-",
+          "meaning": "light"
+        },
+        {
+          "part": "graf",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-iar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -502,6 +1254,18 @@
       "word": "telégrafo",
       "lang": "es",
       "tier": "core",
+      "definition": "a telegraph",
+      "morphemes": [
+        {
+          "part": "tele-",
+          "meaning": "far"
+        },
+        {
+          "part": "grafo",
+          "meaning": "write",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -510,6 +1274,18 @@
       "word": "telegrama",
       "lang": "es",
       "tier": "core",
+      "definition": "a telegram",
+      "morphemes": [
+        {
+          "part": "tele-",
+          "meaning": "far"
+        },
+        {
+          "part": "grama",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
       "variants": [],
       "reviewed": false
@@ -518,6 +1294,18 @@
       "word": "gramática",
       "lang": "es",
       "tier": "core",
+      "definition": "grammar",
+      "morphemes": [
+        {
+          "part": "gramát",
+          "meaning": "letter",
+          "root": true
+        },
+        {
+          "part": "-ica",
+          "meaning": "the art of"
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
       "variants": [],
       "reviewed": false
@@ -526,6 +1314,18 @@
       "word": "gramatical",
       "lang": "es",
       "tier": "core",
+      "definition": "grammatical",
+      "morphemes": [
+        {
+          "part": "gramat",
+          "meaning": "letter",
+          "root": true
+        },
+        {
+          "part": "-ical",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
       "variants": [],
       "reviewed": false
@@ -534,6 +1334,18 @@
       "word": "programa",
       "lang": "es",
       "tier": "core",
+      "definition": "a program; a TV or radio show",
+      "morphemes": [
+        {
+          "part": "pro-",
+          "meaning": "before"
+        },
+        {
+          "part": "grama",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → Spanish",
       "variants": [],
       "reviewed": false
@@ -542,6 +1354,22 @@
       "word": "programar",
       "lang": "es",
       "tier": "core",
+      "definition": "to program; to schedule",
+      "morphemes": [
+        {
+          "part": "pro-",
+          "meaning": "before"
+        },
+        {
+          "part": "gram",
+          "meaning": "something written",
+          "root": true
+        },
+        {
+          "part": "-ar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → Spanish",
       "variants": [],
       "reviewed": false
@@ -550,6 +1378,22 @@
       "word": "programador",
       "lang": "es",
       "tier": "core",
+      "definition": "a programmer",
+      "morphemes": [
+        {
+          "part": "pro-",
+          "meaning": "before"
+        },
+        {
+          "part": "gram",
+          "meaning": "something written",
+          "root": true
+        },
+        {
+          "part": "-ador",
+          "meaning": "a person who"
+        }
+      ],
       "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → Spanish",
       "variants": [],
       "reviewed": false
@@ -558,6 +1402,18 @@
       "word": "diagrama",
       "lang": "es",
       "tier": "core",
+      "definition": "a diagram",
+      "morphemes": [
+        {
+          "part": "dia-",
+          "meaning": "through, across"
+        },
+        {
+          "part": "grama",
+          "meaning": "something drawn",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
       "variants": [],
       "reviewed": false
@@ -566,6 +1422,18 @@
       "word": "epigrama",
       "lang": "es",
       "tier": "core",
+      "definition": "an epigram",
+      "morphemes": [
+        {
+          "part": "epi-",
+          "meaning": "upon"
+        },
+        {
+          "part": "grama",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
       "variants": [],
       "reviewed": false
@@ -574,6 +1442,18 @@
       "word": "anagrama",
       "lang": "es",
       "tier": "core",
+      "definition": "an anagram",
+      "morphemes": [
+        {
+          "part": "ana-",
+          "meaning": "back, again"
+        },
+        {
+          "part": "grama",
+          "meaning": "letter",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
       "variants": [],
       "reviewed": false
@@ -582,6 +1462,18 @@
       "word": "monograma",
       "lang": "es",
       "tier": "core",
+      "definition": "a monogram",
+      "morphemes": [
+        {
+          "part": "mono-",
+          "meaning": "one"
+        },
+        {
+          "part": "grama",
+          "meaning": "letter",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
       "variants": [],
       "reviewed": false
@@ -590,6 +1482,18 @@
       "word": "holograma",
       "lang": "es",
       "tier": "core",
+      "definition": "a hologram",
+      "morphemes": [
+        {
+          "part": "holo-",
+          "meaning": "whole"
+        },
+        {
+          "part": "grama",
+          "meaning": "something drawn",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
       "variants": [],
       "reviewed": false
@@ -598,6 +1502,18 @@
       "word": "kilogramo",
       "lang": "es",
       "tier": "core",
+      "definition": "a kilogram",
+      "morphemes": [
+        {
+          "part": "kilo-",
+          "meaning": "thousand"
+        },
+        {
+          "part": "gramo",
+          "meaning": "a small weight",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → Spanish",
       "variants": [],
       "reviewed": false
@@ -606,6 +1522,14 @@
       "word": "gramo",
       "lang": "es",
       "tier": "core",
+      "definition": "a gram",
+      "morphemes": [
+        {
+          "part": "gramo",
+          "meaning": "a small weight",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → Spanish",
       "variants": [],
       "reviewed": false
@@ -614,6 +1538,22 @@
       "word": "caligrafía",
       "lang": "es",
       "tier": "core",
+      "definition": "calligraphy",
+      "morphemes": [
+        {
+          "part": "cali-",
+          "meaning": "beautiful"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ía",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -622,6 +1562,22 @@
       "word": "coreografía",
       "lang": "es",
       "tier": "core",
+      "definition": "choreography",
+      "morphemes": [
+        {
+          "part": "coreo-",
+          "meaning": "dance"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ía",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -630,6 +1586,22 @@
       "word": "bibliografía",
       "lang": "es",
       "tier": "core",
+      "definition": "a bibliography",
+      "morphemes": [
+        {
+          "part": "biblio-",
+          "meaning": "book"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ía",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -638,6 +1610,18 @@
       "word": "grafía",
       "lang": "es",
       "tier": "technical",
+      "definition": "the way a sound or word is written",
+      "morphemes": [
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ía",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -646,6 +1630,18 @@
       "word": "grafología",
       "lang": "es",
       "tier": "technical",
+      "definition": "graphology",
+      "morphemes": [
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ología",
+          "meaning": "the study of"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -654,6 +1650,18 @@
       "word": "criptograma",
       "lang": "es",
       "tier": "technical",
+      "definition": "a cryptogram",
+      "morphemes": [
+        {
+          "part": "cripto-",
+          "meaning": "hidden"
+        },
+        {
+          "part": "grama",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
       "variants": [],
       "reviewed": false
@@ -662,6 +1670,18 @@
       "word": "sismógrafo",
       "lang": "es",
       "tier": "technical",
+      "definition": "a seismograph",
+      "morphemes": [
+        {
+          "part": "sismo-",
+          "meaning": "earthquake"
+        },
+        {
+          "part": "grafo",
+          "meaning": "write, record",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -670,6 +1690,22 @@
       "word": "taquigrafía",
       "lang": "es",
       "tier": "technical",
+      "definition": "shorthand",
+      "morphemes": [
+        {
+          "part": "taqui-",
+          "meaning": "fast"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ía",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -678,6 +1714,22 @@
       "word": "tipografía",
       "lang": "es",
       "tier": "technical",
+      "definition": "typography",
+      "morphemes": [
+        {
+          "part": "tipo-",
+          "meaning": "type, mark"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ía",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -686,6 +1738,22 @@
       "word": "litografía",
       "lang": "es",
       "tier": "technical",
+      "definition": "a lithograph; lithography",
+      "morphemes": [
+        {
+          "part": "lito-",
+          "meaning": "stone"
+        },
+        {
+          "part": "graf",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ía",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -694,6 +1762,22 @@
       "word": "etnografía",
       "lang": "es",
       "tier": "technical",
+      "definition": "ethnography",
+      "morphemes": [
+        {
+          "part": "etno-",
+          "meaning": "people, nation"
+        },
+        {
+          "part": "graf",
+          "meaning": "write, describe",
+          "root": true
+        },
+        {
+          "part": "-ía",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -702,6 +1786,22 @@
       "word": "demografía",
       "lang": "es",
       "tier": "technical",
+      "definition": "demography",
+      "morphemes": [
+        {
+          "part": "demo-",
+          "meaning": "people"
+        },
+        {
+          "part": "graf",
+          "meaning": "write, describe",
+          "root": true
+        },
+        {
+          "part": "-ía",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -710,6 +1810,22 @@
       "word": "cartografía",
       "lang": "es",
       "tier": "technical",
+      "definition": "cartography",
+      "morphemes": [
+        {
+          "part": "carto-",
+          "meaning": "map"
+        },
+        {
+          "part": "graf",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ía",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Latin carta, “map”, + Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -718,6 +1834,18 @@
       "word": "pictograma",
       "lang": "es",
       "tier": "technical",
+      "definition": "a pictogram",
+      "morphemes": [
+        {
+          "part": "picto-",
+          "meaning": "painted"
+        },
+        {
+          "part": "grama",
+          "meaning": "something drawn",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
       "variants": [],
       "reviewed": false
@@ -726,6 +1854,18 @@
       "word": "ideograma",
       "lang": "es",
       "tier": "technical",
+      "definition": "an ideogram",
+      "morphemes": [
+        {
+          "part": "ideo-",
+          "meaning": "idea"
+        },
+        {
+          "part": "grama",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
       "variants": [],
       "reviewed": false
@@ -734,6 +1874,18 @@
       "word": "gramófono",
       "lang": "es",
       "tier": "technical",
+      "definition": "a gramophone",
+      "morphemes": [
+        {
+          "part": "gramo",
+          "meaning": "something written",
+          "root": true
+        },
+        {
+          "part": "-fono",
+          "meaning": "sound"
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
       "variants": [],
       "reviewed": false
@@ -742,6 +1894,18 @@
       "word": "epígrafe",
       "lang": "es",
       "tier": "technical",
+      "definition": "an epigraph; a heading",
+      "morphemes": [
+        {
+          "part": "epi-",
+          "meaning": "upon"
+        },
+        {
+          "part": "grafe",
+          "meaning": "write",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -750,6 +1914,22 @@
       "word": "ortografía",
       "lang": "es",
       "tier": "technical",
+      "definition": "spelling",
+      "morphemes": [
+        {
+          "part": "orto-",
+          "meaning": "correct"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ía",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -758,6 +1938,22 @@
       "word": "telegrafiar",
       "lang": "es",
       "tier": "technical",
+      "definition": "to send a telegram",
+      "morphemes": [
+        {
+          "part": "tele-",
+          "meaning": "far"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-iar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -766,6 +1962,19 @@
       "word": "grafiti",
       "lang": "es",
       "tier": "bonus",
+      "definition": "writing or drawings scratched or painted on walls",
+      "source": "Italian graffiti",
+      "morphemes": [
+        {
+          "part": "graf",
+          "meaning": "scratch, write",
+          "root": true
+        },
+        {
+          "part": "-iti",
+          "meaning": "more than one"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Spanish",
       "variants": [],
       "reviewed": false
@@ -774,6 +1983,18 @@
       "word": "gráfico",
       "lang": "pt",
       "tier": "core",
+      "definition": "graphic; a chart",
+      "morphemes": [
+        {
+          "part": "graf",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ico",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -782,6 +2003,18 @@
       "word": "gráfica",
       "lang": "pt",
       "tier": "core",
+      "definition": "a printing shop; a graph",
+      "morphemes": [
+        {
+          "part": "graf",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ica",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -790,6 +2023,18 @@
       "word": "grafite",
       "lang": "pt",
       "tier": "core",
+      "definition": "graphite; also graffiti",
+      "morphemes": [
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ite",
+          "meaning": "a mineral"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -798,6 +2043,19 @@
       "word": "parágrafo",
       "lang": "pt",
       "tier": "core",
+      "definition": "a paragraph",
+      "source": "Greek paragraphos",
+      "morphemes": [
+        {
+          "part": "para-",
+          "meaning": "beside"
+        },
+        {
+          "part": "grafo",
+          "meaning": "write",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -806,6 +2064,18 @@
       "word": "autógrafo",
       "lang": "pt",
       "tier": "core",
+      "definition": "an autograph",
+      "morphemes": [
+        {
+          "part": "auto-",
+          "meaning": "self"
+        },
+        {
+          "part": "grafo",
+          "meaning": "write",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -814,6 +2084,22 @@
       "word": "biografia",
       "lang": "pt",
       "tier": "core",
+      "definition": "a biography",
+      "morphemes": [
+        {
+          "part": "bio-",
+          "meaning": "life"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ia",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -822,6 +2108,26 @@
       "word": "autobiografia",
       "lang": "pt",
       "tier": "core",
+      "definition": "an autobiography",
+      "morphemes": [
+        {
+          "part": "auto-",
+          "meaning": "self"
+        },
+        {
+          "part": "bio-",
+          "meaning": "life"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ia",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -830,6 +2136,22 @@
       "word": "geografia",
       "lang": "pt",
       "tier": "core",
+      "definition": "geography",
+      "morphemes": [
+        {
+          "part": "geo-",
+          "meaning": "earth"
+        },
+        {
+          "part": "graf",
+          "meaning": "write, describe",
+          "root": true
+        },
+        {
+          "part": "-ia",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -838,6 +2160,22 @@
       "word": "fotografia",
       "lang": "pt",
       "tier": "core",
+      "definition": "a photograph; photography",
+      "morphemes": [
+        {
+          "part": "foto-",
+          "meaning": "light"
+        },
+        {
+          "part": "graf",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ia",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -846,6 +2184,22 @@
       "word": "fotografar",
       "lang": "pt",
       "tier": "core",
+      "definition": "to photograph",
+      "morphemes": [
+        {
+          "part": "foto-",
+          "meaning": "light"
+        },
+        {
+          "part": "graf",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -854,6 +2208,18 @@
       "word": "telégrafo",
       "lang": "pt",
       "tier": "core",
+      "definition": "a telegraph",
+      "morphemes": [
+        {
+          "part": "tele-",
+          "meaning": "far"
+        },
+        {
+          "part": "grafo",
+          "meaning": "write",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -862,6 +2228,18 @@
       "word": "telegrama",
       "lang": "pt",
       "tier": "core",
+      "definition": "a telegram",
+      "morphemes": [
+        {
+          "part": "tele-",
+          "meaning": "far"
+        },
+        {
+          "part": "grama",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
       "variants": [],
       "reviewed": false
@@ -870,6 +2248,18 @@
       "word": "gramática",
       "lang": "pt",
       "tier": "core",
+      "definition": "grammar",
+      "morphemes": [
+        {
+          "part": "gramát",
+          "meaning": "letter",
+          "root": true
+        },
+        {
+          "part": "-ica",
+          "meaning": "the art of"
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
       "variants": [],
       "reviewed": false
@@ -878,6 +2268,18 @@
       "word": "gramatical",
       "lang": "pt",
       "tier": "core",
+      "definition": "grammatical",
+      "morphemes": [
+        {
+          "part": "gramat",
+          "meaning": "letter",
+          "root": true
+        },
+        {
+          "part": "-ical",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
       "variants": [],
       "reviewed": false
@@ -886,6 +2288,18 @@
       "word": "programa",
       "lang": "pt",
       "tier": "core",
+      "definition": "a program; a TV or radio show",
+      "morphemes": [
+        {
+          "part": "pro-",
+          "meaning": "before"
+        },
+        {
+          "part": "grama",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → Portuguese",
       "variants": [],
       "reviewed": false
@@ -894,6 +2308,22 @@
       "word": "programar",
       "lang": "pt",
       "tier": "core",
+      "definition": "to program; to schedule",
+      "morphemes": [
+        {
+          "part": "pro-",
+          "meaning": "before"
+        },
+        {
+          "part": "gram",
+          "meaning": "something written",
+          "root": true
+        },
+        {
+          "part": "-ar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → Portuguese",
       "variants": [],
       "reviewed": false
@@ -902,6 +2332,22 @@
       "word": "programador",
       "lang": "pt",
       "tier": "core",
+      "definition": "a programmer",
+      "morphemes": [
+        {
+          "part": "pro-",
+          "meaning": "before"
+        },
+        {
+          "part": "gram",
+          "meaning": "something written",
+          "root": true
+        },
+        {
+          "part": "-ador",
+          "meaning": "a person who"
+        }
+      ],
       "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → Portuguese",
       "variants": [],
       "reviewed": false
@@ -910,6 +2356,18 @@
       "word": "diagrama",
       "lang": "pt",
       "tier": "core",
+      "definition": "a diagram",
+      "morphemes": [
+        {
+          "part": "dia-",
+          "meaning": "through, across"
+        },
+        {
+          "part": "grama",
+          "meaning": "something drawn",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
       "variants": [],
       "reviewed": false
@@ -918,6 +2376,18 @@
       "word": "epigrama",
       "lang": "pt",
       "tier": "core",
+      "definition": "an epigram",
+      "morphemes": [
+        {
+          "part": "epi-",
+          "meaning": "upon"
+        },
+        {
+          "part": "grama",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
       "variants": [],
       "reviewed": false
@@ -926,6 +2396,18 @@
       "word": "anagrama",
       "lang": "pt",
       "tier": "core",
+      "definition": "an anagram",
+      "morphemes": [
+        {
+          "part": "ana-",
+          "meaning": "back, again"
+        },
+        {
+          "part": "grama",
+          "meaning": "letter",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
       "variants": [],
       "reviewed": false
@@ -934,6 +2416,18 @@
       "word": "monograma",
       "lang": "pt",
       "tier": "core",
+      "definition": "a monogram",
+      "morphemes": [
+        {
+          "part": "mono-",
+          "meaning": "one"
+        },
+        {
+          "part": "grama",
+          "meaning": "letter",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
       "variants": [],
       "reviewed": false
@@ -942,6 +2436,18 @@
       "word": "holograma",
       "lang": "pt",
       "tier": "core",
+      "definition": "a hologram",
+      "morphemes": [
+        {
+          "part": "holo-",
+          "meaning": "whole"
+        },
+        {
+          "part": "grama",
+          "meaning": "something drawn",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
       "variants": [],
       "reviewed": false
@@ -950,6 +2456,18 @@
       "word": "quilograma",
       "lang": "pt",
       "tier": "core",
+      "definition": "a kilogram",
+      "morphemes": [
+        {
+          "part": "quilo-",
+          "meaning": "thousand"
+        },
+        {
+          "part": "grama",
+          "meaning": "a small weight",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → Portuguese",
       "variants": [],
       "reviewed": false
@@ -958,6 +2476,14 @@
       "word": "grama",
       "lang": "pt",
       "tier": "core",
+      "definition": "a gram",
+      "morphemes": [
+        {
+          "part": "grama",
+          "meaning": "a small weight",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → Portuguese",
       "variants": [],
       "reviewed": false
@@ -966,6 +2492,22 @@
       "word": "caligrafia",
       "lang": "pt",
       "tier": "core",
+      "definition": "calligraphy; handwriting",
+      "morphemes": [
+        {
+          "part": "cali-",
+          "meaning": "beautiful"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ia",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -974,6 +2516,22 @@
       "word": "coreografia",
       "lang": "pt",
       "tier": "core",
+      "definition": "choreography",
+      "morphemes": [
+        {
+          "part": "coreo-",
+          "meaning": "dance"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ia",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -982,6 +2540,22 @@
       "word": "bibliografia",
       "lang": "pt",
       "tier": "core",
+      "definition": "a bibliography",
+      "morphemes": [
+        {
+          "part": "biblio-",
+          "meaning": "book"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ia",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -990,6 +2564,18 @@
       "word": "grafia",
       "lang": "pt",
       "tier": "technical",
+      "definition": "the way a sound or word is written",
+      "morphemes": [
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ia",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -998,6 +2584,18 @@
       "word": "grafologia",
       "lang": "pt",
       "tier": "technical",
+      "definition": "graphology",
+      "morphemes": [
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ologia",
+          "meaning": "the study of"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -1006,6 +2604,18 @@
       "word": "criptograma",
       "lang": "pt",
       "tier": "technical",
+      "definition": "a cryptogram",
+      "morphemes": [
+        {
+          "part": "cripto-",
+          "meaning": "hidden"
+        },
+        {
+          "part": "grama",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
       "variants": [],
       "reviewed": false
@@ -1014,6 +2624,18 @@
       "word": "sismógrafo",
       "lang": "pt",
       "tier": "technical",
+      "definition": "a seismograph",
+      "morphemes": [
+        {
+          "part": "sismo-",
+          "meaning": "earthquake"
+        },
+        {
+          "part": "grafo",
+          "meaning": "write, record",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -1022,6 +2644,22 @@
       "word": "taquigrafia",
       "lang": "pt",
       "tier": "technical",
+      "definition": "shorthand",
+      "morphemes": [
+        {
+          "part": "taqui-",
+          "meaning": "fast"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ia",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -1030,6 +2668,22 @@
       "word": "tipografia",
       "lang": "pt",
       "tier": "technical",
+      "definition": "typography; a print shop",
+      "morphemes": [
+        {
+          "part": "tipo-",
+          "meaning": "type, mark"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ia",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -1038,6 +2692,22 @@
       "word": "litografia",
       "lang": "pt",
       "tier": "technical",
+      "definition": "a lithograph; lithography",
+      "morphemes": [
+        {
+          "part": "lito-",
+          "meaning": "stone"
+        },
+        {
+          "part": "graf",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ia",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -1046,6 +2716,22 @@
       "word": "etnografia",
       "lang": "pt",
       "tier": "technical",
+      "definition": "ethnography",
+      "morphemes": [
+        {
+          "part": "etno-",
+          "meaning": "people, nation"
+        },
+        {
+          "part": "graf",
+          "meaning": "write, describe",
+          "root": true
+        },
+        {
+          "part": "-ia",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -1054,6 +2740,22 @@
       "word": "demografia",
       "lang": "pt",
       "tier": "technical",
+      "definition": "demography",
+      "morphemes": [
+        {
+          "part": "demo-",
+          "meaning": "people"
+        },
+        {
+          "part": "graf",
+          "meaning": "write, describe",
+          "root": true
+        },
+        {
+          "part": "-ia",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -1062,6 +2764,22 @@
       "word": "cartografia",
       "lang": "pt",
       "tier": "technical",
+      "definition": "cartography",
+      "morphemes": [
+        {
+          "part": "carto-",
+          "meaning": "map"
+        },
+        {
+          "part": "graf",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ia",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Latin carta, “map”, + Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -1070,6 +2788,18 @@
       "word": "pictograma",
       "lang": "pt",
       "tier": "technical",
+      "definition": "a pictogram",
+      "morphemes": [
+        {
+          "part": "picto-",
+          "meaning": "painted"
+        },
+        {
+          "part": "grama",
+          "meaning": "something drawn",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
       "variants": [],
       "reviewed": false
@@ -1078,6 +2808,18 @@
       "word": "ideograma",
       "lang": "pt",
       "tier": "technical",
+      "definition": "an ideogram",
+      "morphemes": [
+        {
+          "part": "ideo-",
+          "meaning": "idea"
+        },
+        {
+          "part": "grama",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
       "variants": [],
       "reviewed": false
@@ -1086,6 +2828,18 @@
       "word": "gramofone",
       "lang": "pt",
       "tier": "technical",
+      "definition": "a gramophone",
+      "morphemes": [
+        {
+          "part": "gramo",
+          "meaning": "something written",
+          "root": true
+        },
+        {
+          "part": "-fone",
+          "meaning": "sound"
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
       "variants": [],
       "reviewed": false
@@ -1094,6 +2848,18 @@
       "word": "epígrafe",
       "lang": "pt",
       "tier": "technical",
+      "definition": "an epigraph; a heading",
+      "morphemes": [
+        {
+          "part": "epi-",
+          "meaning": "upon"
+        },
+        {
+          "part": "grafe",
+          "meaning": "write",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -1102,6 +2868,22 @@
       "word": "ortografia",
       "lang": "pt",
       "tier": "technical",
+      "definition": "spelling",
+      "morphemes": [
+        {
+          "part": "orto-",
+          "meaning": "correct"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ia",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -1110,6 +2892,22 @@
       "word": "telegrafar",
       "lang": "pt",
       "tier": "technical",
+      "definition": "to send a telegram",
+      "morphemes": [
+        {
+          "part": "tele-",
+          "meaning": "far"
+        },
+        {
+          "part": "graf",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Greek γράφω (graphō) → Portuguese",
       "variants": [],
       "reviewed": false
@@ -1118,6 +2916,18 @@
       "word": "graphique",
       "lang": "fr",
       "tier": "core",
+      "definition": "graphic; a chart",
+      "morphemes": [
+        {
+          "part": "graph",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ique",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1126,6 +2936,18 @@
       "word": "graphite",
       "lang": "fr",
       "tier": "core",
+      "definition": "the soft black carbon in pencils",
+      "morphemes": [
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ite",
+          "meaning": "a mineral"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1134,6 +2956,19 @@
       "word": "paragraphe",
       "lang": "fr",
       "tier": "core",
+      "definition": "a paragraph",
+      "source": "Greek paragraphos",
+      "morphemes": [
+        {
+          "part": "para-",
+          "meaning": "beside"
+        },
+        {
+          "part": "graphe",
+          "meaning": "write",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1142,6 +2977,18 @@
       "word": "autographe",
       "lang": "fr",
       "tier": "core",
+      "definition": "an autograph",
+      "morphemes": [
+        {
+          "part": "auto-",
+          "meaning": "self"
+        },
+        {
+          "part": "graphe",
+          "meaning": "write",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1150,6 +2997,22 @@
       "word": "biographie",
       "lang": "fr",
       "tier": "core",
+      "definition": "a biography",
+      "morphemes": [
+        {
+          "part": "bio-",
+          "meaning": "life"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ie",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1158,6 +3021,26 @@
       "word": "autobiographie",
       "lang": "fr",
       "tier": "core",
+      "definition": "an autobiography",
+      "morphemes": [
+        {
+          "part": "auto-",
+          "meaning": "self"
+        },
+        {
+          "part": "bio-",
+          "meaning": "life"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ie",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1166,6 +3049,22 @@
       "word": "géographie",
       "lang": "fr",
       "tier": "core",
+      "definition": "geography",
+      "morphemes": [
+        {
+          "part": "géo-",
+          "meaning": "earth"
+        },
+        {
+          "part": "graph",
+          "meaning": "write, describe",
+          "root": true
+        },
+        {
+          "part": "-ie",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1174,6 +3073,22 @@
       "word": "photographie",
       "lang": "fr",
       "tier": "core",
+      "definition": "a photograph; photography",
+      "morphemes": [
+        {
+          "part": "photo-",
+          "meaning": "light"
+        },
+        {
+          "part": "graph",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ie",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1182,6 +3097,22 @@
       "word": "photographier",
       "lang": "fr",
       "tier": "core",
+      "definition": "to photograph",
+      "morphemes": [
+        {
+          "part": "photo-",
+          "meaning": "light"
+        },
+        {
+          "part": "graph",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ier",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1190,6 +3121,18 @@
       "word": "télégraphe",
       "lang": "fr",
       "tier": "core",
+      "definition": "a telegraph",
+      "morphemes": [
+        {
+          "part": "télé-",
+          "meaning": "far"
+        },
+        {
+          "part": "graphe",
+          "meaning": "write",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1198,6 +3141,18 @@
       "word": "télégramme",
       "lang": "fr",
       "tier": "core",
+      "definition": "a telegram",
+      "morphemes": [
+        {
+          "part": "télé-",
+          "meaning": "far"
+        },
+        {
+          "part": "gramme",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
       "variants": [],
       "reviewed": false
@@ -1206,6 +3161,19 @@
       "word": "grammaire",
       "lang": "fr",
       "tier": "core",
+      "definition": "grammar",
+      "source": "Latin grammatica",
+      "morphemes": [
+        {
+          "part": "gramm",
+          "meaning": "letter",
+          "root": true
+        },
+        {
+          "part": "-aire",
+          "meaning": "the art of"
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
       "variants": [],
       "reviewed": false
@@ -1214,6 +3182,18 @@
       "word": "grammatical",
       "lang": "fr",
       "tier": "core",
+      "definition": "grammatical",
+      "morphemes": [
+        {
+          "part": "grammat",
+          "meaning": "letter",
+          "root": true
+        },
+        {
+          "part": "-ical",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
       "variants": [],
       "reviewed": false
@@ -1222,6 +3202,18 @@
       "word": "programme",
       "lang": "fr",
       "tier": "core",
+      "definition": "a program; a plan",
+      "morphemes": [
+        {
+          "part": "pro-",
+          "meaning": "before"
+        },
+        {
+          "part": "gramme",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → French",
       "variants": [],
       "reviewed": false
@@ -1230,6 +3222,22 @@
       "word": "programmer",
       "lang": "fr",
       "tier": "core",
+      "definition": "to program; to schedule",
+      "morphemes": [
+        {
+          "part": "pro-",
+          "meaning": "before"
+        },
+        {
+          "part": "gramm",
+          "meaning": "something written",
+          "root": true
+        },
+        {
+          "part": "-er",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → French",
       "variants": [],
       "reviewed": false
@@ -1238,6 +3246,22 @@
       "word": "programmeur",
       "lang": "fr",
       "tier": "core",
+      "definition": "a programmer",
+      "morphemes": [
+        {
+          "part": "pro-",
+          "meaning": "before"
+        },
+        {
+          "part": "gramm",
+          "meaning": "something written",
+          "root": true
+        },
+        {
+          "part": "-eur",
+          "meaning": "a person who"
+        }
+      ],
       "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → French",
       "variants": [],
       "reviewed": false
@@ -1246,6 +3270,18 @@
       "word": "diagramme",
       "lang": "fr",
       "tier": "core",
+      "definition": "a diagram",
+      "morphemes": [
+        {
+          "part": "dia-",
+          "meaning": "through, across"
+        },
+        {
+          "part": "gramme",
+          "meaning": "something drawn",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
       "variants": [],
       "reviewed": false
@@ -1254,6 +3290,18 @@
       "word": "épigramme",
       "lang": "fr",
       "tier": "core",
+      "definition": "an epigram",
+      "morphemes": [
+        {
+          "part": "épi-",
+          "meaning": "upon"
+        },
+        {
+          "part": "gramme",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
       "variants": [],
       "reviewed": false
@@ -1262,6 +3310,18 @@
       "word": "anagramme",
       "lang": "fr",
       "tier": "core",
+      "definition": "an anagram",
+      "morphemes": [
+        {
+          "part": "ana-",
+          "meaning": "back, again"
+        },
+        {
+          "part": "gramme",
+          "meaning": "letter",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
       "variants": [],
       "reviewed": false
@@ -1270,6 +3330,18 @@
       "word": "monogramme",
       "lang": "fr",
       "tier": "core",
+      "definition": "a monogram",
+      "morphemes": [
+        {
+          "part": "mono-",
+          "meaning": "one"
+        },
+        {
+          "part": "gramme",
+          "meaning": "letter",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
       "variants": [],
       "reviewed": false
@@ -1278,6 +3350,18 @@
       "word": "hologramme",
       "lang": "fr",
       "tier": "core",
+      "definition": "a hologram",
+      "morphemes": [
+        {
+          "part": "holo-",
+          "meaning": "whole"
+        },
+        {
+          "part": "gramme",
+          "meaning": "something drawn",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
       "variants": [],
       "reviewed": false
@@ -1286,6 +3370,18 @@
       "word": "kilogramme",
       "lang": "fr",
       "tier": "core",
+      "definition": "a kilogram",
+      "morphemes": [
+        {
+          "part": "kilo-",
+          "meaning": "thousand"
+        },
+        {
+          "part": "gramme",
+          "meaning": "a small weight",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → French",
       "variants": [],
       "reviewed": false
@@ -1294,6 +3390,14 @@
       "word": "gramme",
       "lang": "fr",
       "tier": "core",
+      "definition": "a gram",
+      "morphemes": [
+        {
+          "part": "gramme",
+          "meaning": "a small weight",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → French",
       "variants": [],
       "reviewed": false
@@ -1302,6 +3406,22 @@
       "word": "calligraphie",
       "lang": "fr",
       "tier": "core",
+      "definition": "calligraphy",
+      "morphemes": [
+        {
+          "part": "calli-",
+          "meaning": "beautiful"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ie",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1310,6 +3430,22 @@
       "word": "chorégraphie",
       "lang": "fr",
       "tier": "core",
+      "definition": "choreography",
+      "morphemes": [
+        {
+          "part": "choré-",
+          "meaning": "dance"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ie",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1318,6 +3454,22 @@
       "word": "bibliographie",
       "lang": "fr",
       "tier": "core",
+      "definition": "a bibliography",
+      "morphemes": [
+        {
+          "part": "biblio-",
+          "meaning": "book"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ie",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1326,6 +3478,15 @@
       "word": "greffe",
       "lang": "fr",
       "tier": "bonus",
+      "definition": "a graft; also a court clerk’s office",
+      "source": "Old French grafe, “stylus”",
+      "morphemes": [
+        {
+          "part": "greffe",
+          "meaning": "stylus, writing tool",
+          "root": true
+        }
+      ],
       "path": "Latin graphium, “stylus”, from Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1334,6 +3495,18 @@
       "word": "greffer",
       "lang": "fr",
       "tier": "bonus",
+      "definition": "to graft",
+      "morphemes": [
+        {
+          "part": "greff",
+          "meaning": "stylus, writing tool",
+          "root": true
+        },
+        {
+          "part": "-er",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin graphium, “stylus”, from Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1342,6 +3515,18 @@
       "word": "graphie",
       "lang": "fr",
       "tier": "technical",
+      "definition": "the way a sound or word is written",
+      "morphemes": [
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ie",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1350,6 +3535,18 @@
       "word": "graphologie",
       "lang": "fr",
       "tier": "technical",
+      "definition": "graphology",
+      "morphemes": [
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ologie",
+          "meaning": "the study of"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1358,6 +3555,18 @@
       "word": "graphème",
       "lang": "fr",
       "tier": "technical",
+      "definition": "a grapheme",
+      "morphemes": [
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ème",
+          "meaning": "a unit"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1366,6 +3575,18 @@
       "word": "cryptogramme",
       "lang": "fr",
       "tier": "technical",
+      "definition": "a cryptogram",
+      "morphemes": [
+        {
+          "part": "crypto-",
+          "meaning": "hidden"
+        },
+        {
+          "part": "gramme",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
       "variants": [],
       "reviewed": false
@@ -1374,6 +3595,18 @@
       "word": "sismographe",
       "lang": "fr",
       "tier": "technical",
+      "definition": "a seismograph",
+      "morphemes": [
+        {
+          "part": "sismo-",
+          "meaning": "earthquake"
+        },
+        {
+          "part": "graphe",
+          "meaning": "write, record",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1382,6 +3615,22 @@
       "word": "sténographie",
       "lang": "fr",
       "tier": "technical",
+      "definition": "shorthand",
+      "morphemes": [
+        {
+          "part": "sténo-",
+          "meaning": "narrow"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ie",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1390,6 +3639,22 @@
       "word": "typographie",
       "lang": "fr",
       "tier": "technical",
+      "definition": "typography",
+      "morphemes": [
+        {
+          "part": "typo-",
+          "meaning": "type, mark"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ie",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1398,6 +3663,22 @@
       "word": "lithographie",
       "lang": "fr",
       "tier": "technical",
+      "definition": "a lithograph; lithography",
+      "morphemes": [
+        {
+          "part": "litho-",
+          "meaning": "stone"
+        },
+        {
+          "part": "graph",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ie",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1406,6 +3687,22 @@
       "word": "ethnographie",
       "lang": "fr",
       "tier": "technical",
+      "definition": "ethnography",
+      "morphemes": [
+        {
+          "part": "ethno-",
+          "meaning": "people, nation"
+        },
+        {
+          "part": "graph",
+          "meaning": "write, describe",
+          "root": true
+        },
+        {
+          "part": "-ie",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1414,6 +3711,22 @@
       "word": "démographie",
       "lang": "fr",
       "tier": "technical",
+      "definition": "demography",
+      "morphemes": [
+        {
+          "part": "démo-",
+          "meaning": "people"
+        },
+        {
+          "part": "graph",
+          "meaning": "write, describe",
+          "root": true
+        },
+        {
+          "part": "-ie",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1422,6 +3735,22 @@
       "word": "cartographie",
       "lang": "fr",
       "tier": "technical",
+      "definition": "cartography",
+      "morphemes": [
+        {
+          "part": "carto-",
+          "meaning": "map"
+        },
+        {
+          "part": "graph",
+          "meaning": "write, draw",
+          "root": true
+        },
+        {
+          "part": "-ie",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Latin carta, “map”, + Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1430,6 +3759,18 @@
       "word": "pictogramme",
       "lang": "fr",
       "tier": "technical",
+      "definition": "a pictogram",
+      "morphemes": [
+        {
+          "part": "picto-",
+          "meaning": "painted"
+        },
+        {
+          "part": "gramme",
+          "meaning": "something drawn",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
       "variants": [],
       "reviewed": false
@@ -1438,6 +3779,18 @@
       "word": "idéogramme",
       "lang": "fr",
       "tier": "technical",
+      "definition": "an ideogram",
+      "morphemes": [
+        {
+          "part": "idéo-",
+          "meaning": "idea"
+        },
+        {
+          "part": "gramme",
+          "meaning": "something written",
+          "root": true
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
       "variants": [],
       "reviewed": false
@@ -1446,6 +3799,18 @@
       "word": "gramophone",
       "lang": "fr",
       "tier": "technical",
+      "definition": "a gramophone",
+      "morphemes": [
+        {
+          "part": "gramo",
+          "meaning": "something written",
+          "root": true
+        },
+        {
+          "part": "-phone",
+          "meaning": "sound"
+        }
+      ],
       "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
       "variants": [],
       "reviewed": false
@@ -1454,6 +3819,18 @@
       "word": "épigraphe",
       "lang": "fr",
       "tier": "technical",
+      "definition": "an epigraph",
+      "morphemes": [
+        {
+          "part": "épi-",
+          "meaning": "upon"
+        },
+        {
+          "part": "graphe",
+          "meaning": "write",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1462,6 +3839,18 @@
       "word": "orthographe",
       "lang": "fr",
       "tier": "technical",
+      "definition": "spelling",
+      "morphemes": [
+        {
+          "part": "ortho-",
+          "meaning": "correct"
+        },
+        {
+          "part": "graphe",
+          "meaning": "write",
+          "root": true
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1470,6 +3859,22 @@
       "word": "télégraphier",
       "lang": "fr",
       "tier": "technical",
+      "definition": "to send a telegram",
+      "morphemes": [
+        {
+          "part": "télé-",
+          "meaning": "far"
+        },
+        {
+          "part": "graph",
+          "meaning": "write",
+          "root": true
+        },
+        {
+          "part": "-ier",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1478,6 +3883,19 @@
       "word": "graffiti",
       "lang": "fr",
       "tier": "bonus",
+      "definition": "writing or drawings scratched or painted on walls",
+      "source": "Italian graffiti",
+      "morphemes": [
+        {
+          "part": "graff",
+          "meaning": "scratch, write",
+          "root": true
+        },
+        {
+          "part": "-iti",
+          "meaning": "more than one"
+        }
+      ],
       "path": "Greek γράφω (graphō) → French",
       "variants": [],
       "reviewed": false
@@ -1486,6 +3904,19 @@
       "word": "grimoire",
       "lang": "fr",
       "tier": "bonus",
+      "definition": "a book of magic spells",
+      "source": "Old French gramaire, “grammar”",
+      "morphemes": [
+        {
+          "part": "grim",
+          "meaning": "grammar, learning",
+          "root": true
+        },
+        {
+          "part": "-oire",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Greek γράμμα (gramma) → French grammaire → grimoire",
       "variants": [],
       "reviewed": false

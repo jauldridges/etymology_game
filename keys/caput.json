@@ -36,6 +36,15 @@
       "word": "chief",
       "lang": "en",
       "tier": "core",
+      "definition": "the leader or head of a group",
+      "source": "Old French chief",
+      "morphemes": [
+        {
+          "part": "chief",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -44,6 +53,19 @@
       "word": "chieftain",
       "lang": "en",
       "tier": "core",
+      "definition": "the leader of a clan or tribe",
+      "source": "Late Latin capitaneus",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-aneus",
+          "meaning": "belonging to"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -52,6 +74,15 @@
       "word": "chef",
       "lang": "en",
       "tier": "core",
+      "definition": "a professional head cook",
+      "source": "French chef",
+      "morphemes": [
+        {
+          "part": "chef",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -60,6 +91,19 @@
       "word": "capital",
       "lang": "en",
       "tier": "core",
+      "definition": "the city where a government sits; also money used to make more money",
+      "source": "Latin capitalis",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-alis",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -68,6 +112,18 @@
       "word": "capitalism",
       "lang": "en",
       "tier": "core",
+      "definition": "an economy built on privately owned capital",
+      "morphemes": [
+        {
+          "part": "capital",
+          "meaning": "wealth used to make more wealth",
+          "root": true
+        },
+        {
+          "part": "-ism",
+          "meaning": "a system or belief"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -76,6 +132,18 @@
       "word": "capitalist",
       "lang": "en",
       "tier": "core",
+      "definition": "a person who owns capital or favors capitalism",
+      "morphemes": [
+        {
+          "part": "capital",
+          "meaning": "wealth used to make more wealth",
+          "root": true
+        },
+        {
+          "part": "-ist",
+          "meaning": "a person who"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -84,6 +152,18 @@
       "word": "capitalize",
       "lang": "en",
       "tier": "core",
+      "definition": "to write with a capital letter; to take advantage of",
+      "morphemes": [
+        {
+          "part": "capital",
+          "meaning": "head (letter); wealth",
+          "root": true
+        },
+        {
+          "part": "-ize",
+          "meaning": "to make or do"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -92,6 +172,19 @@
       "word": "captain",
       "lang": "en",
       "tier": "core",
+      "definition": "the leader of a ship, team or army unit",
+      "source": "Late Latin capitaneus",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-aneus",
+          "meaning": "belonging to"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -100,6 +193,19 @@
       "word": "chapter",
       "lang": "en",
       "tier": "core",
+      "definition": "a main section of a book",
+      "source": "Latin capitulum, a heading",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ulum",
+          "meaning": "little"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -108,6 +214,19 @@
       "word": "achieve",
       "lang": "en",
       "tier": "core",
+      "definition": "to succeed in doing something",
+      "source": "Old French achever, “to bring to a head”",
+      "morphemes": [
+        {
+          "part": "a-",
+          "meaning": "to"
+        },
+        {
+          "part": "chieve",
+          "meaning": "head, end",
+          "root": true
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -116,6 +235,18 @@
       "word": "achievement",
       "lang": "en",
       "tier": "core",
+      "definition": "something done successfully",
+      "morphemes": [
+        {
+          "part": "achieve",
+          "meaning": "bring to a head, finish",
+          "root": true
+        },
+        {
+          "part": "-ment",
+          "meaning": "the result of"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -124,6 +255,19 @@
       "word": "mischief",
       "lang": "en",
       "tier": "core",
+      "definition": "playful troublemaking; harm",
+      "source": "Old French meschief, “a bad end”",
+      "morphemes": [
+        {
+          "part": "mis-",
+          "meaning": "badly"
+        },
+        {
+          "part": "chief",
+          "meaning": "head, end",
+          "root": true
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -132,6 +276,19 @@
       "word": "kerchief",
       "lang": "en",
       "tier": "core",
+      "definition": "a square of cloth worn on the head",
+      "source": "Old French couvrechief",
+      "morphemes": [
+        {
+          "part": "ker-",
+          "meaning": "cover"
+        },
+        {
+          "part": "chief",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -140,6 +297,22 @@
       "word": "handkerchief",
       "lang": "en",
       "tier": "core",
+      "definition": "a small cloth for wiping the face or nose",
+      "morphemes": [
+        {
+          "part": "hand",
+          "meaning": "hand"
+        },
+        {
+          "part": "ker-",
+          "meaning": "cover"
+        },
+        {
+          "part": "chief",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -148,6 +321,23 @@
       "word": "decapitate",
       "lang": "en",
       "tier": "core",
+      "definition": "to cut off the head of",
+      "source": "Late Latin decapitare",
+      "morphemes": [
+        {
+          "part": "de-",
+          "meaning": "off, away"
+        },
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ate",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -156,6 +346,22 @@
       "word": "decapitation",
       "lang": "en",
       "tier": "core",
+      "definition": "the act of cutting off a head",
+      "morphemes": [
+        {
+          "part": "de-",
+          "meaning": "off, away"
+        },
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ation",
+          "meaning": "the act of"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -164,6 +370,23 @@
       "word": "capitulate",
       "lang": "en",
       "tier": "core",
+      "definition": "to give up; to surrender on agreed terms",
+      "source": "Medieval Latin capitulare, “to set out under headings”",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ul",
+          "meaning": "little"
+        },
+        {
+          "part": "-ate",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -172,6 +395,22 @@
       "word": "capitulation",
       "lang": "en",
       "tier": "core",
+      "definition": "a surrender on agreed terms",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ul",
+          "meaning": "little"
+        },
+        {
+          "part": "-ation",
+          "meaning": "the act of"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -180,6 +419,26 @@
       "word": "recapitulate",
       "lang": "en",
       "tier": "core",
+      "definition": "to sum up the main points again",
+      "morphemes": [
+        {
+          "part": "re-",
+          "meaning": "again"
+        },
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ul",
+          "meaning": "little"
+        },
+        {
+          "part": "-ate",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -188,6 +447,26 @@
       "word": "recapitulation",
       "lang": "en",
       "tier": "core",
+      "definition": "a summary of the main points",
+      "morphemes": [
+        {
+          "part": "re-",
+          "meaning": "again"
+        },
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ul",
+          "meaning": "little"
+        },
+        {
+          "part": "-ation",
+          "meaning": "the act of"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -196,6 +475,23 @@
       "word": "precipice",
       "lang": "en",
       "tier": "core",
+      "definition": "a very steep cliff",
+      "source": "Latin praecipitium, from praeceps, “headfirst”",
+      "morphemes": [
+        {
+          "part": "prae-",
+          "meaning": "forward"
+        },
+        {
+          "part": "cip",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-itium",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Latin prae + caput → praeceps, “headfirst” → English",
       "variants": [],
       "reviewed": false
@@ -204,6 +500,23 @@
       "word": "precipitate",
       "lang": "en",
       "tier": "core",
+      "definition": "to make something happen suddenly; to throw down headlong",
+      "source": "Latin praecipitare",
+      "morphemes": [
+        {
+          "part": "prae-",
+          "meaning": "forward"
+        },
+        {
+          "part": "cipit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ate",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin prae + caput → praeceps, “headfirst” → English",
       "variants": [],
       "reviewed": false
@@ -212,6 +525,22 @@
       "word": "precipitation",
       "lang": "en",
       "tier": "core",
+      "definition": "rain, snow or hail; sudden haste",
+      "morphemes": [
+        {
+          "part": "pre-",
+          "meaning": "forward"
+        },
+        {
+          "part": "cipit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ation",
+          "meaning": "the act of"
+        }
+      ],
       "path": "Latin prae + caput → praeceps, “headfirst” → English",
       "variants": [],
       "reviewed": false
@@ -220,6 +549,22 @@
       "word": "precipitous",
       "lang": "en",
       "tier": "core",
+      "definition": "dangerously steep; sudden and hasty",
+      "morphemes": [
+        {
+          "part": "pre-",
+          "meaning": "forward"
+        },
+        {
+          "part": "cipit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ous",
+          "meaning": "full of"
+        }
+      ],
       "path": "Latin prae + caput → praeceps, “headfirst” → English",
       "variants": [],
       "reviewed": false
@@ -228,6 +573,19 @@
       "word": "biceps",
       "lang": "en",
       "tier": "core",
+      "definition": "the muscle at the front of the upper arm",
+      "source": "Latin biceps, “two-headed”",
+      "morphemes": [
+        {
+          "part": "bi-",
+          "meaning": "two"
+        },
+        {
+          "part": "ceps",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -236,6 +594,19 @@
       "word": "triceps",
       "lang": "en",
       "tier": "core",
+      "definition": "the muscle at the back of the upper arm",
+      "source": "Latin triceps, “three-headed”",
+      "morphemes": [
+        {
+          "part": "tri-",
+          "meaning": "three"
+        },
+        {
+          "part": "ceps",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -244,6 +615,18 @@
       "word": "quadriceps",
       "lang": "en",
       "tier": "core",
+      "definition": "the large muscle at the front of the thigh",
+      "morphemes": [
+        {
+          "part": "quadri-",
+          "meaning": "four"
+        },
+        {
+          "part": "ceps",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -252,6 +635,23 @@
       "word": "occipital",
       "lang": "en",
       "tier": "core",
+      "definition": "of the back of the head",
+      "source": "Latin occiput, “back of the head”",
+      "morphemes": [
+        {
+          "part": "oc-",
+          "meaning": "against, behind"
+        },
+        {
+          "part": "cipit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-al",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -261,6 +661,15 @@
       "lang": "en",
       "tier": "core",
       "gloss": "headland",
+      "definition": "a point of land that juts into the sea",
+      "source": "Old French cap",
+      "morphemes": [
+        {
+          "part": "cape",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -269,6 +678,19 @@
       "word": "cadet",
       "lang": "en",
       "tier": "core",
+      "definition": "a student training to be an officer; once, a younger son",
+      "source": "Gascon capdet, “little chief”",
+      "morphemes": [
+        {
+          "part": "cap",
+          "meaning": "head, chief",
+          "root": true
+        },
+        {
+          "part": "-det",
+          "meaning": "little"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -277,6 +699,19 @@
       "word": "caddie",
       "lang": "en",
       "tier": "core",
+      "definition": "a person who carries a golfer’s clubs",
+      "source": "French cadet",
+      "morphemes": [
+        {
+          "part": "cadd",
+          "meaning": "head, chief",
+          "root": true
+        },
+        {
+          "part": "-ie",
+          "meaning": "little"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -285,6 +720,19 @@
       "word": "cabbage",
       "lang": "en",
       "tier": "core",
+      "definition": "a vegetable with a round head of leaves",
+      "source": "Old French caboche, “head”",
+      "morphemes": [
+        {
+          "part": "cabb",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-age",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -293,6 +741,19 @@
       "word": "per capita",
       "lang": "en",
       "tier": "core",
+      "definition": "for each person",
+      "source": "Latin, “by heads”",
+      "morphemes": [
+        {
+          "part": "per",
+          "meaning": "by, for each"
+        },
+        {
+          "part": "capita",
+          "meaning": "heads",
+          "root": true
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -301,6 +762,19 @@
       "word": "cattle",
       "lang": "en",
       "tier": "bonus",
+      "definition": "cows and bulls kept as livestock",
+      "source": "Latin capitale, “property”",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head, chief",
+          "root": true
+        },
+        {
+          "part": "-ale",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -309,6 +783,19 @@
       "word": "chattel",
       "lang": "en",
       "tier": "bonus",
+      "definition": "a personal possession",
+      "source": "Latin capitale, “property”",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head, chief",
+          "root": true
+        },
+        {
+          "part": "-ale",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -317,6 +804,19 @@
       "word": "capitol",
       "lang": "en",
       "tier": "bonus",
+      "definition": "a building where lawmakers meet",
+      "source": "Latin Capitolium, Rome’s temple hill",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head (origin debated)",
+          "root": true
+        },
+        {
+          "part": "-olium",
+          "meaning": "place"
+        }
+      ],
       "path": "Latin caput → English",
       "variants": [],
       "reviewed": false
@@ -326,6 +826,19 @@
       "lang": "en",
       "tier": "bonus",
       "gloss": "military rank",
+      "definition": "a low-ranking officer in the army",
+      "source": "Italian caporale",
+      "morphemes": [
+        {
+          "part": "capor",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ale",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Latin caput → Italian capo, “head” → caporale → English",
       "variants": [],
       "reviewed": false
@@ -334,6 +847,19 @@
       "word": "cabeza",
       "lang": "es",
       "tier": "core",
+      "definition": "head",
+      "source": "Vulgar Latin capitia",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ia",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -342,6 +868,18 @@
       "word": "cabezudo",
       "lang": "es",
       "tier": "core",
+      "definition": "big-headed; stubborn",
+      "morphemes": [
+        {
+          "part": "cabez",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-udo",
+          "meaning": "having a lot of"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -350,6 +888,18 @@
       "word": "cabecera",
       "lang": "es",
       "tier": "core",
+      "definition": "the head of a bed or table; a newspaper’s masthead",
+      "morphemes": [
+        {
+          "part": "cabec",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-era",
+          "meaning": "place of"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -358,6 +908,18 @@
       "word": "cabecilla",
       "lang": "es",
       "tier": "core",
+      "definition": "a ringleader",
+      "morphemes": [
+        {
+          "part": "cabec",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-illa",
+          "meaning": "little"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -366,6 +928,18 @@
       "word": "cabecear",
       "lang": "es",
       "tier": "core",
+      "definition": "to nod; to head a ball",
+      "morphemes": [
+        {
+          "part": "cabec",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ear",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -374,6 +948,22 @@
       "word": "encabezar",
       "lang": "es",
       "tier": "core",
+      "definition": "to lead; to head a list",
+      "morphemes": [
+        {
+          "part": "en-",
+          "meaning": "in, on"
+        },
+        {
+          "part": "cabez",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -382,6 +972,14 @@
       "word": "cabo",
       "lang": "es",
       "tier": "core",
+      "definition": "a cape (headland); an end; a corporal",
+      "morphemes": [
+        {
+          "part": "cabo",
+          "meaning": "head, end",
+          "root": true
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -390,6 +988,22 @@
       "word": "acabar",
       "lang": "es",
       "tier": "core",
+      "definition": "to finish",
+      "morphemes": [
+        {
+          "part": "a-",
+          "meaning": "to"
+        },
+        {
+          "part": "cab",
+          "meaning": "head, end",
+          "root": true
+        },
+        {
+          "part": "-ar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -398,6 +1012,18 @@
       "word": "capataz",
       "lang": "es",
       "tier": "core",
+      "definition": "a foreman, the boss of a work crew",
+      "morphemes": [
+        {
+          "part": "capat",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-az",
+          "meaning": "makes a noun (origin to verify)"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -406,6 +1032,15 @@
       "word": "jefe",
       "lang": "es",
       "tier": "core",
+      "definition": "a boss",
+      "source": "French chef",
+      "morphemes": [
+        {
+          "part": "chef",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → French chef → Spanish",
       "variants": [],
       "reviewed": false
@@ -414,6 +1049,15 @@
       "word": "chef",
       "lang": "es",
       "tier": "core",
+      "definition": "a professional head cook",
+      "source": "French chef",
+      "morphemes": [
+        {
+          "part": "chef",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -422,6 +1066,19 @@
       "word": "capitán",
       "lang": "es",
       "tier": "core",
+      "definition": "a captain",
+      "source": "Late Latin capitaneus",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-aneus",
+          "meaning": "belonging to"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -430,6 +1087,18 @@
       "word": "capital",
       "lang": "es",
       "tier": "core",
+      "definition": "a capital city; money used to make more money",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-al",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -438,6 +1107,18 @@
       "word": "capitalismo",
       "lang": "es",
       "tier": "core",
+      "definition": "an economy built on privately owned capital",
+      "morphemes": [
+        {
+          "part": "capital",
+          "meaning": "wealth used to make more wealth",
+          "root": true
+        },
+        {
+          "part": "-ismo",
+          "meaning": "a system or belief"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -446,6 +1127,18 @@
       "word": "capitalista",
       "lang": "es",
       "tier": "core",
+      "definition": "a person who owns capital or favors capitalism",
+      "morphemes": [
+        {
+          "part": "capital",
+          "meaning": "wealth used to make more wealth",
+          "root": true
+        },
+        {
+          "part": "-ista",
+          "meaning": "a person who"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -454,6 +1147,18 @@
       "word": "capitalizar",
       "lang": "es",
       "tier": "core",
+      "definition": "to capitalize; to turn into capital",
+      "morphemes": [
+        {
+          "part": "capital",
+          "meaning": "head (letter); wealth",
+          "root": true
+        },
+        {
+          "part": "-izar",
+          "meaning": "to make or do"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -462,6 +1167,19 @@
       "word": "capitel",
       "lang": "es",
       "tier": "core",
+      "definition": "the top of a column",
+      "source": "Latin capitellum, “little head”",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ellum",
+          "meaning": "little"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -470,6 +1188,19 @@
       "word": "capítulo",
       "lang": "es",
       "tier": "core",
+      "definition": "a chapter",
+      "source": "Latin capitulum",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ulum",
+          "meaning": "little"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -478,6 +1209,22 @@
       "word": "capitular",
       "lang": "es",
       "tier": "core",
+      "definition": "to surrender on agreed terms",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ul",
+          "meaning": "little"
+        },
+        {
+          "part": "-ar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -486,6 +1233,26 @@
       "word": "recapitular",
       "lang": "es",
       "tier": "core",
+      "definition": "to sum up",
+      "morphemes": [
+        {
+          "part": "re-",
+          "meaning": "again"
+        },
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ul",
+          "meaning": "little"
+        },
+        {
+          "part": "-ar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -494,6 +1261,22 @@
       "word": "decapitar",
       "lang": "es",
       "tier": "core",
+      "definition": "to behead",
+      "morphemes": [
+        {
+          "part": "de-",
+          "meaning": "off, away"
+        },
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -502,6 +1285,19 @@
       "word": "caudillo",
       "lang": "es",
       "tier": "core",
+      "definition": "a military or political strongman",
+      "source": "Latin capitellum, “little head”",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ellum",
+          "meaning": "little"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -510,6 +1306,19 @@
       "word": "cabildo",
       "lang": "es",
       "tier": "core",
+      "definition": "a town council; a cathedral chapter",
+      "source": "Latin capitulum",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ulum",
+          "meaning": "little"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -518,6 +1327,23 @@
       "word": "precipicio",
       "lang": "es",
       "tier": "core",
+      "definition": "a very steep cliff",
+      "source": "Latin praecipitium",
+      "morphemes": [
+        {
+          "part": "prae-",
+          "meaning": "forward"
+        },
+        {
+          "part": "cip",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-itium",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Latin prae + caput → praeceps, “headfirst” → Spanish",
       "variants": [],
       "reviewed": false
@@ -526,6 +1352,23 @@
       "word": "precipitar",
       "lang": "es",
       "tier": "core",
+      "definition": "to hurl down; to rush",
+      "source": "Latin praecipitare",
+      "morphemes": [
+        {
+          "part": "prae-",
+          "meaning": "forward"
+        },
+        {
+          "part": "cipit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin prae + caput → praeceps, “headfirst” → Spanish",
       "variants": [],
       "reviewed": false
@@ -534,6 +1377,18 @@
       "word": "bíceps",
       "lang": "es",
       "tier": "core",
+      "definition": "the muscle at the front of the upper arm",
+      "morphemes": [
+        {
+          "part": "bi-",
+          "meaning": "two"
+        },
+        {
+          "part": "ceps",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -542,6 +1397,18 @@
       "word": "tríceps",
       "lang": "es",
       "tier": "core",
+      "definition": "the muscle at the back of the upper arm",
+      "morphemes": [
+        {
+          "part": "tri-",
+          "meaning": "three"
+        },
+        {
+          "part": "ceps",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -550,6 +1417,18 @@
       "word": "cuádriceps",
       "lang": "es",
       "tier": "core",
+      "definition": "the large muscle at the front of the thigh",
+      "morphemes": [
+        {
+          "part": "cuadri-",
+          "meaning": "four"
+        },
+        {
+          "part": "ceps",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -558,6 +1437,23 @@
       "word": "occipital",
       "lang": "es",
       "tier": "core",
+      "definition": "of the back of the head",
+      "source": "Latin occiput",
+      "morphemes": [
+        {
+          "part": "oc-",
+          "meaning": "against, behind"
+        },
+        {
+          "part": "cipit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-al",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Latin caput → Spanish",
       "variants": [],
       "reviewed": false
@@ -566,6 +1462,19 @@
       "word": "cabeça",
       "lang": "pt",
       "tier": "core",
+      "definition": "head",
+      "source": "Vulgar Latin capitia",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ia",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -574,6 +1483,18 @@
       "word": "cabeçalho",
       "lang": "pt",
       "tier": "core",
+      "definition": "a heading; a letterhead",
+      "morphemes": [
+        {
+          "part": "cabeç",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-alho",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -582,6 +1503,18 @@
       "word": "cabeceira",
       "lang": "pt",
       "tier": "core",
+      "definition": "the head of a bed or table",
+      "morphemes": [
+        {
+          "part": "cabec",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-eira",
+          "meaning": "place of"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -590,6 +1523,18 @@
       "word": "cabecear",
       "lang": "pt",
       "tier": "core",
+      "definition": "to nod; to head a ball",
+      "morphemes": [
+        {
+          "part": "cabec",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ear",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -598,6 +1543,18 @@
       "word": "cabecilha",
       "lang": "pt",
       "tier": "core",
+      "definition": "a ringleader",
+      "morphemes": [
+        {
+          "part": "cabec",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ilha",
+          "meaning": "little"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -606,6 +1563,22 @@
       "word": "encabeçar",
       "lang": "pt",
       "tier": "core",
+      "definition": "to lead; to head a list",
+      "morphemes": [
+        {
+          "part": "en-",
+          "meaning": "in, on"
+        },
+        {
+          "part": "cabeç",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -614,6 +1587,14 @@
       "word": "cabo",
       "lang": "pt",
       "tier": "core",
+      "definition": "a cape (headland); an end; a corporal",
+      "morphemes": [
+        {
+          "part": "cabo",
+          "meaning": "head, end",
+          "root": true
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -622,6 +1603,22 @@
       "word": "acabar",
       "lang": "pt",
       "tier": "core",
+      "definition": "to finish",
+      "morphemes": [
+        {
+          "part": "a-",
+          "meaning": "to"
+        },
+        {
+          "part": "cab",
+          "meaning": "head, end",
+          "root": true
+        },
+        {
+          "part": "-ar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -630,6 +1627,18 @@
       "word": "capataz",
       "lang": "pt",
       "tier": "core",
+      "definition": "a foreman, the boss of a work crew",
+      "morphemes": [
+        {
+          "part": "capat",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-az",
+          "meaning": "makes a noun (origin to verify)"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -638,6 +1647,15 @@
       "word": "chefe",
       "lang": "pt",
       "tier": "core",
+      "definition": "a boss",
+      "source": "French chef",
+      "morphemes": [
+        {
+          "part": "chef",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → French chef → Portuguese",
       "variants": [],
       "reviewed": false
@@ -646,6 +1664,15 @@
       "word": "chef",
       "lang": "pt",
       "tier": "core",
+      "definition": "a professional head cook",
+      "source": "French chef",
+      "morphemes": [
+        {
+          "part": "chef",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -654,6 +1681,19 @@
       "word": "capitão",
       "lang": "pt",
       "tier": "core",
+      "definition": "a captain",
+      "source": "Late Latin capitaneus",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-aneus",
+          "meaning": "belonging to"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -662,6 +1702,18 @@
       "word": "capital",
       "lang": "pt",
       "tier": "core",
+      "definition": "a capital city; money used to make more money",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-al",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -670,6 +1722,18 @@
       "word": "capitalismo",
       "lang": "pt",
       "tier": "core",
+      "definition": "an economy built on privately owned capital",
+      "morphemes": [
+        {
+          "part": "capital",
+          "meaning": "wealth used to make more wealth",
+          "root": true
+        },
+        {
+          "part": "-ismo",
+          "meaning": "a system or belief"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -678,6 +1742,18 @@
       "word": "capitalista",
       "lang": "pt",
       "tier": "core",
+      "definition": "a person who owns capital or favors capitalism",
+      "morphemes": [
+        {
+          "part": "capital",
+          "meaning": "wealth used to make more wealth",
+          "root": true
+        },
+        {
+          "part": "-ista",
+          "meaning": "a person who"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -686,6 +1762,18 @@
       "word": "capitalizar",
       "lang": "pt",
       "tier": "core",
+      "definition": "to capitalize; to turn into capital",
+      "morphemes": [
+        {
+          "part": "capital",
+          "meaning": "head (letter); wealth",
+          "root": true
+        },
+        {
+          "part": "-izar",
+          "meaning": "to make or do"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -694,6 +1782,19 @@
       "word": "capitel",
       "lang": "pt",
       "tier": "core",
+      "definition": "the top of a column",
+      "source": "Latin capitellum, “little head”",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ellum",
+          "meaning": "little"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -702,6 +1803,19 @@
       "word": "capítulo",
       "lang": "pt",
       "tier": "core",
+      "definition": "a chapter",
+      "source": "Latin capitulum",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ulum",
+          "meaning": "little"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -710,6 +1824,22 @@
       "word": "capitular",
       "lang": "pt",
       "tier": "core",
+      "definition": "to surrender on agreed terms",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ul",
+          "meaning": "little"
+        },
+        {
+          "part": "-ar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -718,6 +1848,26 @@
       "word": "recapitular",
       "lang": "pt",
       "tier": "core",
+      "definition": "to sum up",
+      "morphemes": [
+        {
+          "part": "re-",
+          "meaning": "again"
+        },
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ul",
+          "meaning": "little"
+        },
+        {
+          "part": "-ar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -726,6 +1876,22 @@
       "word": "decapitar",
       "lang": "pt",
       "tier": "core",
+      "definition": "to behead",
+      "morphemes": [
+        {
+          "part": "de-",
+          "meaning": "off, away"
+        },
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -734,6 +1900,19 @@
       "word": "caudilho",
       "lang": "pt",
       "tier": "core",
+      "definition": "a military or political strongman",
+      "source": "Latin capitellum, “little head”",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ellum",
+          "meaning": "little"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -742,6 +1921,23 @@
       "word": "precipício",
       "lang": "pt",
       "tier": "core",
+      "definition": "a very steep cliff",
+      "source": "Latin praecipitium",
+      "morphemes": [
+        {
+          "part": "prae-",
+          "meaning": "forward"
+        },
+        {
+          "part": "cip",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-itium",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Latin prae + caput → praeceps, “headfirst” → Portuguese",
       "variants": [],
       "reviewed": false
@@ -750,6 +1946,23 @@
       "word": "precipitar",
       "lang": "pt",
       "tier": "core",
+      "definition": "to hurl down; to rush",
+      "source": "Latin praecipitare",
+      "morphemes": [
+        {
+          "part": "prae-",
+          "meaning": "forward"
+        },
+        {
+          "part": "cipit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ar",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin prae + caput → praeceps, “headfirst” → Portuguese",
       "variants": [],
       "reviewed": false
@@ -758,6 +1971,18 @@
       "word": "bíceps",
       "lang": "pt",
       "tier": "core",
+      "definition": "the muscle at the front of the upper arm",
+      "morphemes": [
+        {
+          "part": "bi-",
+          "meaning": "two"
+        },
+        {
+          "part": "ceps",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -766,6 +1991,18 @@
       "word": "tríceps",
       "lang": "pt",
       "tier": "core",
+      "definition": "the muscle at the back of the upper arm",
+      "morphemes": [
+        {
+          "part": "tri-",
+          "meaning": "three"
+        },
+        {
+          "part": "ceps",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -774,6 +2011,18 @@
       "word": "quadríceps",
       "lang": "pt",
       "tier": "core",
+      "definition": "the large muscle at the front of the thigh",
+      "morphemes": [
+        {
+          "part": "quadri-",
+          "meaning": "four"
+        },
+        {
+          "part": "ceps",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -782,6 +2031,23 @@
       "word": "occipital",
       "lang": "pt",
       "tier": "core",
+      "definition": "of the back of the head",
+      "source": "Latin occiput",
+      "morphemes": [
+        {
+          "part": "oc-",
+          "meaning": "against, behind"
+        },
+        {
+          "part": "cipit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-al",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Latin caput → Portuguese",
       "variants": [],
       "reviewed": false
@@ -790,6 +2056,14 @@
       "word": "chef",
       "lang": "fr",
       "tier": "core",
+      "definition": "a head, leader or boss; a head cook",
+      "morphemes": [
+        {
+          "part": "chef",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -798,6 +2072,22 @@
       "word": "chef-d'œuvre",
       "lang": "fr",
       "tier": "core",
+      "definition": "a masterpiece",
+      "morphemes": [
+        {
+          "part": "chef",
+          "meaning": "head, top",
+          "root": true
+        },
+        {
+          "part": "d’",
+          "meaning": "of"
+        },
+        {
+          "part": "œuvre",
+          "meaning": "work"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -806,6 +2096,19 @@
       "word": "chapitre",
       "lang": "fr",
       "tier": "core",
+      "definition": "a chapter",
+      "source": "Latin capitulum",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ulum",
+          "meaning": "little"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -814,6 +2117,19 @@
       "word": "chapiteau",
       "lang": "fr",
       "tier": "core",
+      "definition": "the top of a column; a circus tent",
+      "source": "Latin capitellum, “little head”",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ellum",
+          "meaning": "little"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -822,6 +2138,19 @@
       "word": "chevet",
       "lang": "fr",
       "tier": "core",
+      "definition": "the head of a bed",
+      "source": "Latin capitium",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ium",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -830,6 +2159,23 @@
       "word": "achever",
       "lang": "fr",
       "tier": "core",
+      "definition": "to finish",
+      "source": "Old French, from à chef, “to a head”",
+      "morphemes": [
+        {
+          "part": "a-",
+          "meaning": "to"
+        },
+        {
+          "part": "chev",
+          "meaning": "head, end",
+          "root": true
+        },
+        {
+          "part": "-er",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -838,6 +2184,18 @@
       "word": "achèvement",
       "lang": "fr",
       "tier": "core",
+      "definition": "completion",
+      "morphemes": [
+        {
+          "part": "achever",
+          "meaning": "to finish",
+          "root": true
+        },
+        {
+          "part": "-ment",
+          "meaning": "the result of"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -846,6 +2204,18 @@
       "word": "couvre-chef",
       "lang": "fr",
       "tier": "core",
+      "definition": "a hat (jokingly)",
+      "morphemes": [
+        {
+          "part": "couvre",
+          "meaning": "covers"
+        },
+        {
+          "part": "chef",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -854,6 +2224,19 @@
       "word": "capitaine",
       "lang": "fr",
       "tier": "core",
+      "definition": "a captain",
+      "source": "Late Latin capitaneus",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-aneus",
+          "meaning": "belonging to"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -862,6 +2245,18 @@
       "word": "capital",
       "lang": "fr",
       "tier": "core",
+      "definition": "main; money used to make more money",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-al",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -870,6 +2265,18 @@
       "word": "capitale",
       "lang": "fr",
       "tier": "core",
+      "definition": "a capital city; a capital letter",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ale",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -878,6 +2285,18 @@
       "word": "capitalisme",
       "lang": "fr",
       "tier": "core",
+      "definition": "an economy built on privately owned capital",
+      "morphemes": [
+        {
+          "part": "capital",
+          "meaning": "wealth used to make more wealth",
+          "root": true
+        },
+        {
+          "part": "-isme",
+          "meaning": "a system or belief"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -886,6 +2305,18 @@
       "word": "capitaliste",
       "lang": "fr",
       "tier": "core",
+      "definition": "a person who owns capital or favors capitalism",
+      "morphemes": [
+        {
+          "part": "capital",
+          "meaning": "wealth used to make more wealth",
+          "root": true
+        },
+        {
+          "part": "-iste",
+          "meaning": "a person who"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -894,6 +2325,22 @@
       "word": "capitulation",
       "lang": "fr",
       "tier": "core",
+      "definition": "a surrender on agreed terms",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ul",
+          "meaning": "little"
+        },
+        {
+          "part": "-ation",
+          "meaning": "the act of"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -902,6 +2349,22 @@
       "word": "capituler",
       "lang": "fr",
       "tier": "core",
+      "definition": "to surrender on agreed terms",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ul",
+          "meaning": "little"
+        },
+        {
+          "part": "-er",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -910,6 +2373,26 @@
       "word": "récapituler",
       "lang": "fr",
       "tier": "core",
+      "definition": "to sum up",
+      "morphemes": [
+        {
+          "part": "ré-",
+          "meaning": "again"
+        },
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ul",
+          "meaning": "little"
+        },
+        {
+          "part": "-er",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -918,6 +2401,22 @@
       "word": "décapiter",
       "lang": "fr",
       "tier": "core",
+      "definition": "to behead",
+      "morphemes": [
+        {
+          "part": "dé-",
+          "meaning": "off, away"
+        },
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-er",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -926,6 +2425,22 @@
       "word": "décapitation",
       "lang": "fr",
       "tier": "core",
+      "definition": "beheading",
+      "morphemes": [
+        {
+          "part": "dé-",
+          "meaning": "off, away"
+        },
+        {
+          "part": "capit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ation",
+          "meaning": "the act of"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -934,6 +2449,19 @@
       "word": "cheptel",
       "lang": "fr",
       "tier": "core",
+      "definition": "livestock",
+      "source": "Latin capitale, “property”",
+      "morphemes": [
+        {
+          "part": "capit",
+          "meaning": "head, chief",
+          "root": true
+        },
+        {
+          "part": "-ale",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -942,6 +2470,19 @@
       "word": "cadet",
       "lang": "fr",
       "tier": "core",
+      "definition": "the younger or youngest child; a cadet",
+      "source": "Gascon capdet, “little chief”",
+      "morphemes": [
+        {
+          "part": "cap",
+          "meaning": "head, chief",
+          "root": true
+        },
+        {
+          "part": "-det",
+          "meaning": "little"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -950,6 +2491,14 @@
       "word": "caboche",
       "lang": "fr",
       "tier": "core",
+      "definition": "a head (slang)",
+      "morphemes": [
+        {
+          "part": "caboche",
+          "meaning": "head (origin to verify)",
+          "root": true
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -958,6 +2507,15 @@
       "word": "cap",
       "lang": "fr",
       "tier": "core",
+      "definition": "a cape (headland); a heading or course",
+      "source": "Occitan cap",
+      "morphemes": [
+        {
+          "part": "cap",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -966,6 +2524,19 @@
       "word": "caporal",
       "lang": "fr",
       "tier": "core",
+      "definition": "a corporal",
+      "source": "Italian caporale",
+      "morphemes": [
+        {
+          "part": "capor",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ale",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Latin caput → Italian capo, “head” → caporale → French",
       "variants": [],
       "reviewed": false
@@ -974,6 +2545,23 @@
       "word": "précipice",
       "lang": "fr",
       "tier": "core",
+      "definition": "a very steep cliff",
+      "source": "Latin praecipitium",
+      "morphemes": [
+        {
+          "part": "prae-",
+          "meaning": "forward"
+        },
+        {
+          "part": "cip",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-itium",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Latin prae + caput → praeceps, “headfirst” → French",
       "variants": [],
       "reviewed": false
@@ -982,6 +2570,23 @@
       "word": "précipiter",
       "lang": "fr",
       "tier": "core",
+      "definition": "to hurl down; to rush",
+      "source": "Latin praecipitare",
+      "morphemes": [
+        {
+          "part": "prae-",
+          "meaning": "forward"
+        },
+        {
+          "part": "cipit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-er",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Latin prae + caput → praeceps, “headfirst” → French",
       "variants": [],
       "reviewed": false
@@ -990,6 +2595,22 @@
       "word": "précipitation",
       "lang": "fr",
       "tier": "core",
+      "definition": "rain or snow; haste",
+      "morphemes": [
+        {
+          "part": "pré-",
+          "meaning": "forward"
+        },
+        {
+          "part": "cipit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-ation",
+          "meaning": "the act of"
+        }
+      ],
       "path": "Latin prae + caput → praeceps, “headfirst” → French",
       "variants": [],
       "reviewed": false
@@ -998,6 +2619,18 @@
       "word": "biceps",
       "lang": "fr",
       "tier": "core",
+      "definition": "the muscle at the front of the upper arm",
+      "morphemes": [
+        {
+          "part": "bi-",
+          "meaning": "two"
+        },
+        {
+          "part": "ceps",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -1006,6 +2639,18 @@
       "word": "triceps",
       "lang": "fr",
       "tier": "core",
+      "definition": "the muscle at the back of the upper arm",
+      "morphemes": [
+        {
+          "part": "tri-",
+          "meaning": "three"
+        },
+        {
+          "part": "ceps",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -1014,6 +2659,18 @@
       "word": "quadriceps",
       "lang": "fr",
       "tier": "core",
+      "definition": "the large muscle at the front of the thigh",
+      "morphemes": [
+        {
+          "part": "quadri-",
+          "meaning": "four"
+        },
+        {
+          "part": "ceps",
+          "meaning": "head",
+          "root": true
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false
@@ -1022,6 +2679,23 @@
       "word": "occipital",
       "lang": "fr",
       "tier": "core",
+      "definition": "of the back of the head",
+      "source": "Latin occiput",
+      "morphemes": [
+        {
+          "part": "oc-",
+          "meaning": "against, behind"
+        },
+        {
+          "part": "cipit",
+          "meaning": "head",
+          "root": true
+        },
+        {
+          "part": "-al",
+          "meaning": "relating to"
+        }
+      ],
       "path": "Latin caput → French",
       "variants": [],
       "reviewed": false

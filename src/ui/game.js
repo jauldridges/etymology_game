@@ -119,7 +119,7 @@ export async function mountGame(container, options = {}) {
   let timer = null;
   let game = null; // { day, puzzle, saveKey, progress }
 
-  const wrap = (inner) => { container.innerHTML = `<div class="rg-wrap">${inner}</div>`; };
+  const wrap = (inner, cls = '') => { container.innerHTML = `<div class="rg-wrap ${cls}">${inner}</div>`; };
   const header = (right = '') => `
     <header class="rg-top"><span class="rg-brand">${h(GAME_NAME)}</span>${right}</header>`;
 
@@ -284,7 +284,7 @@ export async function mountGame(container, options = {}) {
         <button class="rg-btn" type="submit">Enter</button>
       </form>
       ${accents.length ? `<div class="rg-accents" aria-label="Accented letters (optional: words match without them)"><span class="rg-accents-note">Accents optional</span>${accents.map((a) => `<button type="button" class="rg-key" data-char="${h(a)}">${h(a)}</button>`).join('')}</div>` : ''}
-      <div class="rg-feedback" aria-live="polite"></div>
+      <div class="rg-feedback" aria-live="polite" aria-atomic="true"></div>
       <div class="rg-tabs" role="tablist" aria-label="Found words by language"></div>
       <div class="rg-panel" role="tabpanel"></div>
       <div class="rg-finish"><button class="rg-btn rg-ghost" data-act="finish">Finish and see all words</button></div>`);
@@ -316,9 +316,50 @@ export async function mountGame(container, options = {}) {
         : `<p class="rg-empty">No ${h(langName(tab))} words yet.</p>`;
     }
 
-    function say(cls, html) {
-      feedback.className = `rg-feedback ${cls}`;
-      feedback.innerHTML = html;
+    // A big, unmissable card for every answer. Each answer builds a fresh card so
+    // its entrance animation always plays. Shape and wording differ by result,
+    // never color alone.
+    function card(kind, { icon, title, sub = '', detail = '', plus = '', extra = '' }) {
+      const el = document.createElement('div');
+      el.className = `rg-fb rg-fb-${kind}`;
+      el.innerHTML = `
+        <span class="rg-fb-icon" aria-hidden="true">${icon}</span>
+        <div class="rg-fb-body">
+          <p class="rg-fb-title">${title}</p>
+          ${sub ? `<p class="rg-fb-sub">${sub}</p>` : ''}
+          ${detail ? `<p class="rg-fb-detail">${detail}</p>` : ''}
+          ${extra}
+        </div>
+        ${plus ? `<span class="rg-fb-plus" aria-hidden="true">${plus}</span>` : ''}`;
+      feedback.replaceChildren(el);
+      return el;
+    }
+
+    function burst(el, big) {
+      if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+      const n = big ? 24 : 12;
+      const layer = document.createElement('span');
+      layer.className = 'rg-burst';
+      layer.setAttribute('aria-hidden', 'true');
+      for (let i = 0; i < n; i++) {
+        const dot = document.createElement('i');
+        const angle = (i / n) * Math.PI * 2 + Math.random() * 0.4;
+        const dist = (big ? 70 : 44) + Math.random() * (big ? 50 : 24);
+        dot.style.setProperty('--dx', `${Math.cos(angle) * dist}px`);
+        dot.style.setProperty('--dy', `${Math.sin(angle) * dist}px`);
+        dot.style.setProperty('--d', `${Math.random() * 80}ms`);
+        if (i % 3 === 0) dot.className = 'rg-leaf';
+        layer.appendChild(dot);
+      }
+      el.querySelector('.rg-fb-icon').appendChild(layer);
+      setTimeout(() => layer.remove(), 1200);
+    }
+
+    function shake() {
+      const form = container.querySelector('.rg-form');
+      form.classList.remove('rg-shake');
+      void form.offsetWidth; // restart the animation
+      form.classList.add('rg-shake');
     }
 
     function submit() {
@@ -327,29 +368,58 @@ export async function mountGame(container, options = {}) {
       input.value = '';
       if (result.kind === 'empty') return;
       if (result.kind === 'new') {
+        const before = score();
         freshIds.clear();
         for (const e of result.entries) { progress.found.push(e.id); freshIds.add(e.id); }
         saveProgress();
+        const after = score();
         const langs = [...new Set(result.entries.map((e) => e.lang))];
         if (!langs.includes(tab)) tab = langs[0];
         const bonusOnly = result.entries.every((e) => puzzle.tiers[e.tier]?.scoring === 'bonus');
-        const note = bonusOnly
-          ? (settings.bonusMode === 'off' ? ' · bonus word (not scored)' : ' · bonus word')
-          : '';
-        say('rg-good', `<span class="rg-mark">✓ Found</span> <span><strong>${h(result.entries[0].word)}</strong> in ${langs.map(langName).join(', ')}${note}</span>`);
+        const gained = after.found - before.found;
+        const rankUp = after.rank.min > before.rank.min;
+        const defined = result.entries.find((e) => e.lang === 'en' && e.definition) ?? result.entries.find((e) => e.definition);
+        const el = card('good', {
+          icon: '✓',
+          title: h(result.entries[0].word),
+          sub: `${langs.map((l) => h(langName(l))).join(' · ')}${bonusOnly ? ` · bonus word${settings.bonusMode === 'off' ? ', not scored' : ''}` : ''}`,
+          detail: defined ? h(defined.definition) : '',
+          plus: gained > 0 ? `+${gained}` : '',
+          extra: rankUp ? `<p class="rg-fb-rankup">New rank: <strong>${h(after.rank.name)}</strong></p>` : '',
+        });
+        if (rankUp) el.classList.add('rg-fb-big');
+        burst(el, rankUp);
+        drawScore();
+        if (rankUp) rankEl.classList.add('rg-rank-up');
+        setTimeout(() => rankEl.classList.remove('rg-rank-up'), 1200);
       } else if (result.kind === 'repeat') {
-        say('', `<span class="rg-mark">↺</span> <span>Already found: <strong>${h(result.entries[0].word)}</strong></span>`);
+        card('repeat', { icon: '↺', title: 'Already found', sub: `<strong>${h(result.entries[0].word)}</strong> is on your list` });
+        shake();
+        drawScore();
       } else if (result.kind === 'notRelated') {
-        say('rg-close', `<span class="rg-mark">≈</span> <span>Close, but <strong>${h(typed.trim())}</strong> is not from this root.</span>`);
+        const item = result.items[0];
+        card('close', {
+          icon: '≈',
+          title: 'Close, but not from this root',
+          sub: `<strong>${h(typed.trim())}</strong>: ${h(item.why)}`,
+        });
+        shake();
+        drawScore();
       } else {
-        say('', `<span class="rg-mark">·</span> <span><strong>${h(result.text)}</strong> is not in this puzzle.</span> <button type="button" class="rg-link" data-belongs="${h(result.text)}">It belongs</button>`);
+        card('miss', {
+          icon: '✕',
+          title: 'Not in this puzzle',
+          sub: `<strong>${h(result.text)}</strong>`,
+          extra: `<button type="button" class="rg-fb-flag" data-belongs="${h(result.text)}">I think it belongs</button>`,
+        });
         feedback.querySelector('[data-belongs]').addEventListener('click', (e) => {
-          flagWord(e.target.dataset.belongs, null);
-          say('', '<span class="rg-mark">✓</span> <span>Thanks. Sent for review.</span>');
+          flagWord(e.currentTarget.dataset.belongs, null);
+          card('repeat', { icon: '✓', title: 'Thanks', sub: 'Sent for review.' });
           input.focus();
         });
+        shake();
+        drawScore();
       }
-      drawScore();
       input.focus();
     }
 
@@ -406,6 +476,51 @@ export async function mountGame(container, options = {}) {
   }
 
   // ---------- Reveal ----------
+  // The key shows one column per language. Tapping a column (or a word in it)
+  // zooms in: that column fills the width and every word opens up to show its
+  // parts, what it was built from, and its path from the root.
+  function setupZoom(langs) {
+    const cols = container.querySelector('.rg-cols');
+    const bar = container.querySelector('.rg-zoombar');
+    const key = container.querySelector('.rg-family');
+    let current = null;
+
+    function zoom(lang, entry) {
+      current = lang;
+      cols.classList.toggle('is-zoomed', !!lang);
+      bar.hidden = !lang;
+      cols.querySelectorAll('.rg-col').forEach((c) => c.classList.toggle('is-active', c.dataset.lang === lang));
+      cols.querySelectorAll('[data-zoom]').forEach((b) => b.setAttribute('aria-expanded', String(!!lang)));
+      const target = entry != null ? container.querySelector(`#rg-e-${entry}`) : key;
+      if (target) {
+        target.scrollIntoView({ block: entry != null ? 'center' : 'start' });
+        if (entry != null) {
+          target.classList.remove('rg-flash');
+          void target.offsetWidth;
+          target.classList.add('rg-flash');
+        }
+      }
+    }
+
+    cols.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-zoom]');
+      if (!btn) return;
+      if (current && !btn.dataset.entry) return zoom(null);
+      if (current) return; // already zoomed: words are open, nothing to do
+      zoom(btn.dataset.zoom, btn.dataset.entry ?? null);
+    });
+    bar.querySelector('.rg-zoom-back').addEventListener('click', () => {
+      const was = current;
+      zoom(null);
+      cols.querySelector(`.rg-col[data-lang="${was}"]`)?.scrollIntoView({ inline: 'start', block: 'nearest' });
+    });
+    bar.querySelectorAll('.rg-zoom-step').forEach((b) => b.addEventListener('click', () => {
+      const i = langs.indexOf(current);
+      zoom(langs[(i + Number(b.dataset.step) + langs.length) % langs.length]);
+    }));
+    container.addEventListener('keydown', (e) => { if (e.key === 'Escape' && current) zoom(null); });
+  }
+
   function renderReveal() {
     stopTimer();
     const { day, puzzle, progress } = game;
@@ -418,29 +533,77 @@ export async function mountGame(container, options = {}) {
     const tierOrder = Object.keys(puzzle.tiers);
     const myFlags = store.get('flags', []).filter((f) => f.puzzle === puzzle.id);
 
-    const langSections = puzzle.languages.map((l) => {
-      const entries = puzzle.entries.filter((e) => e.lang === l)
-        .sort((a, b) => tierOrder.indexOf(a.tier) - tierOrder.indexOf(b.tier));
-      const pl = s.perLang[l];
+    // English first, then the puzzle's other languages in their usual order.
+    const columnLangs = [...puzzle.languages].sort((a, b) => (b === 'en') - (a === 'en'));
+    const entryIndex = new Map(puzzle.entries.map((e, i) => [e.id, i]));
+
+    const partsInline = (e) => (e.morphemes ?? []).map((m) =>
+      `<span class="${m.root ? 'rg-m-root' : ''}">${h(m.part)}</span>`).join('<span class="rg-m-plus"> + </span>');
+
+    const partsFull = (e) => (e.morphemes ?? []).map((m) => `
+      <span class="rg-chip${m.root ? ' rg-chip-root' : ''}">
+        <span class="rg-chip-part">${h(m.part)}</span>
+        <span class="rg-chip-meaning">${h(m.meaning)}</span>
+      </span>`).join('<span class="rg-chip-plus" aria-hidden="true">+</span>');
+
+    const wordItem = (e) => {
+      const isFound = found.has(e.id);
+      const i = entryIndex.get(e.id);
       return `
-        <section>
-          <div class="rg-lang-head"><h2>${h(langName(l))}</h2><span class="rg-muted rg-small">${pl.found} of ${pl.total} found</span></div>
-          <ul class="rg-words">${entries.map((e) => {
-            const isFound = found.has(e.id);
-            const tier = puzzle.tiers[e.tier];
-            const badge = e.tier !== 'core' ? `<span class="rg-badge">${h(tier?.label ?? e.tier)}</span>` : '';
-            return `<li class="${isFound ? 'rg-was-found' : ''}">
-              <span class="rg-status ${isFound ? 'rg-is-found' : 'rg-is-missed'}">${isFound ? '✓ Found' : '○ Missed'}</span>
-              <span><span class="rg-word">${h(e.word)}</span>${e.gloss ? `<span class="rg-gloss">(${h(e.gloss)})</span>` : ''}${badge}</span>
-              <span class="rg-path">${h(e.path)}</span>
-            </li>`;
-          }).join('')}</ul>
-        </section>`;
+        <li class="rg-kw ${isFound ? 'rg-kw-found' : 'rg-kw-missed'}" id="rg-e-${i}">
+          <button type="button" class="rg-kw-btn" data-zoom="${e.lang}" data-entry="${i}">
+            <span class="rg-kw-mark" aria-hidden="true">${isFound ? '✓' : '○'}</span>
+            <span class="rg-kw-main">
+              <span class="rg-kw-word">${h(e.word)}${e.gloss ? ` <span class="rg-gloss">(${h(e.gloss)})</span>` : ''}</span>
+              <span class="rg-visually-hidden">${isFound ? ', found' : ', missed'}</span>
+              ${e.definition ? `<span class="rg-kw-def">${h(e.definition)}</span>` : ''}
+              ${e.morphemes ? `<span class="rg-kw-parts">${partsInline(e)}</span>` : ''}
+            </span>
+          </button>
+          <div class="rg-kw-detail">
+            ${e.morphemes ? `<div class="rg-chips" aria-label="Word parts">${partsFull(e)}</div>` : ''}
+            ${e.source ? `<p class="rg-kw-source">Built from ${h(e.source)}</p>` : ''}
+            <p class="rg-kw-path"><span class="rg-kw-label">Path</span> ${h(e.path)}</p>
+          </div>
+        </li>`;
+    };
+
+    const columns = columnLangs.map((l) => {
+      const pl = s.perLang[l];
+      const groups = tierOrder.map((t) => ({ t, list: puzzle.entries.filter((e) => e.lang === l && e.tier === t) }))
+        .filter((g) => g.list.length);
+      return `
+        <article class="rg-col" data-lang="${l}" aria-label="${h(langName(l))}">
+          <button type="button" class="rg-col-head" data-zoom="${l}">
+            <span class="rg-col-name">${h(langName(l))}</span>
+            <span class="rg-col-count">${pl.found} of ${pl.total} found</span>
+            <span class="rg-col-zoom" aria-hidden="true">Zoom in ⤢</span>
+          </button>
+          ${groups.map((g) => `
+            ${g.t !== 'core' ? `<h3 class="rg-col-tier">${h(puzzle.tiers[g.t]?.label ?? g.t)}</h3>` : ''}
+            <ul class="rg-kw-list">${g.list.map(wordItem).join('')}</ul>`).join('')}
+        </article>`;
     }).join('');
+
+    const langSections = `
+      <section class="rg-family" aria-labelledby="rg-key-title">
+        <div class="rg-key-head">
+          <h2 id="rg-key-title">The whole family</h2>
+          <p class="rg-muted rg-small rg-key-hint">Tap a language to zoom in and see what each part of a word means.</p>
+        </div>
+        <div class="rg-zoombar" hidden>
+          <button type="button" class="rg-btn rg-ghost rg-zoom-back">← All languages</button>
+          <span class="rg-zoom-steps">
+            <button type="button" class="rg-key rg-zoom-step" data-step="-1" aria-label="Previous language">‹</button>
+            <button type="button" class="rg-key rg-zoom-step" data-step="1" aria-label="Next language">›</button>
+          </span>
+        </div>
+        <div class="rg-cols">${columns}</div>
+      </section>`;
 
     wrap(`${header('<button class="rg-link" data-act="archive">Past puzzles</button>')}
       <main>
-        <section class="rg-card rg-result">
+        <section class="rg-card rg-result rg-narrow">
           <p class="rg-kicker">${day.number ? `No. ${day.number} · ` : ''}${h(rootLabel(puzzle))} · “${h(puzzle.roots[0].meaning)}”${progress.mode === 'blitz' ? ' · blitz' : ''}</p>
           <span class="rg-rank-name">${h(s.rank.name)}</span>
           <p>${s.found - s.extra} of ${s.total} words · ${s.percentShown}%${s.extra ? ` · +${s.extra} bonus` : ''}</p>
@@ -451,17 +614,17 @@ export async function mountGame(container, options = {}) {
             <div class="rg-btn-row"><button class="rg-btn" data-act="copy">Copy result</button></div>
           </div>
         </section>
-        ${puzzle.context ? `<p class="rg-context">${h(puzzle.context)}</p>` : ''}
+        ${puzzle.context ? `<p class="rg-context rg-narrow">${h(puzzle.context)}</p>` : ''}
         ${langSections}
         ${puzzle.notRelated.length ? `
-          <section>
+          <section class="rg-narrow">
             <div class="rg-lang-head"><h2>Not related</h2><span class="rg-muted rg-small">Lookalikes</span></div>
             <ul class="rg-words rg-nr">${puzzle.notRelated.map((n) => `
               <li><span><span class="rg-word">${h(n.word)}</span>${n.sense ? `<span class="rg-gloss">(${h(n.sense)})</span>` : ''} <span class="rg-badge">${h(langName(n.lang))}</span></span>
               <span class="rg-path">${h(n.why[0].toUpperCase() + n.why.slice(1))}.</span></li>`).join('')}
             </ul>
           </section>` : ''}
-        <section class="rg-suggest">
+        <section class="rg-suggest rg-narrow">
           <h2 style="font-size:22px">Missing a word?</h2>
           <p class="rg-muted rg-small">If a word belongs here, tell us. Suggestions are checked before they join the list.</p>
           <form autocomplete="off">
@@ -474,8 +637,9 @@ export async function mountGame(container, options = {}) {
           ${myFlags.length ? `<p class="rg-muted rg-small" style="margin-top:10px">You have suggested ${myFlags.length} ${myFlags.length === 1 ? 'word' : 'words'} for this puzzle. ${options.onFlag ? '' : '<button class="rg-link" data-act="export">Copy suggestions</button>'}</p>` : ''}
         </section>
         <div class="rg-finish"><button class="rg-btn rg-ghost" data-act="archive">Past puzzles</button></div>
-      </main>`);
+      </main>`, 'rg-wide');
 
+    setupZoom(columnLangs);
     container.querySelector('.rg-suggest form').addEventListener('submit', (e) => {
       e.preventDefault();
       const w = container.querySelector('#rg-suggest-word').value;

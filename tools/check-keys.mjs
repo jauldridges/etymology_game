@@ -78,6 +78,14 @@ export function checkPuzzle(p, file = p?.id ?? '?') {
     if (!Array.isArray(e.variants)) err(`${label}: variants must be a list`);
     if (typeof e.reviewed !== 'boolean') err(`${label}: reviewed must be true or false`);
     if (roots.length > 1 && !rootIds.has(e.root)) err(`${label}: names root "${e.root}", which is not in this bundle`);
+    if (e.morphemes !== undefined) {
+      if (!Array.isArray(e.morphemes) || !e.morphemes.length) err(`${label}: morphemes must be a non-empty list`);
+      else {
+        if (e.morphemes.some((m) => !m.part || !m.meaning)) err(`${label}: every word part needs part and meaning`);
+        if (!e.morphemes.some((m) => m.root)) err(`${label}: no word part is marked as the root`);
+      }
+    }
+    if (e.definition !== undefined && !String(e.definition).trim()) err(`${label}: empty definition`);
     if (!e.reviewed) unreviewed++;
     if (tiers[e.tier]?.scoring === 'always') scored++;
     if (e.lang in perLang) perLang[e.lang]++;
@@ -113,6 +121,8 @@ export function checkPuzzle(p, file = p?.id ?? '?') {
   for (const [l, n] of Object.entries(perLang)) if (!n) err(`language "${l}" has no entries`);
   if (scored < SIZE.min || scored > SIZE.max)
     warn(`${scored} scored words; the target is about 100 (${SIZE.min}–${SIZE.max})`);
+  const bare = p.entries.filter((e) => !e.definition || !e.morphemes).length;
+  if (bare) warn(`${bare} of ${p.entries.length} entries have no definition or word parts yet (the reveal shows the path only)`);
   if (unreviewed && p.status !== 'ready') warn(`${unreviewed} of ${p.entries.length} entries unreviewed (draft)`);
 
   return { errors, warnings };

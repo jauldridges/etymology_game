@@ -32,6 +32,7 @@ For testing, the URL accepts `?date=2026-11-19` to pretend it is that day, and `
 | `src/ui/game.js`, `game.css` | The whole game as one embeddable piece, `mountGame(element, options)` |
 | `index.html` | A standalone page that mounts the game |
 | `tools/check-keys.mjs` | The key checker |
+| `annotations/<id>.txt`, `tools/annotate.mjs` | Definitions and word-part breakdowns, written as plain text and merged into a key file |
 | `tools/import-drafts.mjs` | The one-time converter from `docs/draft-keys.md` (will not overwrite existing keys) |
 
 ## Key files
@@ -62,6 +63,7 @@ For testing, the URL accepts `?date=2026-11-19` to pretend it is that day, and `
 - **gloss / sense**: tell apart two words with the same spelling (*cape* the headland counts; *cape* the cloak does not).
 - **variants**: extra accepted spellings and endings. Matching already ignores capitals, accents, hyphens and apostrophes, but it never guesses endings, so *chefs* is accepted only if it is listed.
 - **Bundles**: use `"roots": [{ "id": …, … }, …]` instead of `root`, and give every entry a `root`. The engine and checker support this; no bundle puzzle exists yet.
+- **definition, source, morphemes**: what the reveal shows when a word is opened. `morphemes` lists the word's parts (`{ "part": "capit", "meaning": "head", "root": true }`), and `source` names the older word those parts belong to when they are not the parts of the modern spelling (*chapter*: Latin *capitulum*). Edit them in `annotations/<id>.txt` and run `node tools/annotate.mjs keys/<id>.json annotations/<id>.txt`. So far only *caput*, *graphō* and *hūs* have them.
 - **notes**: the draft's Flags notes, copied word for word, plus anything the import changed.
 
 ## Embedding in the practice app

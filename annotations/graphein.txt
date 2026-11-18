@@ -1,0 +1,187 @@
+# graphō, "write". Definitions and word parts, drafted for review.
+# graph- = write, draw;  gram- = something written, a letter.
+# lang | word | definition | source | parts
+
+en | graph | a diagram that shows data | | *graph=write, draw
+en | graphic | relating to drawing or images; vivid and detailed | | *graph=write, draw + -ic=relating to
+en | graphics | images made for print or screens | | *graph=write, draw + -ics=the art of
+en | graphite | the soft black carbon in pencils | | *graph=write + -ite=a mineral
+en | paragraph | a block of text on one topic | Greek paragraphos, a mark written beside the text | para-=beside + *graph=write
+en | autograph | a famous person’s signature | | auto-=self + *graph=write
+en | biography | the story of a person’s life | | bio-=life + *graph=write + -y=makes a noun
+en | autobiography | the story of a person’s life, written by that person | | auto-=self + bio-=life + *graph=write + -y=makes a noun
+en | geography | the study of the earth’s lands and places | | geo-=earth + *graph=write, describe + -y=makes a noun
+en | photograph | a picture made with a camera | | photo-=light + *graph=write, draw
+en | photography | the art of taking photographs | | photo-=light + *graph=write, draw + -y=makes a noun
+en | telegraph | a system for sending messages over wires | | tele-=far + *graph=write
+en | telegram | a message sent by telegraph | | tele-=far + *gram=something written
+en | grammar | the rules of a language | Greek grammatikē, “the art of letters” | *gramm=letter + -ar=the art of
+en | grammatical | following the rules of grammar | | *grammat=letter + -ical=relating to
+en | program | a plan of events; a set of computer instructions | Greek programma, “a public notice” | pro-=before + *gram=something written
+en | programmer | a person who writes computer programs | | pro-=before + *gram=something written + -er=a person who
+en | diagram | a simple drawing that explains something | | dia-=through, across + *gram=something drawn
+en | epigram | a short, witty saying | | epi-=upon + *gram=something written
+en | anagram | a word made by rearranging the letters of another | | ana-=back, again + *gram=letter
+en | monogram | a design made from a person’s initials | | mono-=one + *gram=letter
+en | hologram | a three-dimensional image made with lasers | | holo-=whole + *gram=something drawn
+en | kilogram | a thousand grams | | kilo-=thousand + *gram=a small weight
+en | gram | a small unit of weight | Late Latin gramma, “a small weight” | *gram=something written; a small weight
+en | calligraphy | the art of beautiful handwriting | | calli-=beautiful + *graph=write + -y=makes a noun
+en | choreography | the art of planning dance steps | | choreo-=dance + *graph=write + -y=makes a noun
+en | bibliography | a list of books or sources | | biblio-=book + *graph=write + -y=makes a noun
+en | grapheme | the smallest unit of a writing system, such as a letter | | *graph=write + -eme=a unit
+en | graphology | the study of handwriting | | *graph=write + -ology=the study of
+en | grammarian | an expert in grammar | | *grammar=the rules of a language + -ian=a person who
+en | cryptogram | a message in code | | crypto-=hidden + *gram=something written
+en | seismograph | an instrument that records earthquakes | | seismo-=earthquake + *graph=write, record
+en | stenography | writing in shorthand | | steno-=narrow + *graph=write + -y=makes a noun
+en | typography | the style and arrangement of printed letters | | typo-=type, mark + *graph=write + -y=makes a noun
+en | lithograph | a print made from a flat stone or metal plate | | litho-=stone + *graph=write, draw
+en | ethnography | the study of peoples and their customs | | ethno-=people, nation + *graph=write, describe + -y=makes a noun
+en | demography | the study of populations | | demo-=people + *graph=write, describe + -y=makes a noun
+en | cartography | the making of maps | | carto-=map (from Latin) + *graph=write, draw + -y=makes a noun
+en | pictogram | a picture used as a symbol | | picto-=painted (from Latin) + *gram=something drawn
+en | ideogram | a symbol that stands for an idea | | ideo-=idea + *gram=something written
+en | gramophone | an old record player | | *gramo=something written + -phone=sound
+en | epigraph | a quotation at the start of a book or chapter | | epi-=upon + *graph=write
+en | orthography | correct spelling; a spelling system | | ortho-=correct + *graph=write + -y=makes a noun
+en | glamour | exciting, attractive charm | Scots glamour, an altered form of grammar | *glam=grammar, learning (once meant magic spells) + -our=makes a noun
+en | graffiti | writing or drawings scratched or painted on walls | Italian graffiti, “scratchings” | *graff=scratch, write + -iti=more than one
+en | graft | a shoot joined to another plant; to join one living thing to another | Old French grafe, “stylus”, for the shoot’s shape | *graft=stylus, writing tool
+
+es | gráfico | graphic; a chart | | *graf=write, draw + -ico=relating to
+es | gráfica | a graph | | *graf=write, draw + -ica=relating to
+es | grafito | @graphite | | *graf=write + -ito=a mineral
+es | párrafo | a paragraph | Greek paragraphos | para-=beside + *graph=write
+es | autógrafo | an autograph | | auto-=self + *grafo=write
+es | biografía | a biography | | bio-=life + *graf=write + -ía=makes a noun
+es | autobiografía | an autobiography | | auto-=self + bio-=life + *graf=write + -ía=makes a noun
+es | geografía | geography | | geo-=earth + *graf=write, describe + -ía=makes a noun
+es | fotografía | a photograph; photography | | foto-=light + *graf=write, draw + -ía=makes a noun
+es | fotografiar | to photograph | | foto-=light + *graf=write, draw + -iar=makes a verb
+es | telégrafo | a telegraph | | tele-=far + *grafo=write
+es | telegrama | a telegram | | tele-=far + *grama=something written
+es | gramática | grammar | | *gramát=letter + -ica=the art of
+es | gramatical | grammatical | | *gramat=letter + -ical=relating to
+es | programa | a program; a TV or radio show | | pro-=before + *grama=something written
+es | programar | to program; to schedule | | pro-=before + *gram=something written + -ar=makes a verb
+es | programador | a programmer | | pro-=before + *gram=something written + -ador=a person who
+es | diagrama | a diagram | | dia-=through, across + *grama=something drawn
+es | epigrama | an epigram | | epi-=upon + *grama=something written
+es | anagrama | an anagram | | ana-=back, again + *grama=letter
+es | monograma | a monogram | | mono-=one + *grama=letter
+es | holograma | a hologram | | holo-=whole + *grama=something drawn
+es | kilogramo | a kilogram | | kilo-=thousand + *gramo=a small weight
+es | gramo | a gram | | *gramo=a small weight
+es | caligrafía | calligraphy | | cali-=beautiful + *graf=write + -ía=makes a noun
+es | coreografía | choreography | | coreo-=dance + *graf=write + -ía=makes a noun
+es | bibliografía | a bibliography | | biblio-=book + *graf=write + -ía=makes a noun
+es | grafía | the way a sound or word is written | | *graf=write + -ía=makes a noun
+es | grafología | graphology | | *graf=write + -ología=the study of
+es | criptograma | a cryptogram | | cripto-=hidden + *grama=something written
+es | sismógrafo | a seismograph | | sismo-=earthquake + *grafo=write, record
+es | taquigrafía | shorthand | | taqui-=fast + *graf=write + -ía=makes a noun
+es | tipografía | typography | | tipo-=type, mark + *graf=write + -ía=makes a noun
+es | litografía | a lithograph; lithography | | lito-=stone + *graf=write, draw + -ía=makes a noun
+es | etnografía | ethnography | | etno-=people, nation + *graf=write, describe + -ía=makes a noun
+es | demografía | demography | | demo-=people + *graf=write, describe + -ía=makes a noun
+es | cartografía | cartography | | carto-=map + *graf=write, draw + -ía=makes a noun
+es | pictograma | a pictogram | | picto-=painted + *grama=something drawn
+es | ideograma | an ideogram | | ideo-=idea + *grama=something written
+es | gramófono | a gramophone | | *gramo=something written + -fono=sound
+es | epígrafe | an epigraph; a heading | | epi-=upon + *grafe=write
+es | ortografía | spelling | | orto-=correct + *graf=write + -ía=makes a noun
+es | telegrafiar | to send a telegram | | tele-=far + *graf=write + -iar=makes a verb
+es | grafiti | @graffiti | Italian graffiti | *graf=scratch, write + -iti=more than one
+
+pt | gráfico | graphic; a chart | | *graf=write, draw + -ico=relating to
+pt | gráfica | a printing shop; a graph | | *graf=write, draw + -ica=relating to
+pt | grafite | graphite; also graffiti | | *graf=write + -ite=a mineral
+pt | parágrafo | a paragraph | Greek paragraphos | para-=beside + *grafo=write
+pt | autógrafo | an autograph | | auto-=self + *grafo=write
+pt | biografia | a biography | | bio-=life + *graf=write + -ia=makes a noun
+pt | autobiografia | an autobiography | | auto-=self + bio-=life + *graf=write + -ia=makes a noun
+pt | geografia | geography | | geo-=earth + *graf=write, describe + -ia=makes a noun
+pt | fotografia | a photograph; photography | | foto-=light + *graf=write, draw + -ia=makes a noun
+pt | fotografar | to photograph | | foto-=light + *graf=write, draw + -ar=makes a verb
+pt | telégrafo | a telegraph | | tele-=far + *grafo=write
+pt | telegrama | a telegram | | tele-=far + *grama=something written
+pt | gramática | grammar | | *gramát=letter + -ica=the art of
+pt | gramatical | grammatical | | *gramat=letter + -ical=relating to
+pt | programa | a program; a TV or radio show | | pro-=before + *grama=something written
+pt | programar | to program; to schedule | | pro-=before + *gram=something written + -ar=makes a verb
+pt | programador | a programmer | | pro-=before + *gram=something written + -ador=a person who
+pt | diagrama | a diagram | | dia-=through, across + *grama=something drawn
+pt | epigrama | an epigram | | epi-=upon + *grama=something written
+pt | anagrama | an anagram | | ana-=back, again + *grama=letter
+pt | monograma | a monogram | | mono-=one + *grama=letter
+pt | holograma | a hologram | | holo-=whole + *grama=something drawn
+pt | quilograma | a kilogram | | quilo-=thousand + *grama=a small weight
+pt | grama | a gram | | *grama=a small weight
+pt | caligrafia | calligraphy; handwriting | | cali-=beautiful + *graf=write + -ia=makes a noun
+pt | coreografia | choreography | | coreo-=dance + *graf=write + -ia=makes a noun
+pt | bibliografia | a bibliography | | biblio-=book + *graf=write + -ia=makes a noun
+pt | grafia | the way a sound or word is written | | *graf=write + -ia=makes a noun
+pt | grafologia | graphology | | *graf=write + -ologia=the study of
+pt | criptograma | a cryptogram | | cripto-=hidden + *grama=something written
+pt | sismógrafo | a seismograph | | sismo-=earthquake + *grafo=write, record
+pt | taquigrafia | shorthand | | taqui-=fast + *graf=write + -ia=makes a noun
+pt | tipografia | typography; a print shop | | tipo-=type, mark + *graf=write + -ia=makes a noun
+pt | litografia | a lithograph; lithography | | lito-=stone + *graf=write, draw + -ia=makes a noun
+pt | etnografia | ethnography | | etno-=people, nation + *graf=write, describe + -ia=makes a noun
+pt | demografia | demography | | demo-=people + *graf=write, describe + -ia=makes a noun
+pt | cartografia | cartography | | carto-=map + *graf=write, draw + -ia=makes a noun
+pt | pictograma | a pictogram | | picto-=painted + *grama=something drawn
+pt | ideograma | an ideogram | | ideo-=idea + *grama=something written
+pt | gramofone | a gramophone | | *gramo=something written + -fone=sound
+pt | epígrafe | an epigraph; a heading | | epi-=upon + *grafe=write
+pt | ortografia | spelling | | orto-=correct + *graf=write + -ia=makes a noun
+pt | telegrafar | to send a telegram | | tele-=far + *graf=write + -ar=makes a verb
+
+fr | graphique | graphic; a chart | | *graph=write, draw + -ique=relating to
+fr | graphite | @graphite | | *graph=write + -ite=a mineral
+fr | paragraphe | a paragraph | Greek paragraphos | para-=beside + *graphe=write
+fr | autographe | an autograph | | auto-=self + *graphe=write
+fr | biographie | a biography | | bio-=life + *graph=write + -ie=makes a noun
+fr | autobiographie | an autobiography | | auto-=self + bio-=life + *graph=write + -ie=makes a noun
+fr | géographie | geography | | géo-=earth + *graph=write, describe + -ie=makes a noun
+fr | photographie | a photograph; photography | | photo-=light + *graph=write, draw + -ie=makes a noun
+fr | photographier | to photograph | | photo-=light + *graph=write, draw + -ier=makes a verb
+fr | télégraphe | a telegraph | | télé-=far + *graphe=write
+fr | télégramme | a telegram | | télé-=far + *gramme=something written
+fr | grammaire | grammar | Latin grammatica | *gramm=letter + -aire=the art of
+fr | grammatical | grammatical | | *grammat=letter + -ical=relating to
+fr | programme | a program; a plan | | pro-=before + *gramme=something written
+fr | programmer | to program; to schedule | | pro-=before + *gramm=something written + -er=makes a verb
+fr | programmeur | a programmer | | pro-=before + *gramm=something written + -eur=a person who
+fr | diagramme | a diagram | | dia-=through, across + *gramme=something drawn
+fr | épigramme | an epigram | | épi-=upon + *gramme=something written
+fr | anagramme | an anagram | | ana-=back, again + *gramme=letter
+fr | monogramme | a monogram | | mono-=one + *gramme=letter
+fr | hologramme | a hologram | | holo-=whole + *gramme=something drawn
+fr | kilogramme | a kilogram | | kilo-=thousand + *gramme=a small weight
+fr | gramme | a gram | | *gramme=a small weight
+fr | calligraphie | calligraphy | | calli-=beautiful + *graph=write + -ie=makes a noun
+fr | chorégraphie | choreography | | choré-=dance + *graph=write + -ie=makes a noun
+fr | bibliographie | a bibliography | | biblio-=book + *graph=write + -ie=makes a noun
+fr | greffe | a graft; also a court clerk’s office | Old French grafe, “stylus” | *greffe=stylus, writing tool
+fr | greffer | to graft | | *greff=stylus, writing tool + -er=makes a verb
+fr | graffiti | @graffiti | Italian graffiti | *graff=scratch, write + -iti=more than one
+fr | grimoire | a book of magic spells | Old French gramaire, “grammar” | *grim=grammar, learning + -oire=makes a noun
+fr | graphie | the way a sound or word is written | | *graph=write + -ie=makes a noun
+fr | graphologie | graphology | | *graph=write + -ologie=the study of
+fr | graphème | a grapheme | | *graph=write + -ème=a unit
+fr | cryptogramme | a cryptogram | | crypto-=hidden + *gramme=something written
+fr | sismographe | a seismograph | | sismo-=earthquake + *graphe=write, record
+fr | sténographie | shorthand | | sténo-=narrow + *graph=write + -ie=makes a noun
+fr | typographie | typography | | typo-=type, mark + *graph=write + -ie=makes a noun
+fr | lithographie | a lithograph; lithography | | litho-=stone + *graph=write, draw + -ie=makes a noun
+fr | ethnographie | ethnography | | ethno-=people, nation + *graph=write, describe + -ie=makes a noun
+fr | démographie | demography | | démo-=people + *graph=write, describe + -ie=makes a noun
+fr | cartographie | cartography | | carto-=map + *graph=write, draw + -ie=makes a noun
+fr | pictogramme | a pictogram | | picto-=painted + *gramme=something drawn
+fr | idéogramme | an ideogram | | idéo-=idea + *gramme=something written
+fr | gramophone | a gramophone | | *gramo=something written + -phone=sound
+fr | épigraphe | an epigraph | | épi-=upon + *graphe=write
+fr | orthographe | spelling | | ortho-=correct + *graphe=write
+fr | télégraphier | to send a telegram | | télé-=far + *graph=write + -ier=makes a verb

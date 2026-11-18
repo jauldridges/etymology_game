@@ -48,6 +48,14 @@
       "word": "house",
       "lang": "en",
       "tier": "core",
+      "definition": "a building where people live",
+      "morphemes": [
+        {
+          "part": "house",
+          "meaning": "house",
+          "root": true
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -56,6 +64,18 @@
       "word": "housing",
       "lang": "en",
       "tier": "core",
+      "definition": "homes, taken as a whole; a protective case",
+      "morphemes": [
+        {
+          "part": "house",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "-ing",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -64,6 +84,18 @@
       "word": "household",
       "lang": "en",
       "tier": "core",
+      "definition": "all the people who live in one home",
+      "morphemes": [
+        {
+          "part": "house",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "hold",
+          "meaning": "keeping"
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -72,6 +104,18 @@
       "word": "housewife",
       "lang": "en",
       "tier": "core",
+      "definition": "a woman who runs a home",
+      "morphemes": [
+        {
+          "part": "house",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "wife",
+          "meaning": "woman"
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -80,6 +124,18 @@
       "word": "housework",
       "lang": "en",
       "tier": "core",
+      "definition": "cleaning and other jobs around the home",
+      "morphemes": [
+        {
+          "part": "house",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "work",
+          "meaning": "work"
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -88,6 +144,22 @@
       "word": "housekeeper",
       "lang": "en",
       "tier": "core",
+      "definition": "a person paid to run a home",
+      "morphemes": [
+        {
+          "part": "house",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "keep",
+          "meaning": "look after"
+        },
+        {
+          "part": "-er",
+          "meaning": "a person who"
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -96,6 +168,18 @@
       "word": "houseboat",
       "lang": "en",
       "tier": "core",
+      "definition": "a boat that people live on",
+      "morphemes": [
+        {
+          "part": "house",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "boat",
+          "meaning": "boat"
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -104,6 +188,18 @@
       "word": "housefly",
       "lang": "en",
       "tier": "core",
+      "definition": "the common fly found in homes",
+      "morphemes": [
+        {
+          "part": "house",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "fly",
+          "meaning": "fly"
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -112,6 +208,18 @@
       "word": "warehouse",
       "lang": "en",
       "tier": "core",
+      "definition": "a large building for storing goods",
+      "morphemes": [
+        {
+          "part": "ware",
+          "meaning": "goods"
+        },
+        {
+          "part": "house",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -120,6 +228,18 @@
       "word": "courthouse",
       "lang": "en",
       "tier": "core",
+      "definition": "a building that holds courts of law",
+      "morphemes": [
+        {
+          "part": "court",
+          "meaning": "court"
+        },
+        {
+          "part": "house",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -128,6 +248,18 @@
       "word": "farmhouse",
       "lang": "en",
       "tier": "core",
+      "definition": "the main house on a farm",
+      "morphemes": [
+        {
+          "part": "farm",
+          "meaning": "farm"
+        },
+        {
+          "part": "house",
+          "meaning": "house",
+          "root": true
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -136,6 +268,18 @@
       "word": "doghouse",
       "lang": "en",
       "tier": "core",
+      "definition": "a shelter for a dog; trouble or disgrace",
+      "morphemes": [
+        {
+          "part": "dog",
+          "meaning": "dog"
+        },
+        {
+          "part": "house",
+          "meaning": "house",
+          "root": true
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -144,6 +288,18 @@
       "word": "greenhouse",
       "lang": "en",
       "tier": "core",
+      "definition": "a glass building for growing plants",
+      "morphemes": [
+        {
+          "part": "green",
+          "meaning": "growing plants"
+        },
+        {
+          "part": "house",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -152,6 +308,18 @@
       "word": "lighthouse",
       "lang": "en",
       "tier": "core",
+      "definition": "a tower with a light that guides ships",
+      "morphemes": [
+        {
+          "part": "light",
+          "meaning": "light"
+        },
+        {
+          "part": "house",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -160,6 +328,18 @@
       "word": "outhouse",
       "lang": "en",
       "tier": "core",
+      "definition": "an outdoor toilet or shed",
+      "morphemes": [
+        {
+          "part": "out",
+          "meaning": "outside"
+        },
+        {
+          "part": "house",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -168,6 +348,18 @@
       "word": "hothouse",
       "lang": "en",
       "tier": "core",
+      "definition": "a heated greenhouse; a place of intense activity",
+      "morphemes": [
+        {
+          "part": "hot",
+          "meaning": "hot"
+        },
+        {
+          "part": "house",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -176,6 +368,18 @@
       "word": "workhouse",
       "lang": "en",
       "tier": "core",
+      "definition": "a former institution where poor people lived and worked",
+      "morphemes": [
+        {
+          "part": "work",
+          "meaning": "work"
+        },
+        {
+          "part": "house",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -184,6 +388,18 @@
       "word": "madhouse",
       "lang": "en",
       "tier": "core",
+      "definition": "a scene of chaos; once, a hospital for the mentally ill",
+      "morphemes": [
+        {
+          "part": "mad",
+          "meaning": "mad"
+        },
+        {
+          "part": "house",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -192,6 +408,18 @@
       "word": "slaughterhouse",
       "lang": "en",
       "tier": "core",
+      "definition": "a place where animals are killed for meat",
+      "morphemes": [
+        {
+          "part": "slaughter",
+          "meaning": "killing"
+        },
+        {
+          "part": "house",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -200,6 +428,18 @@
       "word": "townhouse",
       "lang": "en",
       "tier": "core",
+      "definition": "a house joined to others in a row",
+      "morphemes": [
+        {
+          "part": "town",
+          "meaning": "town"
+        },
+        {
+          "part": "house",
+          "meaning": "house",
+          "root": true
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -208,6 +448,18 @@
       "word": "clubhouse",
       "lang": "en",
       "tier": "core",
+      "definition": "a building used by a club",
+      "morphemes": [
+        {
+          "part": "club",
+          "meaning": "club"
+        },
+        {
+          "part": "house",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -216,6 +468,18 @@
       "word": "treehouse",
       "lang": "en",
       "tier": "core",
+      "definition": "a playhouse built in a tree",
+      "morphemes": [
+        {
+          "part": "tree",
+          "meaning": "tree"
+        },
+        {
+          "part": "house",
+          "meaning": "house",
+          "root": true
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -224,6 +488,18 @@
       "word": "playhouse",
       "lang": "en",
       "tier": "core",
+      "definition": "a theater; a small house for children to play in",
+      "morphemes": [
+        {
+          "part": "play",
+          "meaning": "play"
+        },
+        {
+          "part": "house",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -232,6 +508,18 @@
       "word": "birdhouse",
       "lang": "en",
       "tier": "core",
+      "definition": "a box for birds to nest in",
+      "morphemes": [
+        {
+          "part": "bird",
+          "meaning": "bird"
+        },
+        {
+          "part": "house",
+          "meaning": "house",
+          "root": true
+        }
+      ],
       "path": "Old English hūs → English",
       "variants": [],
       "reviewed": false
@@ -240,6 +528,19 @@
       "word": "husband",
       "lang": "en",
       "tier": "core",
+      "definition": "a married man",
+      "source": "Old Norse húsbóndi, “master of the house”",
+      "morphemes": [
+        {
+          "part": "hús",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "bóndi",
+          "meaning": "dweller, master"
+        }
+      ],
       "path": "Old Norse húsbóndi, “master of the house” → English",
       "variants": [],
       "reviewed": false
@@ -248,6 +549,19 @@
       "word": "hussy",
       "lang": "en",
       "tier": "core",
+      "definition": "a cheeky or shameless woman (old-fashioned)",
+      "source": "a shortening of housewife",
+      "morphemes": [
+        {
+          "part": "hus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "-sy",
+          "meaning": "from wife"
+        }
+      ],
       "path": "Old English hūs → housewife → shortened to hussy",
       "variants": [],
       "reviewed": false
@@ -256,6 +570,19 @@
       "word": "hustings",
       "lang": "en",
       "tier": "core",
+      "definition": "campaign speeches and events; once, a platform for them",
+      "source": "Old Norse húsþing, “house assembly”",
+      "morphemes": [
+        {
+          "part": "hús",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "þing",
+          "meaning": "assembly"
+        }
+      ],
       "path": "Old Norse húsþing, “house assembly” → English",
       "variants": [],
       "reviewed": false
@@ -264,6 +591,14 @@
       "word": "Haus",
       "lang": "de",
       "tier": "core",
+      "definition": "a house",
+      "morphemes": [
+        {
+          "part": "Haus",
+          "meaning": "house",
+          "root": true
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -272,6 +607,18 @@
       "word": "Häuschen",
       "lang": "de",
       "tier": "core",
+      "definition": "a little house, a cottage",
+      "morphemes": [
+        {
+          "part": "Häus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "-chen",
+          "meaning": "little"
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -280,6 +627,18 @@
       "word": "häuslich",
       "lang": "de",
       "tier": "core",
+      "definition": "domestic; home-loving",
+      "morphemes": [
+        {
+          "part": "häus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "-lich",
+          "meaning": "like, relating to"
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -288,6 +647,18 @@
       "word": "Hausfrau",
       "lang": "de",
       "tier": "core",
+      "definition": "a housewife",
+      "morphemes": [
+        {
+          "part": "Haus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "Frau",
+          "meaning": "woman, wife"
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -296,6 +667,18 @@
       "word": "Hausmann",
       "lang": "de",
       "tier": "core",
+      "definition": "a househusband",
+      "morphemes": [
+        {
+          "part": "Haus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "Mann",
+          "meaning": "man"
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -304,6 +687,18 @@
       "word": "Haushalt",
       "lang": "de",
       "tier": "core",
+      "definition": "a household; a budget",
+      "morphemes": [
+        {
+          "part": "Haus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "Halt",
+          "meaning": "keeping"
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -312,6 +707,18 @@
       "word": "Hausaufgabe",
       "lang": "de",
       "tier": "core",
+      "definition": "homework",
+      "morphemes": [
+        {
+          "part": "Haus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "Aufgabe",
+          "meaning": "task"
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -320,6 +727,18 @@
       "word": "Hausarzt",
       "lang": "de",
       "tier": "core",
+      "definition": "a family doctor",
+      "morphemes": [
+        {
+          "part": "Haus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "Arzt",
+          "meaning": "doctor"
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -328,6 +747,18 @@
       "word": "Hausmeister",
       "lang": "de",
       "tier": "core",
+      "definition": "a caretaker or janitor",
+      "morphemes": [
+        {
+          "part": "Haus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "Meister",
+          "meaning": "master"
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -336,6 +767,18 @@
       "word": "Haustier",
       "lang": "de",
       "tier": "core",
+      "definition": "a pet",
+      "morphemes": [
+        {
+          "part": "Haus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "Tier",
+          "meaning": "animal"
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -344,6 +787,18 @@
       "word": "Haustür",
       "lang": "de",
       "tier": "core",
+      "definition": "a front door",
+      "morphemes": [
+        {
+          "part": "Haus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "Tür",
+          "meaning": "door"
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -352,6 +807,18 @@
       "word": "Rathaus",
       "lang": "de",
       "tier": "core",
+      "definition": "a town hall",
+      "morphemes": [
+        {
+          "part": "Rat",
+          "meaning": "council"
+        },
+        {
+          "part": "Haus",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -360,6 +827,18 @@
       "word": "Krankenhaus",
       "lang": "de",
       "tier": "core",
+      "definition": "a hospital",
+      "morphemes": [
+        {
+          "part": "Kranken",
+          "meaning": "the sick"
+        },
+        {
+          "part": "Haus",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -368,6 +847,18 @@
       "word": "Gasthaus",
       "lang": "de",
       "tier": "core",
+      "definition": "an inn",
+      "morphemes": [
+        {
+          "part": "Gast",
+          "meaning": "guest"
+        },
+        {
+          "part": "Haus",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -376,6 +867,18 @@
       "word": "Warenhaus",
       "lang": "de",
       "tier": "core",
+      "definition": "a department store",
+      "morphemes": [
+        {
+          "part": "Waren",
+          "meaning": "goods"
+        },
+        {
+          "part": "Haus",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -384,6 +887,18 @@
       "word": "Kaufhaus",
       "lang": "de",
       "tier": "core",
+      "definition": "a department store",
+      "morphemes": [
+        {
+          "part": "Kauf",
+          "meaning": "buying"
+        },
+        {
+          "part": "Haus",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -392,6 +907,18 @@
       "word": "Bauernhaus",
       "lang": "de",
       "tier": "core",
+      "definition": "a farmhouse",
+      "morphemes": [
+        {
+          "part": "Bauern",
+          "meaning": "farmers"
+        },
+        {
+          "part": "Haus",
+          "meaning": "house",
+          "root": true
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -400,6 +927,18 @@
       "word": "Treibhaus",
       "lang": "de",
       "tier": "core",
+      "definition": "a hothouse",
+      "morphemes": [
+        {
+          "part": "Treib",
+          "meaning": "forcing (plants to grow)"
+        },
+        {
+          "part": "Haus",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -408,6 +947,18 @@
       "word": "Gewächshaus",
       "lang": "de",
       "tier": "core",
+      "definition": "a greenhouse",
+      "morphemes": [
+        {
+          "part": "Gewächs",
+          "meaning": "plant"
+        },
+        {
+          "part": "Haus",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -416,6 +967,22 @@
       "word": "Gehäuse",
       "lang": "de",
       "tier": "core",
+      "definition": "a case or casing; a shell",
+      "morphemes": [
+        {
+          "part": "Ge-",
+          "meaning": "together, a set"
+        },
+        {
+          "part": "häus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "-e",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -424,6 +991,18 @@
       "word": "hausen",
       "lang": "de",
       "tier": "core",
+      "definition": "to live in poor conditions; to wreak havoc",
+      "morphemes": [
+        {
+          "part": "haus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "-en",
+          "meaning": "makes a verb"
+        }
+      ],
       "path": "Old High German hūs → German",
       "variants": [],
       "reviewed": false
@@ -432,6 +1011,14 @@
       "word": "huis",
       "lang": "nl",
       "tier": "core",
+      "definition": "a house",
+      "morphemes": [
+        {
+          "part": "huis",
+          "meaning": "house",
+          "root": true
+        }
+      ],
       "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
       "variants": [],
       "reviewed": false
@@ -440,6 +1027,18 @@
       "word": "huisje",
       "lang": "nl",
       "tier": "core",
+      "definition": "a little house, a cottage",
+      "morphemes": [
+        {
+          "part": "huis",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "-je",
+          "meaning": "little"
+        }
+      ],
       "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
       "variants": [],
       "reviewed": false
@@ -448,6 +1047,18 @@
       "word": "huiselijk",
       "lang": "nl",
       "tier": "core",
+      "definition": "domestic; homey",
+      "morphemes": [
+        {
+          "part": "huis",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "-elijk",
+          "meaning": "like, relating to"
+        }
+      ],
       "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
       "variants": [],
       "reviewed": false
@@ -456,6 +1067,18 @@
       "word": "huisvrouw",
       "lang": "nl",
       "tier": "core",
+      "definition": "a housewife",
+      "morphemes": [
+        {
+          "part": "huis",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "vrouw",
+          "meaning": "woman, wife"
+        }
+      ],
       "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
       "variants": [],
       "reviewed": false
@@ -464,6 +1087,18 @@
       "word": "huisman",
       "lang": "nl",
       "tier": "core",
+      "definition": "a househusband",
+      "morphemes": [
+        {
+          "part": "huis",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "man",
+          "meaning": "man"
+        }
+      ],
       "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
       "variants": [],
       "reviewed": false
@@ -472,6 +1107,18 @@
       "word": "huishouden",
       "lang": "nl",
       "tier": "core",
+      "definition": "a household; housekeeping",
+      "morphemes": [
+        {
+          "part": "huis",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "houden",
+          "meaning": "keep"
+        }
+      ],
       "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
       "variants": [],
       "reviewed": false
@@ -480,6 +1127,18 @@
       "word": "huiswerk",
       "lang": "nl",
       "tier": "core",
+      "definition": "homework",
+      "morphemes": [
+        {
+          "part": "huis",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "werk",
+          "meaning": "work"
+        }
+      ],
       "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
       "variants": [],
       "reviewed": false
@@ -488,6 +1147,18 @@
       "word": "huisarts",
       "lang": "nl",
       "tier": "core",
+      "definition": "a family doctor",
+      "morphemes": [
+        {
+          "part": "huis",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "arts",
+          "meaning": "doctor"
+        }
+      ],
       "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
       "variants": [],
       "reviewed": false
@@ -496,6 +1167,18 @@
       "word": "huisdier",
       "lang": "nl",
       "tier": "core",
+      "definition": "a pet",
+      "morphemes": [
+        {
+          "part": "huis",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "dier",
+          "meaning": "animal"
+        }
+      ],
       "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
       "variants": [],
       "reviewed": false
@@ -504,6 +1187,18 @@
       "word": "ziekenhuis",
       "lang": "nl",
       "tier": "core",
+      "definition": "a hospital",
+      "morphemes": [
+        {
+          "part": "zieken",
+          "meaning": "the sick"
+        },
+        {
+          "part": "huis",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
       "variants": [],
       "reviewed": false
@@ -512,6 +1207,18 @@
       "word": "stadhuis",
       "lang": "nl",
       "tier": "core",
+      "definition": "a town hall",
+      "morphemes": [
+        {
+          "part": "stad",
+          "meaning": "town"
+        },
+        {
+          "part": "huis",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
       "variants": [],
       "reviewed": false
@@ -520,6 +1227,18 @@
       "word": "gasthuis",
       "lang": "nl",
       "tier": "core",
+      "definition": "a hospital or almshouse (old-fashioned)",
+      "morphemes": [
+        {
+          "part": "gast",
+          "meaning": "guest"
+        },
+        {
+          "part": "huis",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
       "variants": [],
       "reviewed": false
@@ -528,6 +1247,18 @@
       "word": "warenhuis",
       "lang": "nl",
       "tier": "core",
+      "definition": "a department store",
+      "morphemes": [
+        {
+          "part": "waren",
+          "meaning": "goods"
+        },
+        {
+          "part": "huis",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
       "variants": [],
       "reviewed": false
@@ -536,6 +1267,18 @@
       "word": "huisvesten",
       "lang": "nl",
       "tier": "core",
+      "definition": "to house, to give someone a place to live",
+      "morphemes": [
+        {
+          "part": "huis",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "vesten",
+          "meaning": "to settle"
+        }
+      ],
       "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
       "variants": [],
       "reviewed": false
@@ -544,6 +1287,22 @@
       "word": "behuizing",
       "lang": "nl",
       "tier": "core",
+      "definition": "housing; a casing",
+      "morphemes": [
+        {
+          "part": "be-",
+          "meaning": "provide with"
+        },
+        {
+          "part": "huiz",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "-ing",
+          "meaning": "makes a noun"
+        }
+      ],
       "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
       "variants": [],
       "reviewed": false
@@ -552,6 +1311,14 @@
       "word": "hus",
       "lang": "sv",
       "tier": "core",
+      "definition": "a house",
+      "morphemes": [
+        {
+          "part": "hus",
+          "meaning": "house",
+          "root": true
+        }
+      ],
       "path": "Old Norse hús → Swedish",
       "variants": [],
       "reviewed": false
@@ -560,6 +1327,18 @@
       "word": "husdjur",
       "lang": "sv",
       "tier": "core",
+      "definition": "a pet",
+      "morphemes": [
+        {
+          "part": "hus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "djur",
+          "meaning": "animal"
+        }
+      ],
       "path": "Old Norse hús → Swedish",
       "variants": [],
       "reviewed": false
@@ -568,6 +1347,18 @@
       "word": "hushåll",
       "lang": "sv",
       "tier": "core",
+      "definition": "a household",
+      "morphemes": [
+        {
+          "part": "hus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "håll",
+          "meaning": "keeping"
+        }
+      ],
       "path": "Old Norse hús → Swedish",
       "variants": [],
       "reviewed": false
@@ -576,6 +1367,18 @@
       "word": "sjukhus",
       "lang": "sv",
       "tier": "core",
+      "definition": "a hospital",
+      "morphemes": [
+        {
+          "part": "sjuk",
+          "meaning": "sick"
+        },
+        {
+          "part": "hus",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old Norse hús → Swedish",
       "variants": [],
       "reviewed": false
@@ -584,6 +1387,18 @@
       "word": "stadshus",
       "lang": "sv",
       "tier": "core",
+      "definition": "a town hall",
+      "morphemes": [
+        {
+          "part": "stads",
+          "meaning": "town’s"
+        },
+        {
+          "part": "hus",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old Norse hús → Swedish",
       "variants": [],
       "reviewed": false
@@ -592,6 +1407,18 @@
       "word": "bostadshus",
       "lang": "sv",
       "tier": "core",
+      "definition": "a residential building",
+      "morphemes": [
+        {
+          "part": "bostads",
+          "meaning": "dwelling"
+        },
+        {
+          "part": "hus",
+          "meaning": "building",
+          "root": true
+        }
+      ],
       "path": "Old Norse hús → Swedish",
       "variants": [],
       "reviewed": false
@@ -600,6 +1427,18 @@
       "word": "husvagn",
       "lang": "sv",
       "tier": "core",
+      "definition": "a camper trailer",
+      "morphemes": [
+        {
+          "part": "hus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "vagn",
+          "meaning": "wagon"
+        }
+      ],
       "path": "Old Norse hús → Swedish",
       "variants": [],
       "reviewed": false
@@ -608,6 +1447,18 @@
       "word": "husmor",
       "lang": "sv",
       "tier": "core",
+      "definition": "a housewife",
+      "morphemes": [
+        {
+          "part": "hus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "mor",
+          "meaning": "mother"
+        }
+      ],
       "path": "Old Norse hús → Swedish",
       "variants": [],
       "reviewed": false
@@ -616,6 +1467,18 @@
       "word": "husrum",
       "lang": "sv",
       "tier": "core",
+      "definition": "lodging, a place to stay",
+      "morphemes": [
+        {
+          "part": "hus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "rum",
+          "meaning": "room, space"
+        }
+      ],
       "path": "Old Norse hús → Swedish",
       "variants": [],
       "reviewed": false
@@ -624,6 +1487,18 @@
       "word": "husarrest",
       "lang": "sv",
       "tier": "core",
+      "definition": "house arrest",
+      "morphemes": [
+        {
+          "part": "hus",
+          "meaning": "house",
+          "root": true
+        },
+        {
+          "part": "arrest",
+          "meaning": "arrest"
+        }
+      ],
       "path": "Old Norse hús → Swedish",
       "variants": [],
       "reviewed": false

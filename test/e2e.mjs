@@ -38,6 +38,20 @@ async function type(word) {
   return (await page.textContent('.rg-feedback')).trim();
 }
 
+// Feedback cards: a find, a miss, and a close lookalike.
+await page.goto(`${base}?puzzle=caput`);
+await page.click('[data-act="start"]');
+await type('decapitate');
+assert.ok(await page.locator('.rg-fb-good').isVisible());
+await page.screenshot({ path: `${outDir}/feedback-found.png` });
+await type('banana');
+assert.ok(await page.locator('.rg-fb-miss').isVisible());
+await page.screenshot({ path: `${outDir}/feedback-miss.png` });
+await type('capture');
+assert.ok(await page.locator('.rg-fb-close').isVisible());
+await page.screenshot({ path: `${outDir}/feedback-close.png` });
+await page.evaluate(() => localStorage.clear());
+
 const STARTERS = [
   { date: '2026-11-18', id: 'caput', words: ['chef', 'cabeza', 'cabeca', 'capital', 'precipice', 'chapitre', 'capture', 'chef', 'zebra'] },
   { date: '2026-11-19', id: 'graphein', words: ['telegrama', 'grammar', 'paragraphe', 'glamour', 'grape'] },
@@ -55,6 +69,7 @@ for (const s of STARTERS) {
   console.log(`\n${s.id}\n  ${log.join('\n  ')}`);
   await noHorizontalScroll();
   await page.screenshot({ path: `${outDir}/${s.id}-2-play.png` });
+  assert.ok(await page.locator('.rg-fb').isVisible(), 'every answer shows a feedback card');
   await page.click('[data-act="finish"]');
   await page.waitForSelector('.rg-result');
   await page.click('[data-act="copy"]');
@@ -64,6 +79,19 @@ for (const s of STARTERS) {
   console.log(`  share:\n    ${copied.split('\n').join('\n    ')}`);
   await noHorizontalScroll();
   await page.screenshot({ path: `${outDir}/${s.id}-3-reveal.png` });
+
+  // The key: one column per language, English first; tapping one zooms in.
+  const colLangs = await page.$$eval('.rg-col', (cols) => cols.map((c) => c.dataset.lang));
+  assert.equal(colLangs[0], 'en', 'English is the first column');
+  await page.locator('.rg-family').scrollIntoViewIfNeeded();
+  await page.screenshot({ path: `${outDir}/${s.id}-4-columns.png` });
+  await page.click(`.rg-col[data-lang="${colLangs[1]}"] .rg-col-head`);
+  assert.equal(await page.locator('.rg-col:visible').count(), 1, 'zoom shows one column');
+  assert.ok(await page.locator('.rg-col.is-active .rg-chip-root').first().isVisible(), 'zoom shows word parts');
+  await noHorizontalScroll();
+  await page.screenshot({ path: `${outDir}/${s.id}-5-zoomed.png` });
+  await page.click('.rg-zoom-back');
+  assert.equal(await page.locator('.rg-col:visible').count(), colLangs.length, 'back shows every column');
 }
 
 // Checks of specific behaviours

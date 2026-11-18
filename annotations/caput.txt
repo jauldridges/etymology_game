@@ -1,0 +1,130 @@
+# caput, "head". Definitions and word parts, drafted for review.
+# lang | word | definition | source | parts
+
+en | chief | the leader or head of a group | Old French chief | *chief=head
+en | chieftain | the leader of a clan or tribe | Late Latin capitaneus | *capit=head + -aneus=belonging to
+en | chef | a professional head cook | French chef | *chef=head
+en | capital | the city where a government sits; also money used to make more money | Latin capitalis | *capit=head + -alis=relating to
+en | capitalism | an economy built on privately owned capital | | *capital=wealth used to make more wealth + -ism=a system or belief
+en | capitalist | a person who owns capital or favors capitalism | | *capital=wealth used to make more wealth + -ist=a person who
+en | capitalize | to write with a capital letter; to take advantage of | | *capital=head (letter); wealth + -ize=to make or do
+en | captain | the leader of a ship, team or army unit | Late Latin capitaneus | *capit=head + -aneus=belonging to
+en | chapter | a main section of a book | Latin capitulum, a heading | *capit=head + -ulum=little
+en | achieve | to succeed in doing something | Old French achever, “to bring to a head” | a-=to + *chieve=head, end
+en | achievement | something done successfully | | *achieve=bring to a head, finish + -ment=the result of
+en | mischief | playful troublemaking; harm | Old French meschief, “a bad end” | mis-=badly + *chief=head, end
+en | kerchief | a square of cloth worn on the head | Old French couvrechief | ker-=cover + *chief=head
+en | handkerchief | a small cloth for wiping the face or nose | | hand + ker-=cover + *chief=head
+en | decapitate | to cut off the head of | Late Latin decapitare | de-=off, away + *capit=head + -ate=makes a verb
+en | decapitation | the act of cutting off a head | | de-=off, away + *capit=head + -ation=the act of
+en | capitulate | to give up; to surrender on agreed terms | Medieval Latin capitulare, “to set out under headings” | *capit=head + -ul=little + -ate=makes a verb
+en | capitulation | a surrender on agreed terms | | *capit=head + -ul=little + -ation=the act of
+en | recapitulate | to sum up the main points again | | re-=again + *capit=head + -ul=little + -ate=makes a verb
+en | recapitulation | a summary of the main points | | re-=again + *capit=head + -ul=little + -ation=the act of
+en | precipice | a very steep cliff | Latin praecipitium, from praeceps, “headfirst” | prae-=forward + *cip=head + -itium=makes a noun
+en | precipitate | to make something happen suddenly; to throw down headlong | Latin praecipitare | prae-=forward + *cipit=head + -ate=makes a verb
+en | precipitation | rain, snow or hail; sudden haste | | pre-=forward + *cipit=head + -ation=the act of
+en | precipitous | dangerously steep; sudden and hasty | | pre-=forward + *cipit=head + -ous=full of
+en | biceps | the muscle at the front of the upper arm | Latin biceps, “two-headed” | bi-=two + *ceps=head
+en | triceps | the muscle at the back of the upper arm | Latin triceps, “three-headed” | tri-=three + *ceps=head
+en | quadriceps | the large muscle at the front of the thigh | | quadri-=four + *ceps=head
+en | occipital | of the back of the head | Latin occiput, “back of the head” | oc-=against, behind + *cipit=head + -al=relating to
+en | cape (headland) | a point of land that juts into the sea | Old French cap | *cape=head
+en | cadet | a student training to be an officer; once, a younger son | Gascon capdet, “little chief” | *cap=head, chief + -det=little
+en | caddie | a person who carries a golfer’s clubs | French cadet | *cadd=head, chief + -ie=little
+en | cabbage | a vegetable with a round head of leaves | Old French caboche, “head” | *cabb=head + -age=makes a noun
+en | per capita | for each person | Latin, “by heads” | per=by, for each + *capita=heads
+en | cattle | cows and bulls kept as livestock | Latin capitale, “property” | *capit=head, chief + -ale=relating to
+en | chattel | a personal possession | Latin capitale, “property” | *capit=head, chief + -ale=relating to
+en | capitol | a building where lawmakers meet | Latin Capitolium, Rome’s temple hill | *capit=head (origin debated) + -olium=place
+en | corporal (military rank) | a low-ranking officer in the army | Italian caporale | *capor=head + -ale=relating to
+
+es | cabeza | head | Vulgar Latin capitia | *capit=head + -ia=makes a noun
+es | cabezudo | big-headed; stubborn | | *cabez=head + -udo=having a lot of
+es | cabecera | the head of a bed or table; a newspaper’s masthead | | *cabec=head + -era=place of
+es | cabecilla | a ringleader | | *cabec=head + -illa=little
+es | cabecear | to nod; to head a ball | | *cabec=head + -ear=makes a verb
+es | encabezar | to lead; to head a list | | en-=in, on + *cabez=head + -ar=makes a verb
+es | cabo | a cape (headland); an end; a corporal | | *cabo=head, end
+es | acabar | to finish | | a-=to + *cab=head, end + -ar=makes a verb
+es | capataz | a foreman, the boss of a work crew | | *capat=head + -az=makes a noun (origin to verify)
+es | jefe | a boss | French chef | *chef=head
+es | chef | @chef | French chef | *chef=head
+es | capitán | a captain | Late Latin capitaneus | *capit=head + -aneus=belonging to
+es | capital | a capital city; money used to make more money | | *capit=head + -al=relating to
+es | capitalismo | @capitalism | | *capital=wealth used to make more wealth + -ismo=a system or belief
+es | capitalista | @capitalist | | *capital=wealth used to make more wealth + -ista=a person who
+es | capitalizar | to capitalize; to turn into capital | | *capital=head (letter); wealth + -izar=to make or do
+es | capitel | the top of a column | Latin capitellum, “little head” | *capit=head + -ellum=little
+es | capítulo | a chapter | Latin capitulum | *capit=head + -ulum=little
+es | capitular | to surrender on agreed terms | | *capit=head + -ul=little + -ar=makes a verb
+es | recapitular | to sum up | | re-=again + *capit=head + -ul=little + -ar=makes a verb
+es | decapitar | to behead | | de-=off, away + *capit=head + -ar=makes a verb
+es | caudillo | a military or political strongman | Latin capitellum, “little head” | *capit=head + -ellum=little
+es | cabildo | a town council; a cathedral chapter | Latin capitulum | *capit=head + -ulum=little
+es | precipicio | @precipice | Latin praecipitium | prae-=forward + *cip=head + -itium=makes a noun
+es | precipitar | to hurl down; to rush | Latin praecipitare | prae-=forward + *cipit=head + -ar=makes a verb
+es | bíceps | @biceps | | bi-=two + *ceps=head
+es | tríceps | @triceps | | tri-=three + *ceps=head
+es | cuádriceps | @quadriceps | | cuadri-=four + *ceps=head
+es | occipital | @occipital | Latin occiput | oc-=against, behind + *cipit=head + -al=relating to
+
+pt | cabeça | head | Vulgar Latin capitia | *capit=head + -ia=makes a noun
+pt | cabeçalho | a heading; a letterhead | | *cabeç=head + -alho=makes a noun
+pt | cabeceira | the head of a bed or table | | *cabec=head + -eira=place of
+pt | cabecear | to nod; to head a ball | | *cabec=head + -ear=makes a verb
+pt | cabecilha | a ringleader | | *cabec=head + -ilha=little
+pt | encabeçar | to lead; to head a list | | en-=in, on + *cabeç=head + -ar=makes a verb
+pt | cabo | a cape (headland); an end; a corporal | | *cabo=head, end
+pt | acabar | to finish | | a-=to + *cab=head, end + -ar=makes a verb
+pt | capataz | a foreman, the boss of a work crew | | *capat=head + -az=makes a noun (origin to verify)
+pt | chefe | a boss | French chef | *chef=head
+pt | chef | @chef | French chef | *chef=head
+pt | capitão | a captain | Late Latin capitaneus | *capit=head + -aneus=belonging to
+pt | capital | a capital city; money used to make more money | | *capit=head + -al=relating to
+pt | capitalismo | @capitalism | | *capital=wealth used to make more wealth + -ismo=a system or belief
+pt | capitalista | @capitalist | | *capital=wealth used to make more wealth + -ista=a person who
+pt | capitalizar | to capitalize; to turn into capital | | *capital=head (letter); wealth + -izar=to make or do
+pt | capitel | the top of a column | Latin capitellum, “little head” | *capit=head + -ellum=little
+pt | capítulo | a chapter | Latin capitulum | *capit=head + -ulum=little
+pt | capitular | to surrender on agreed terms | | *capit=head + -ul=little + -ar=makes a verb
+pt | recapitular | to sum up | | re-=again + *capit=head + -ul=little + -ar=makes a verb
+pt | decapitar | to behead | | de-=off, away + *capit=head + -ar=makes a verb
+pt | caudilho | a military or political strongman | Latin capitellum, “little head” | *capit=head + -ellum=little
+pt | precipício | @precipice | Latin praecipitium | prae-=forward + *cip=head + -itium=makes a noun
+pt | precipitar | to hurl down; to rush | Latin praecipitare | prae-=forward + *cipit=head + -ar=makes a verb
+pt | bíceps | @biceps | | bi-=two + *ceps=head
+pt | tríceps | @triceps | | tri-=three + *ceps=head
+pt | quadríceps | @quadriceps | | quadri-=four + *ceps=head
+pt | occipital | @occipital | Latin occiput | oc-=against, behind + *cipit=head + -al=relating to
+
+fr | chef | a head, leader or boss; a head cook | | *chef=head
+fr | chef-d'œuvre | a masterpiece | | *chef=head, top + d’=of + œuvre=work
+fr | chapitre | a chapter | Latin capitulum | *capit=head + -ulum=little
+fr | chapiteau | the top of a column; a circus tent | Latin capitellum, “little head” | *capit=head + -ellum=little
+fr | chevet | the head of a bed | Latin capitium | *capit=head + -ium=makes a noun
+fr | achever | to finish | Old French, from à chef, “to a head” | a-=to + *chev=head, end + -er=makes a verb
+fr | achèvement | completion | | *achever=to finish + -ment=the result of
+fr | couvre-chef | a hat (jokingly) | | couvre=covers + *chef=head
+fr | capitaine | a captain | Late Latin capitaneus | *capit=head + -aneus=belonging to
+fr | capital | main; money used to make more money | | *capit=head + -al=relating to
+fr | capitale | a capital city; a capital letter | | *capit=head + -ale=relating to
+fr | capitalisme | @capitalism | | *capital=wealth used to make more wealth + -isme=a system or belief
+fr | capitaliste | @capitalist | | *capital=wealth used to make more wealth + -iste=a person who
+fr | capitulation | @capitulation | | *capit=head + -ul=little + -ation=the act of
+fr | capituler | to surrender on agreed terms | | *capit=head + -ul=little + -er=makes a verb
+fr | récapituler | to sum up | | ré-=again + *capit=head + -ul=little + -er=makes a verb
+fr | décapiter | to behead | | dé-=off, away + *capit=head + -er=makes a verb
+fr | décapitation | beheading | | dé-=off, away + *capit=head + -ation=the act of
+fr | cheptel | livestock | Latin capitale, “property” | *capit=head, chief + -ale=relating to
+fr | cadet | the younger or youngest child; a cadet | Gascon capdet, “little chief” | *cap=head, chief + -det=little
+fr | caboche | a head (slang) | | *caboche=head (origin to verify)
+fr | cap | a cape (headland); a heading or course | Occitan cap | *cap=head
+fr | caporal | a corporal | Italian caporale | *capor=head + -ale=relating to
+fr | précipice | @precipice | Latin praecipitium | prae-=forward + *cip=head + -itium=makes a noun
+fr | précipiter | to hurl down; to rush | Latin praecipitare | prae-=forward + *cipit=head + -er=makes a verb
+fr | précipitation | rain or snow; haste | | pré-=forward + *cipit=head + -ation=the act of
+fr | biceps | @biceps | | bi-=two + *ceps=head
+fr | triceps | @triceps | | tri-=three + *ceps=head
+fr | quadriceps | @quadriceps | | quadri-=four + *ceps=head
+fr | occipital | @occipital | Latin occiput | oc-=against, behind + *cipit=head + -al=relating to

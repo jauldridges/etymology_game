@@ -1,0 +1,80 @@
+# hūs, "house". Definitions and word parts, drafted for review.
+# German, Dutch and Swedish entries need a fluent reader's check.
+# lang | word | definition | source | parts
+
+en | house | a building where people live | | *house
+en | housing | homes, taken as a whole; a protective case | | *house + -ing=makes a noun
+en | household | all the people who live in one home | | *house + hold=keeping
+en | housewife | a woman who runs a home | | *house + wife=woman
+en | housework | cleaning and other jobs around the home | | *house + work
+en | housekeeper | a person paid to run a home | | *house + keep=look after + -er=a person who
+en | houseboat | a boat that people live on | | *house + boat
+en | housefly | the common fly found in homes | | *house + fly
+en | warehouse | a large building for storing goods | | ware=goods + *house=building
+en | courthouse | a building that holds courts of law | | court + *house=building
+en | farmhouse | the main house on a farm | | farm + *house
+en | doghouse | a shelter for a dog; trouble or disgrace | | dog + *house
+en | greenhouse | a glass building for growing plants | | green=growing plants + *house=building
+en | lighthouse | a tower with a light that guides ships | | light + *house=building
+en | outhouse | an outdoor toilet or shed | | out=outside + *house=building
+en | hothouse | a heated greenhouse; a place of intense activity | | hot + *house=building
+en | workhouse | a former institution where poor people lived and worked | | work + *house=building
+en | madhouse | a scene of chaos; once, a hospital for the mentally ill | | mad + *house=building
+en | slaughterhouse | a place where animals are killed for meat | | slaughter=killing + *house=building
+en | townhouse | a house joined to others in a row | | town + *house
+en | clubhouse | a building used by a club | | club + *house=building
+en | treehouse | a playhouse built in a tree | | tree + *house
+en | playhouse | a theater; a small house for children to play in | | play + *house=building
+en | birdhouse | a box for birds to nest in | | bird + *house
+en | husband | a married man | Old Norse húsbóndi, “master of the house” | *hús=house + bóndi=dweller, master
+en | hussy | a cheeky or shameless woman (old-fashioned) | a shortening of housewife | *hus=house + -sy=from wife
+en | hustings | campaign speeches and events; once, a platform for them | Old Norse húsþing, “house assembly” | *hús=house + þing=assembly
+
+de | Haus | a house | | *Haus
+de | Häuschen | a little house, a cottage | | *Häus=house + -chen=little
+de | häuslich | domestic; home-loving | | *häus=house + -lich=like, relating to
+de | Hausfrau | a housewife | | *Haus + Frau=woman, wife
+de | Hausmann | a househusband | | *Haus + Mann=man
+de | Haushalt | a household; a budget | | *Haus + Halt=keeping
+de | Hausaufgabe | homework | | *Haus + Aufgabe=task
+de | Hausarzt | a family doctor | | *Haus + Arzt=doctor
+de | Hausmeister | a caretaker or janitor | | *Haus + Meister=master
+de | Haustier | a pet | | *Haus + Tier=animal
+de | Haustür | a front door | | *Haus + Tür=door
+de | Rathaus | a town hall | | Rat=council + *Haus=building
+de | Krankenhaus | a hospital | | Kranken=the sick + *Haus=building
+de | Gasthaus | an inn | | Gast=guest + *Haus=building
+de | Warenhaus | a department store | | Waren=goods + *Haus=building
+de | Kaufhaus | a department store | | Kauf=buying + *Haus=building
+de | Bauernhaus | a farmhouse | | Bauern=farmers + *Haus
+de | Treibhaus | a hothouse | | Treib=forcing (plants to grow) + *Haus=building
+de | Gewächshaus | a greenhouse | | Gewächs=plant + *Haus=building
+de | Gehäuse | a case or casing; a shell | | Ge-=together, a set + *häus=house + -e=makes a noun
+de | hausen | to live in poor conditions; to wreak havoc | | *haus=house + -en=makes a verb
+
+nl | huis | a house | | *huis
+nl | huisje | a little house, a cottage | | *huis + -je=little
+nl | huiselijk | domestic; homey | | *huis + -elijk=like, relating to
+nl | huisvrouw | a housewife | | *huis + vrouw=woman, wife
+nl | huisman | a househusband | | *huis + man
+nl | huishouden | a household; housekeeping | | *huis + houden=keep
+nl | huiswerk | homework | | *huis + werk=work
+nl | huisarts | a family doctor | | *huis + arts=doctor
+nl | huisdier | a pet | | *huis + dier=animal
+nl | ziekenhuis | a hospital | | zieken=the sick + *huis=building
+nl | stadhuis | a town hall | | stad=town + *huis=building
+nl | gasthuis | a hospital or almshouse (old-fashioned) | | gast=guest + *huis=building
+nl | warenhuis | a department store | | waren=goods + *huis=building
+nl | huisvesten | to house, to give someone a place to live | | *huis + vesten=to settle
+nl | behuizing | housing; a casing | | be-=provide with + *huiz=house + -ing=makes a noun
+
+sv | hus | a house | | *hus
+sv | husdjur | a pet | | *hus + djur=animal
+sv | hushåll | a household | | *hus + håll=keeping
+sv | sjukhus | a hospital | | sjuk=sick + *hus=building
+sv | stadshus | a town hall | | stads=town’s + *hus=building
+sv | bostadshus | a residential building | | bostads=dwelling + *hus=building
+sv | husvagn | a camper trailer | | *hus + vagn=wagon
+sv | husmor | a housewife | | *hus + mor=mother
+sv | husrum | lodging, a place to stay | | *hus + rum=room, space
+sv | husarrest | house arrest | | *hus + arrest
