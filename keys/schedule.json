@@ -1,0 +1,12 @@
+{
+  "note": "One puzzle per date. The puzzle number is the position in this list. The three starter puzzles come first, then the four other drafts in difficulty order.",
+  "days": [
+    { "date": "2026-11-18", "puzzle": "caput" },
+    { "date": "2026-11-19", "puzzle": "graphein" },
+    { "date": "2026-11-20", "puzzle": "hus" },
+    { "date": "2026-11-21", "puzzle": "bonus" },
+    { "date": "2026-11-22", "puzzle": "mittere" },
+    { "date": "2026-11-23", "puzzle": "ferre" },
+    { "date": "2026-11-24", "puzzle": "dare" }
+  ]
+}

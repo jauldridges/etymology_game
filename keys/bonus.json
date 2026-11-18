@@ -1,0 +1,852 @@
+{
+  "id": "bonus",
+  "status": "draft",
+  "root": {
+    "form": "bonus",
+    "transliteration": "bonus",
+    "family": "latin",
+    "meaning": "good",
+    "principalParts": [
+      "bonus",
+      "bona",
+      "bonum"
+    ],
+    "stems": [
+      "bon-",
+      "ben-"
+    ]
+  },
+  "languages": [
+    "en",
+    "es",
+    "pt",
+    "fr"
+  ],
+  "difficulty": "easy",
+  "tiers": {
+    "core": {
+      "label": "Core",
+      "scoring": "always"
+    },
+    "bene": {
+      "label": "bene- words",
+      "scoring": "always"
+    }
+  },
+  "entries": [
+    {
+      "word": "bonus",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin bonus → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonanza",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin bonus → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bounty",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin bonus → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bountiful",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin bonus → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "debonair",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin bonus → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonhomie",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin bonus → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonbon",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin bonus → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bona fide",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin bonus → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bon voyage",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin bonus → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bon appétit",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin bonus → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bon mot",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin bonus → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "benefit",
+      "lang": "en",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "beneficial",
+      "lang": "en",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "beneficiary",
+      "lang": "en",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "benefactor",
+      "lang": "en",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "benefice",
+      "lang": "en",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "beneficent",
+      "lang": "en",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "benevolent",
+      "lang": "en",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "benevolence",
+      "lang": "en",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "benediction",
+      "lang": "en",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "benedict",
+      "lang": "en",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "benign",
+      "lang": "en",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "nota bene",
+      "lang": "en",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bueno",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin bonus → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "buen",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin bonus → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bondad",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin bonus → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bondadoso",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin bonus → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonito",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin bonus → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonanza",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin bonus → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bono",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin bonus → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonificar",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin bonus → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonificación",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin bonus → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bombón",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin bonus → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bien",
+      "lang": "es",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bienestar",
+      "lang": "es",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bienvenido",
+      "lang": "es",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bienhechor",
+      "lang": "es",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "beneficio",
+      "lang": "es",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "beneficiar",
+      "lang": "es",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "beneficiario",
+      "lang": "es",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "benéfico",
+      "lang": "es",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "benevolencia",
+      "lang": "es",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bendecir",
+      "lang": "es",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bendición",
+      "lang": "es",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "benigno",
+      "lang": "es",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bom",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin bonus → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "boa",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin bonus → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bondade",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin bonus → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonito",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin bonus → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonança",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin bonus → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bónus",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin bonus → Portuguese",
+      "variants": [
+        "bônus"
+      ],
+      "reviewed": false
+    },
+    {
+      "word": "bonificar",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin bonus → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonificação",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin bonus → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bombom",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin bonus → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonomia",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin bonus → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bem",
+      "lang": "pt",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bem-estar",
+      "lang": "pt",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bem-vindo",
+      "lang": "pt",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "benfeitor",
+      "lang": "pt",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "benefício",
+      "lang": "pt",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "beneficiar",
+      "lang": "pt",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "beneficiário",
+      "lang": "pt",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "benéfico",
+      "lang": "pt",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "benevolência",
+      "lang": "pt",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bendizer",
+      "lang": "pt",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bênção",
+      "lang": "pt",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "benigno",
+      "lang": "pt",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bon",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin bonus → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonne",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin bonus → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonté",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin bonus → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonheur",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin bonus → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonbon",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin bonus → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonbonnière",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin bonus → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonhomie",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin bonus → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonifier",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin bonus → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonification",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin bonus → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonus",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin bonus → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonjour",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin bonus → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bonsoir",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin bonus → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "débonnaire",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin bonus → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "embonpoint",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin bonus → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bien",
+      "lang": "fr",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bien-être",
+      "lang": "fr",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bienvenue",
+      "lang": "fr",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bienfaiteur",
+      "lang": "fr",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bienfait",
+      "lang": "fr",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bienveillance",
+      "lang": "fr",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bénéfice",
+      "lang": "fr",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bénéficier",
+      "lang": "fr",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bénéficiaire",
+      "lang": "fr",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bénéfique",
+      "lang": "fr",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bénir",
+      "lang": "fr",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bénédiction",
+      "lang": "fr",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bénin",
+      "lang": "fr",
+      "tier": "bene",
+      "path": "Latin bene, “well” (the adverb of bonus) → French",
+      "variants": [],
+      "reviewed": false
+    }
+  ],
+  "notRelated": [
+    {
+      "word": "ameliorate",
+      "lang": "en",
+      "why": "from melior or optimus (“better”, “best”), which come from different roots",
+      "reviewed": false
+    },
+    {
+      "word": "optimum",
+      "lang": "en",
+      "why": "from melior or optimus (“better”, “best”), which come from different roots",
+      "reviewed": false
+    },
+    {
+      "word": "mejor",
+      "lang": "es",
+      "why": "from melior or optimus (“better”, “best”), which come from different roots",
+      "reviewed": false
+    },
+    {
+      "word": "meilleur",
+      "lang": "fr",
+      "why": "from melior or optimus (“better”, “best”), which come from different roots",
+      "reviewed": false
+    },
+    {
+      "word": "boon",
+      "lang": "en",
+      "why": "from Old Norse, not Latin",
+      "reviewed": false
+    },
+    {
+      "word": "bond",
+      "lang": "en",
+      "why": "unrelated, despite the look",
+      "reviewed": false
+    },
+    {
+      "word": "bonfire",
+      "lang": "en",
+      "why": "originally a “bone fire”",
+      "reviewed": false
+    },
+    {
+      "word": "bonito",
+      "lang": "en",
+      "sense": "the fish",
+      "why": "unrelated, despite the look",
+      "reviewed": false
+    }
+  ],
+  "notes": [
+    "Draft: Stems: *bon-* and *ben-* (from the adverb *bene*, \"well\"). Languages: English, Spanish, Portuguese, French.",
+    "Draft: *Melior* and *optimus* (the comparative and superlative of *bonus*) come from different roots, so *ameliorate, optimum, mejor, meilleur* do not belong here. They would make good puzzles of their own.",
+    "Draft: Lookalikes to exclude: *boon* (a favor, Old Norse), *bond*, *bonfire* (\"bone fire\"), and *bonito* the fish.",
+    "Draft: Uncertain and left out: English *bonny* (probably from French *bon*) and *boon companion*.",
+    "Draft: The *bene-* words are compounds with *facere*, *dicere* and *velle* (*benefit, benediction, benevolent*), so they could also appear in puzzles for those verbs.",
+    "Import: the draft lists “note bene”; corrected to “nota bene”.",
+    "Import: Portuguese “bônus” is another spelling of “bónus”; kept as a variant."
+  ]
+}

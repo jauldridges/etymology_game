@@ -1,0 +1,1062 @@
+{
+  "id": "mittere",
+  "status": "draft",
+  "root": {
+    "form": "mittere",
+    "transliteration": "mittere",
+    "family": "latin",
+    "meaning": "send",
+    "principalParts": [
+      "mittō",
+      "mittere",
+      "mīsī",
+      "missum"
+    ],
+    "stems": [
+      "mitt-",
+      "miss-"
+    ]
+  },
+  "languages": [
+    "en",
+    "es",
+    "pt",
+    "fr"
+  ],
+  "difficulty": "hard",
+  "tiers": {
+    "core": {
+      "label": "Core",
+      "scoring": "always"
+    },
+    "bonus": {
+      "label": "Bonus",
+      "scoring": "bonus"
+    }
+  },
+  "entries": [
+    {
+      "word": "admit",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "commit",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "committee",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "commission",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "permit",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "permission",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "submit",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "submission",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "transmit",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "transmission",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "remit",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "remittance",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "emit",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "emission",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "omit",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "omission",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "intermittent",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "intermission",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "promise",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "compromise",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dismiss",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mission",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "missionary",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "missile",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "missive",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "message",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "messenger",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "premise",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "surmise",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "demise",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "emissary",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "remiss",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "manumit",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mess",
+      "lang": "en",
+      "tier": "bonus",
+      "gloss": "a meal",
+      "path": "Latin missus, “a course sent to the table” (from mittere) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Mass",
+      "lang": "en",
+      "tier": "bonus",
+      "path": "Latin mittere → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "meter",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "prometer",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "promesa",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cometer",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "someter",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "sumisión",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "permitir",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "permiso",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "admitir",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "admisión",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "emitir",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "emisión",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "omitir",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "omisión",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "transmitir",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "transmisión",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "remitir",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "remesa",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "misión",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "misil",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "misa",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mensaje",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mensajero",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "compromiso",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "comisión",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "premisa",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "intermitente",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "emisario",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dimitir",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dimisión",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin mittere → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "meter",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "prometer",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "promessa",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cometer",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "submeter",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "submissão",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "permitir",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "permissão",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "admitir",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "admissão",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "emitir",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "emissão",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "omitir",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "omissão",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "transmitir",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "transmissão",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "remeter",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "remessa",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "missão",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "míssil",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "missa",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mensagem",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mensageiro",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "compromisso",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "comissão",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "premissa",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "intermitente",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "emissário",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "demitir",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "demissão",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin mittere → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mettre",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "promettre",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "promesse",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "commettre",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "soumettre",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "soumission",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "permettre",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "permission",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "admettre",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "admission",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "émettre",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "émission",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "omettre",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "omission",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "transmettre",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "transmission",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "remettre",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "remise",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mission",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "missile",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "messe",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "message",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "messager",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "compromis",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "commission",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "prémisse",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "intermittent",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "émissaire",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "démettre",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "démission",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mets",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mise",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin mittere → French",
+      "variants": [],
+      "reviewed": false
+    }
+  ],
+  "notRelated": [],
+  "notes": [
+    "Draft: Stems: *mitt-* and *miss-*. Languages: English, Spanish, Portuguese, French.",
+    "Draft: English *mess* (from *missus*, a course sent to the table) and *Mass* are real but indirect, so they sit in the bonus tier.",
+    "Draft: Spanish and Portuguese *meter* (\"to put in\") has drifted far in meaning but is a genuine descendant."
+  ]
+}

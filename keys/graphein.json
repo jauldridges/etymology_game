@@ -1,0 +1,1537 @@
+{
+  "id": "graphein",
+  "status": "draft",
+  "root": {
+    "form": "γράφω",
+    "transliteration": "graphō",
+    "family": "greek",
+    "meaning": "write",
+    "principalParts": [
+      "γράφω",
+      "γράψω",
+      "ἔγραψα",
+      "γέγραφα",
+      "γέγραμμαι",
+      "ἐγράφην"
+    ],
+    "principalPartsTransliterated": [
+      "graphō",
+      "grapsō",
+      "egrapsa",
+      "gegrapha",
+      "gegrammai",
+      "egraphēn"
+    ],
+    "stems": [
+      "graph-",
+      "gram-"
+    ]
+  },
+  "languages": [
+    "en",
+    "es",
+    "pt",
+    "fr"
+  ],
+  "difficulty": "medium",
+  "tiers": {
+    "core": {
+      "label": "Core",
+      "scoring": "always"
+    },
+    "technical": {
+      "label": "Technical",
+      "scoring": "always",
+      "note": "First tier to cut if the puzzle is too large."
+    },
+    "bonus": {
+      "label": "Bonus",
+      "scoring": "bonus"
+    }
+  },
+  "entries": [
+    {
+      "word": "graph",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "graphic",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "graphics",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "graphite",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "paragraph",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "autograph",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "biography",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "autobiography",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "geography",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "photograph",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "photography",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "telegraph",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "telegram",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "grammar",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "grammatical",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "program",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "programmer",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "diagram",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "epigram",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "anagram",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "monogram",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "hologram",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "kilogram",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "gram",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "calligraphy",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "choreography",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bibliography",
+      "lang": "en",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "grapheme",
+      "lang": "en",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "graphology",
+      "lang": "en",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "grammarian",
+      "lang": "en",
+      "tier": "technical",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cryptogram",
+      "lang": "en",
+      "tier": "technical",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "seismograph",
+      "lang": "en",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "stenography",
+      "lang": "en",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "typography",
+      "lang": "en",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "lithograph",
+      "lang": "en",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "ethnography",
+      "lang": "en",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "demography",
+      "lang": "en",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cartography",
+      "lang": "en",
+      "tier": "technical",
+      "path": "Latin carta, “map”, + Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "pictogram",
+      "lang": "en",
+      "tier": "technical",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "ideogram",
+      "lang": "en",
+      "tier": "technical",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "gramophone",
+      "lang": "en",
+      "tier": "technical",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "epigraph",
+      "lang": "en",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "orthography",
+      "lang": "en",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "glamour",
+      "lang": "en",
+      "tier": "bonus",
+      "path": "Greek γράμμα (gramma) → English grammar → Scottish glamour → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "graffiti",
+      "lang": "en",
+      "tier": "bonus",
+      "path": "Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "graft",
+      "lang": "en",
+      "tier": "bonus",
+      "path": "Latin graphium, “stylus”, from Greek γράφω (graphō) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "gráfico",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "gráfica",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "grafito",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "párrafo",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "autógrafo",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "biografía",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "autobiografía",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "geografía",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "fotografía",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "fotografiar",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "telégrafo",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "telegrama",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "gramática",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "gramatical",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "programa",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "programar",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "programador",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "diagrama",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "epigrama",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "anagrama",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "monograma",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "holograma",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "kilogramo",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "gramo",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "caligrafía",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "coreografía",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bibliografía",
+      "lang": "es",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "grafía",
+      "lang": "es",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "grafología",
+      "lang": "es",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "criptograma",
+      "lang": "es",
+      "tier": "technical",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "sismógrafo",
+      "lang": "es",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "taquigrafía",
+      "lang": "es",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "tipografía",
+      "lang": "es",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "litografía",
+      "lang": "es",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "etnografía",
+      "lang": "es",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "demografía",
+      "lang": "es",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cartografía",
+      "lang": "es",
+      "tier": "technical",
+      "path": "Latin carta, “map”, + Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "pictograma",
+      "lang": "es",
+      "tier": "technical",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "ideograma",
+      "lang": "es",
+      "tier": "technical",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "gramófono",
+      "lang": "es",
+      "tier": "technical",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "epígrafe",
+      "lang": "es",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "ortografía",
+      "lang": "es",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "telegrafiar",
+      "lang": "es",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "grafiti",
+      "lang": "es",
+      "tier": "bonus",
+      "path": "Greek γράφω (graphō) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "gráfico",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "gráfica",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "grafite",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "parágrafo",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "autógrafo",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "biografia",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "autobiografia",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "geografia",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "fotografia",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "fotografar",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "telégrafo",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "telegrama",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "gramática",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "gramatical",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "programa",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "programar",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "programador",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "diagrama",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "epigrama",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "anagrama",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "monograma",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "holograma",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "quilograma",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "grama",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "caligrafia",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "coreografia",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bibliografia",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "grafia",
+      "lang": "pt",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "grafologia",
+      "lang": "pt",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "criptograma",
+      "lang": "pt",
+      "tier": "technical",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "sismógrafo",
+      "lang": "pt",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "taquigrafia",
+      "lang": "pt",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "tipografia",
+      "lang": "pt",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "litografia",
+      "lang": "pt",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "etnografia",
+      "lang": "pt",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "demografia",
+      "lang": "pt",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cartografia",
+      "lang": "pt",
+      "tier": "technical",
+      "path": "Latin carta, “map”, + Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "pictograma",
+      "lang": "pt",
+      "tier": "technical",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "ideograma",
+      "lang": "pt",
+      "tier": "technical",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "gramofone",
+      "lang": "pt",
+      "tier": "technical",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "epígrafe",
+      "lang": "pt",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "ortografia",
+      "lang": "pt",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "telegrafar",
+      "lang": "pt",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "graphique",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "graphite",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "paragraphe",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "autographe",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "biographie",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "autobiographie",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "géographie",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "photographie",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "photographier",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "télégraphe",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "télégramme",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "grammaire",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "grammatical",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "programme",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "programmer",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "programmeur",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek pro-, “before”, + γράμμα (gramma), “something written” → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "diagramme",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "épigramme",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "anagramme",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "monogramme",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "hologramme",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "kilogramme",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "gramme",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράμμα (gramma) → Late Latin gramma, “a small weight” → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "calligraphie",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "chorégraphie",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bibliographie",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "greffe",
+      "lang": "fr",
+      "tier": "bonus",
+      "path": "Latin graphium, “stylus”, from Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "greffer",
+      "lang": "fr",
+      "tier": "bonus",
+      "path": "Latin graphium, “stylus”, from Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "graphie",
+      "lang": "fr",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "graphologie",
+      "lang": "fr",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "graphème",
+      "lang": "fr",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cryptogramme",
+      "lang": "fr",
+      "tier": "technical",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "sismographe",
+      "lang": "fr",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "sténographie",
+      "lang": "fr",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "typographie",
+      "lang": "fr",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "lithographie",
+      "lang": "fr",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "ethnographie",
+      "lang": "fr",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "démographie",
+      "lang": "fr",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cartographie",
+      "lang": "fr",
+      "tier": "technical",
+      "path": "Latin carta, “map”, + Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "pictogramme",
+      "lang": "fr",
+      "tier": "technical",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "idéogramme",
+      "lang": "fr",
+      "tier": "technical",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "gramophone",
+      "lang": "fr",
+      "tier": "technical",
+      "path": "Greek γράμμα (gramma), “letter, something written”, from γράφω → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "épigraphe",
+      "lang": "fr",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "orthographe",
+      "lang": "fr",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "télégraphier",
+      "lang": "fr",
+      "tier": "technical",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "graffiti",
+      "lang": "fr",
+      "tier": "bonus",
+      "path": "Greek γράφω (graphō) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "grimoire",
+      "lang": "fr",
+      "tier": "bonus",
+      "path": "Greek γράμμα (gramma) → French grammaire → grimoire",
+      "variants": [],
+      "reviewed": false
+    }
+  ],
+  "notRelated": [
+    {
+      "word": "carve",
+      "lang": "en",
+      "why": "a very distant cousin from a far older root, not a descendant",
+      "reviewed": false
+    },
+    {
+      "word": "grave",
+      "lang": "en",
+      "why": "unrelated, despite the look",
+      "reviewed": false
+    },
+    {
+      "word": "engrave",
+      "lang": "en",
+      "why": "unrelated, despite the look",
+      "reviewed": false
+    },
+    {
+      "word": "grab",
+      "lang": "en",
+      "why": "unrelated, despite the look",
+      "reviewed": false
+    },
+    {
+      "word": "grape",
+      "lang": "en",
+      "why": "unrelated, despite the look",
+      "reviewed": false
+    }
+  ],
+  "notes": [
+    "Draft: Principal parts: γράφω, γράψω, ἔγραψα, γέγραφα, γέγραμμαι, ἐγράφην (*graphō, grapsō, egrapsa, gegrapha, gegrammai, egraphēn*). The *graph-* words come from the present stem; the *gram-* words come from the perfect *gegrammai* and the noun *gramma*.",
+    "Draft: Stems: *graph-* and *gram-* (from *gramma*, \"letter, something written\"). Languages: English, Spanish, Portuguese, French. This family is very large, about 200 entries across the four languages. A puzzle uses about 100, so the technical tier is the first to be cut.",
+    "Draft: *Gram* (the unit) comes from Greek *gramma* by way of Late Latin, where it meant \"a small weight.\" *Kilogram* is built on it.",
+    "Draft: *Program* is *pro-* + *gramma* (\"written beforehand\"). *Cartography* is a hybrid of Latin *carta* and Greek.",
+    "Draft: *Glamour* is a Scottish alteration of *grammar*, and *grimoire* is French for the same word. *Graft* and French *greffe* come from *graphium* (\"stylus\"). All are bonus-tier because the link is indirect.",
+    "Draft: English *carve* is a distant cousin through Proto-Indo-European, not a descendant, and is excluded. *Grave, engrave, grab* and *grape* are unrelated.",
+    "Draft: To verify: *glamour, grimoire, graft/greffe*, and the Spanish and Portuguese *grafiti* and *grafite*, which share spellings with *graffiti* and *graphite*.",
+    "Import: French “greffe” is core in the draft table but bonus-tier in its Flags; moved to bonus. Confirm.",
+    "Import: French “greffer” is core in the draft table but bonus-tier in its Flags; moved to bonus. Confirm."
+  ]
+}

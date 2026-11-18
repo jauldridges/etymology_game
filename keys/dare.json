@@ -1,0 +1,1313 @@
+{
+  "id": "dare",
+  "status": "draft",
+  "root": {
+    "form": "dare",
+    "transliteration": "dare",
+    "family": "latin",
+    "meaning": "give",
+    "principalParts": [
+      "dō",
+      "dare",
+      "dedī",
+      "datum"
+    ],
+    "stems": [
+      "da-",
+      "dat-",
+      "ded-",
+      "-dit-",
+      "-dere"
+    ]
+  },
+  "languages": [
+    "en",
+    "es",
+    "pt",
+    "fr"
+  ],
+  "difficulty": "hardest",
+  "tiers": {
+    "core": {
+      "label": "Core",
+      "scoring": "always"
+    },
+    "compounds": {
+      "label": "Compounds",
+      "scoring": "always",
+      "note": "Open question: count the -dere compounds as core or bonus? Set scoring to \"bonus\" to try the other way."
+    }
+  },
+  "entries": [
+    {
+      "word": "data",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "datum",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "date",
+      "lang": "en",
+      "tier": "core",
+      "gloss": "calendar date",
+      "path": "Latin dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dative",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "donate",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "donation",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "donor",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "pardon",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "condone",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dowry",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "endow",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "add",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "addition",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "additive",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "edit",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "edition",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "editor",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "tradition",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "traitor",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "treason",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "betray",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "extradite",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "extradition",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "render",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "rendition",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "surrender",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "rent",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "vend",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "vendor",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "perdition",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mandate",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mandatory",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "command",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "commander",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "demand",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "commend",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "recommend",
+      "lang": "en",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dar",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dato",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "datar",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dado",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dativo",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dádiva",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "donar",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "donación",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "donante",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "perdonar",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "perdón",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "condonar",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dote",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dotar",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "adición",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "editar",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "edición",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "editor",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "tradición",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "traidor",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "traición",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "extradición",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "rendir",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "renta",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "rendición",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "vender",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "venta",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "vendedor",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "perder",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "pérdida",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "perdición",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "esconder",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mandar",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mandato",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "comandar",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "demandar",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "recomendar",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "encomendar",
+      "lang": "es",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dar",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dado",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "data",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dativo",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dádiva",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "doar",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "doação",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "doador",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "perdoar",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "perdão",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dote",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dotar",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "adição",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "editar",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "edição",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "editor",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "tradição",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "traidor",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "trair",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "traição",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "extradição",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "render",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "renda",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "rendição",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "vender",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "venda",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "vendedor",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "perder",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "perda",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "perdição",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "esconder",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mandar",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mandato",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "comandar",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "demanda",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "recomendar",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "encomendar",
+      "lang": "pt",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "donner",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "don",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "donation",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "donateur",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "donneur",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "donnée",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "date",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "datif",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dé",
+      "lang": "fr",
+      "tier": "core",
+      "gloss": "die",
+      "path": "Latin dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "pardonner",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "pardon",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dot",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "doter",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dotation",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "addition",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "éditer",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "édition",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "éditeur",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "tradition",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "traître",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "trahir",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "trahison",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "extrader",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "extradition",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "rendre",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "rente",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "rendu",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "reddition",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "vendre",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "vente",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "vendeur",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "perdre",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "perte",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "perdition",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin compound in -dere, “put”, which merged with dare → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mandat",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "commander",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "commande",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "demander",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "demande",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "recommander",
+      "lang": "fr",
+      "tier": "compounds",
+      "path": "Latin manus, “hand”, + dare, “put in someone’s hand” → French",
+      "variants": [],
+      "reviewed": false
+    }
+  ],
+  "notRelated": [
+    {
+      "word": "dare",
+      "lang": "en",
+      "why": "a native English word, not from Latin",
+      "reviewed": false
+    },
+    {
+      "word": "give",
+      "lang": "en",
+      "why": "a native English word, not from Latin",
+      "reviewed": false
+    },
+    {
+      "word": "date",
+      "lang": "en",
+      "sense": "the fruit",
+      "why": "from Greek, not from dare",
+      "reviewed": false
+    },
+    {
+      "word": "dose",
+      "lang": "en",
+      "why": "from Greek didōmi, a cousin of dare, not a descendant",
+      "reviewed": false
+    },
+    {
+      "word": "antidote",
+      "lang": "en",
+      "why": "from Greek didōmi, a cousin of dare, not a descendant",
+      "reviewed": false
+    },
+    {
+      "word": "anecdote",
+      "lang": "en",
+      "why": "from Greek didōmi, a cousin of dare, not a descendant",
+      "reviewed": false
+    },
+    {
+      "word": "añadir",
+      "lang": "es",
+      "why": "from Latin adnectere, not from dare",
+      "reviewed": false
+    }
+  ],
+  "notes": [
+    "Draft: Stems: *da-*, *dat-*, *ded-*; compounds use *-dit-* and *-dere*. Languages: English, Spanish, Portuguese, French. About 120 entries; the compound tier may become its own puzzle.",
+    "Draft: The compounds (*add, edit, tradition, render, vend, perdition*) look like *dare* compounds but come from a second Latin verb, *-dere* (\"put\"), that merged with *dare*. Many dictionaries file them under *dare* anyway. Whether they count as core is an open question.",
+    "Draft: *Mandate, command, demand, commend, recommend* are *manus* + *dare* (\"put in someone's hand\").",
+    "Draft: Lookalikes to exclude: English *dare* and *give* (Germanic); *date* the fruit (Greek); *dose, antidote, anecdote* (Greek *didōmi*, a cousin, not a descendant); Spanish *añadir*, which comes from *adnectere*, not *addere*.",
+    "Draft: To verify: Spanish *dado* and French *dé* (\"die\") from *datum*, and English *betray* via *tradere*."
+  ]
+}

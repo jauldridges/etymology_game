@@ -1,0 +1,14 @@
+{
+  "name": "roots-game",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A daily word-roots puzzle: find every modern word that grows from one ancient root.",
+  "scripts": {
+    "check": "node tools/check-keys.mjs",
+    "test": "node --test test/*.test.js",
+    "serve": "node tools/serve.mjs",
+    "import-drafts": "node tools/import-drafts.mjs",
+    "e2e": "node test/e2e.mjs"
+  }
+}

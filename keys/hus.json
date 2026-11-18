@@ -1,0 +1,674 @@
+{
+  "id": "hus",
+  "status": "draft",
+  "root": {
+    "form": "hūs",
+    "transliteration": "hūs",
+    "family": "germanic",
+    "meaning": "house",
+    "writtenForms": [
+      {
+        "language": "Old English",
+        "form": "hūs"
+      },
+      {
+        "language": "Old Norse",
+        "form": "hús"
+      },
+      {
+        "language": "Old High German",
+        "form": "hūs"
+      },
+      {
+        "language": "Gothic",
+        "form": "-hūs",
+        "note": "in gudhūs, “temple”"
+      }
+    ],
+    "stems": [
+      "hūs"
+    ]
+  },
+  "languages": [
+    "en",
+    "de",
+    "nl",
+    "sv"
+  ],
+  "difficulty": "medium",
+  "tiers": {
+    "core": {
+      "label": "Core",
+      "scoring": "always"
+    }
+  },
+  "context": "House, Haus, huis and hus are cousins: none comes from another. They share an older ancestor, reconstructed as Proto-Germanic *hūsą, which was never written down.",
+  "entries": [
+    {
+      "word": "house",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "housing",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "household",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "housewife",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "housework",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "housekeeper",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "houseboat",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "housefly",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "warehouse",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "courthouse",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "farmhouse",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "doghouse",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "greenhouse",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "lighthouse",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "outhouse",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "hothouse",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "workhouse",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "madhouse",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "slaughterhouse",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "townhouse",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "clubhouse",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "treehouse",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "playhouse",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "birdhouse",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "husband",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old Norse húsbóndi, “master of the house” → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "hussy",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old English hūs → housewife → shortened to hussy",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "hustings",
+      "lang": "en",
+      "tier": "core",
+      "path": "Old Norse húsþing, “house assembly” → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Haus",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Häuschen",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "häuslich",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Hausfrau",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Hausmann",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Haushalt",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Hausaufgabe",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Hausarzt",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Hausmeister",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Haustier",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Haustür",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Rathaus",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Krankenhaus",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Gasthaus",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Warenhaus",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Kaufhaus",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Bauernhaus",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Treibhaus",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Gewächshaus",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Gehäuse",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "hausen",
+      "lang": "de",
+      "tier": "core",
+      "path": "Old High German hūs → German",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "huis",
+      "lang": "nl",
+      "tier": "core",
+      "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "huisje",
+      "lang": "nl",
+      "tier": "core",
+      "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "huiselijk",
+      "lang": "nl",
+      "tier": "core",
+      "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "huisvrouw",
+      "lang": "nl",
+      "tier": "core",
+      "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "huisman",
+      "lang": "nl",
+      "tier": "core",
+      "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "huishouden",
+      "lang": "nl",
+      "tier": "core",
+      "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "huiswerk",
+      "lang": "nl",
+      "tier": "core",
+      "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "huisarts",
+      "lang": "nl",
+      "tier": "core",
+      "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "huisdier",
+      "lang": "nl",
+      "tier": "core",
+      "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "ziekenhuis",
+      "lang": "nl",
+      "tier": "core",
+      "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "stadhuis",
+      "lang": "nl",
+      "tier": "core",
+      "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "gasthuis",
+      "lang": "nl",
+      "tier": "core",
+      "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "warenhuis",
+      "lang": "nl",
+      "tier": "core",
+      "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "huisvesten",
+      "lang": "nl",
+      "tier": "core",
+      "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "behuizing",
+      "lang": "nl",
+      "tier": "core",
+      "path": "Proto-Germanic *hūsą → Dutch (a cousin of Old English hūs)",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "hus",
+      "lang": "sv",
+      "tier": "core",
+      "path": "Old Norse hús → Swedish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "husdjur",
+      "lang": "sv",
+      "tier": "core",
+      "path": "Old Norse hús → Swedish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "hushåll",
+      "lang": "sv",
+      "tier": "core",
+      "path": "Old Norse hús → Swedish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "sjukhus",
+      "lang": "sv",
+      "tier": "core",
+      "path": "Old Norse hús → Swedish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "stadshus",
+      "lang": "sv",
+      "tier": "core",
+      "path": "Old Norse hús → Swedish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bostadshus",
+      "lang": "sv",
+      "tier": "core",
+      "path": "Old Norse hús → Swedish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "husvagn",
+      "lang": "sv",
+      "tier": "core",
+      "path": "Old Norse hús → Swedish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "husmor",
+      "lang": "sv",
+      "tier": "core",
+      "path": "Old Norse hús → Swedish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "husrum",
+      "lang": "sv",
+      "tier": "core",
+      "path": "Old Norse hús → Swedish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "husarrest",
+      "lang": "sv",
+      "tier": "core",
+      "path": "Old Norse hús → Swedish",
+      "variants": [],
+      "reviewed": false
+    }
+  ],
+  "notRelated": [
+    {
+      "word": "hut",
+      "lang": "en",
+      "why": "may share a far older root with house, but the link lies beyond the written record",
+      "reviewed": false
+    },
+    {
+      "word": "hood",
+      "lang": "en",
+      "why": "may share a far older root with house, but the link lies beyond the written record",
+      "reviewed": false
+    },
+    {
+      "word": "hide",
+      "lang": "en",
+      "sense": "conceal",
+      "why": "may share a far older root with house, but the link lies beyond the written record",
+      "reviewed": false
+    },
+    {
+      "word": "hose",
+      "lang": "en",
+      "why": "a separate word",
+      "reviewed": false
+    },
+    {
+      "word": "Hose",
+      "lang": "de",
+      "sense": "trousers",
+      "why": "a separate word",
+      "reviewed": false
+    }
+  ],
+  "notes": [
+    "Draft: Germanic cousins puzzle. Written forms: Old English *hūs*, Old Norse *hús*, Old High German *hūs*, and Gothic *-hūs* (in *gudhūs*, \"temple\"). The reveal may show the reconstructed Proto-Germanic ancestor \\*hūsą as extra context. Languages: English, German, Dutch, Swedish. About 85 entries.",
+    "Draft: This is a cousins puzzle. *House, Haus, huis* and *hus* share an ancestor; none comes from another. *Husband* and *hustings* are different: they come directly from Old Norse *húsbóndi* (\"master of the house\") and *húsþing* (\"house assembly\"). *Hussy* is a shortening of *housewife*.",
+    "Draft: Germanic languages build compounds freely, so the family is unlimited. The key lists only compounds found in a standard learner's dictionary.",
+    "Draft: Distant cousins left out: *hut*, *hide* (conceal) and *hood* may share a far older root with *house*, but the link lies beyond the written evidence. The reveal can mention it. *Hose* and German *Hose* (\"trousers\") are a separate word.",
+    "Draft: Danish and Norwegian *hus* are also cousins, but are not in this puzzle's language set.",
+    "Draft: The German, Dutch and Swedish entries need a check by a fluent reader before use."
+  ]
+}

@@ -1,0 +1,1091 @@
+{
+  "id": "caput",
+  "status": "draft",
+  "root": {
+    "form": "caput",
+    "transliteration": "caput",
+    "family": "latin",
+    "meaning": "head",
+    "principalParts": [
+      "caput",
+      "capitis"
+    ],
+    "stems": [
+      "capit-"
+    ]
+  },
+  "languages": [
+    "en",
+    "es",
+    "pt",
+    "fr"
+  ],
+  "difficulty": "easy",
+  "tiers": {
+    "core": {
+      "label": "Core",
+      "scoring": "always"
+    },
+    "bonus": {
+      "label": "Bonus",
+      "scoring": "bonus"
+    }
+  },
+  "entries": [
+    {
+      "word": "chief",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "chieftain",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "chef",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capital",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitalism",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitalist",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitalize",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "captain",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "chapter",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "achieve",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "achievement",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "mischief",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "kerchief",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "handkerchief",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "decapitate",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "decapitation",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitulate",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitulation",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "recapitulate",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "recapitulation",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "precipice",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin prae + caput → praeceps, “headfirst” → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "precipitate",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin prae + caput → praeceps, “headfirst” → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "precipitation",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin prae + caput → praeceps, “headfirst” → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "precipitous",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin prae + caput → praeceps, “headfirst” → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "biceps",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "triceps",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "quadriceps",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "occipital",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cape",
+      "lang": "en",
+      "tier": "core",
+      "gloss": "headland",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cadet",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "caddie",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cabbage",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "per capita",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cattle",
+      "lang": "en",
+      "tier": "bonus",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "chattel",
+      "lang": "en",
+      "tier": "bonus",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitol",
+      "lang": "en",
+      "tier": "bonus",
+      "path": "Latin caput → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "corporal",
+      "lang": "en",
+      "tier": "bonus",
+      "gloss": "military rank",
+      "path": "Latin caput → Italian capo, “head” → caporale → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cabeza",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cabezudo",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cabecera",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cabecilla",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cabecear",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "encabezar",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cabo",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "acabar",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capataz",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "jefe",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → French chef → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "chef",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitán",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capital",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitalismo",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitalista",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitalizar",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitel",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capítulo",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitular",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "recapitular",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "decapitar",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "caudillo",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cabildo",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "precipicio",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin prae + caput → praeceps, “headfirst” → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "precipitar",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin prae + caput → praeceps, “headfirst” → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bíceps",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "tríceps",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cuádriceps",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "occipital",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin caput → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cabeça",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cabeçalho",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cabeceira",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cabecear",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cabecilha",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "encabeçar",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cabo",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "acabar",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capataz",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "chefe",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → French chef → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "chef",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitão",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capital",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitalismo",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitalista",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitalizar",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitel",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capítulo",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitular",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "recapitular",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "decapitar",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "caudilho",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "precipício",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin prae + caput → praeceps, “headfirst” → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "precipitar",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin prae + caput → praeceps, “headfirst” → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "bíceps",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "tríceps",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "quadríceps",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "occipital",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin caput → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "chef",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "chef-d'œuvre",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "chapitre",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "chapiteau",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "chevet",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "achever",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "achèvement",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "couvre-chef",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitaine",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capital",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitale",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitalisme",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitaliste",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capitulation",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "capituler",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "récapituler",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "décapiter",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "décapitation",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cheptel",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cadet",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "caboche",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "cap",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "caporal",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → Italian capo, “head” → caporale → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "précipice",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin prae + caput → praeceps, “headfirst” → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "précipiter",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin prae + caput → praeceps, “headfirst” → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "précipitation",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin prae + caput → praeceps, “headfirst” → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "biceps",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "triceps",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "quadriceps",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "occipital",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin caput → French",
+      "variants": [],
+      "reviewed": false
+    }
+  ],
+  "notRelated": [
+    {
+      "word": "capture",
+      "lang": "en",
+      "why": "from Latin capere, “take”, a different root",
+      "reviewed": false
+    },
+    {
+      "word": "capable",
+      "lang": "en",
+      "why": "from Latin capere, “take”, a different root",
+      "reviewed": false
+    },
+    {
+      "word": "accept",
+      "lang": "en",
+      "why": "from Latin capere, “take”, a different root",
+      "reviewed": false
+    },
+    {
+      "word": "receive",
+      "lang": "en",
+      "why": "from Latin capere, “take”, a different root",
+      "reviewed": false
+    },
+    {
+      "word": "cap",
+      "lang": "en",
+      "why": "from Late Latin cappa, not caput",
+      "reviewed": false
+    },
+    {
+      "word": "cape",
+      "lang": "en",
+      "sense": "cloak",
+      "why": "from Late Latin cappa, not caput",
+      "reviewed": false
+    },
+    {
+      "word": "caper",
+      "lang": "en",
+      "why": "from Latin caper, “goat”",
+      "reviewed": false
+    },
+    {
+      "word": "Capricorn",
+      "lang": "en",
+      "why": "from Latin caper, “goat”",
+      "reviewed": false
+    }
+  ],
+  "notes": [
+    "Draft: Stem: *capit-*. Languages: English, Spanish, Portuguese, French. About 120 entries, so the larger families may be trimmed to fit a puzzle of about 100.",
+    "Draft: *Capere* (\"take\": *capture, capable, accept, receive*) is a different root and the biggest trap in this family. None of those words belong here.",
+    "Draft: English *cap* and *cape* (cloak) come from Late Latin *cappa*, whose origin is uncertain, so they are excluded. *Cape* (headland) does come from *caput*.",
+    "Draft: *Caper* and *Capricorn* come from *caper* (\"goat\") and are excluded.",
+    "Draft: *Precipice* and *precipitate* come from *praeceps* (*prae* + *caput*, \"headfirst\"). This surprises players and makes a good reveal.",
+    "Draft: *Corporal* (rank) comes from Italian *caporale*, from *capo* (\"head\"); it is bonus-tier because it is easily confused with *corporal* (of the body). *Capitol* is bonus-tier because the origin of *Capitolium* is debated.",
+    "Draft: Spanish *jefe* and Portuguese *chefe* came through French *chef*.",
+    "Draft: To verify: *cabildo, caudillo* (from *capitellum*), *capataz, caboche, cheptel*, and English *cadet* and *caddie*."
+  ]
+}

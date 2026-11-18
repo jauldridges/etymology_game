@@ -1,0 +1,1117 @@
+{
+  "id": "ferre",
+  "status": "draft",
+  "root": {
+    "form": "ferre",
+    "transliteration": "ferre",
+    "family": "latin",
+    "meaning": "carry",
+    "principalParts": [
+      "ferō",
+      "ferre",
+      "tulī",
+      "lātum"
+    ],
+    "stems": [
+      "fer-",
+      "lat-",
+      "tul-"
+    ]
+  },
+  "languages": [
+    "en",
+    "es",
+    "pt",
+    "fr"
+  ],
+  "difficulty": "hard",
+  "tiers": {
+    "core": {
+      "label": "Core",
+      "scoring": "always"
+    },
+    "bonus": {
+      "label": "Bonus",
+      "scoring": "bonus"
+    }
+  },
+  "entries": [
+    {
+      "word": "transfer",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "refer",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "reference",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "referee",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "confer",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "conference",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "defer",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "deference",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "differ",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "difference",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "infer",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "inference",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "offer",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "prefer",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "preference",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "suffer",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "suffering",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "proffer",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "fertile",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "fertility",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "circumference",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "conifer",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Lucifer",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "vociferous",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "translate",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "translation",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "relate",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "relation",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "relative",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "collate",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "collation",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "elate",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "ablative",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "superlative",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dilate",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "prelate",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "oblate",
+      "lang": "en",
+      "tier": "core",
+      "path": "Latin ferre → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "legislate",
+      "lang": "en",
+      "tier": "bonus",
+      "path": "Latin lex, “law”, + lātor, “proposer” (from ferre) → English",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "transferir",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "referir",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "referencia",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "conferir",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "conferencia",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "diferir",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "diferencia",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "inferir",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "ofrecer",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "ofrenda",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "preferir",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "preferencia",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "sufrir",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "sufrimiento",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "proferir",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "fértil",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "fertilidad",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "circunferencia",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "conífero",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Lucifer",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "trasladar",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "traslación",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "relación",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "relatar",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "relativo",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "colación",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "ablativo",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "superlativo",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dilatar",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "prelado",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin ferre → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "oblea",
+      "lang": "es",
+      "tier": "core",
+      "path": "Latin oblāta, “offering” (from ferre) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "legislación",
+      "lang": "es",
+      "tier": "bonus",
+      "path": "Latin lex, “law”, + lātor, “proposer” (from ferre) → Spanish",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "transferir",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "referir",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "referência",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "conferir",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "conferência",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "diferir",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "diferença",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "inferir",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "oferecer",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "oferta",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "oferenda",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "preferir",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "preferência",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "sofrer",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "sofrimento",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "proferir",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "fértil",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "fertilidade",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "circunferência",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "conífero",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "trasladar",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "translação",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "relação",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "relatar",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "relativo",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "colação",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "ablativo",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "superlativo",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dilatar",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "prelado",
+      "lang": "pt",
+      "tier": "core",
+      "path": "Latin ferre → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "legislação",
+      "lang": "pt",
+      "tier": "bonus",
+      "path": "Latin lex, “law”, + lātor, “proposer” (from ferre) → Portuguese",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "transférer",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "référer",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "référence",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "conférer",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "conférence",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "différer",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "différence",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "inférer",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "offrir",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "offre",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "offrande",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "préférer",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "préférence",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "souffrir",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "souffrance",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "proférer",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "fertile",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "circonférence",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "conifère",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "Lucifer",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "translation",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "relation",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "relater",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "relatif",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "collation",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "ablatif",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "superlatif",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "dilater",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "prélat",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin ferre → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "oublie",
+      "lang": "fr",
+      "tier": "core",
+      "path": "Latin oblāta, “offering” (from ferre) → French",
+      "variants": [],
+      "reviewed": false
+    },
+    {
+      "word": "législation",
+      "lang": "fr",
+      "tier": "bonus",
+      "path": "Latin lex, “law”, + lātor, “proposer” (from ferre) → French",
+      "variants": [],
+      "reviewed": false
+    }
+  ],
+  "notRelated": [
+    {
+      "word": "tolerate",
+      "lang": "en",
+      "why": "shares an old root with tulī, but does not come from ferre",
+      "reviewed": false
+    },
+    {
+      "word": "extol",
+      "lang": "en",
+      "why": "from a separate verb, tollere",
+      "reviewed": false
+    }
+  ],
+  "notes": [
+    "Draft: Stems: *fer-*, *lat-* (from the supine), *tul-*. Languages: English, Spanish, Portuguese, French.",
+    "Draft: Many English words come from the *lat-* stem (*relate, translate, elate*), which players will not expect from *ferre*. This makes a good reveal.",
+    "Draft: *Tolerate* shares a root with *tulī* but does not descend from *ferre*; *extol* comes from the separate verb *tollere*. Both are left out.",
+    "Draft: *Legislate* comes from *lex* plus *lātor* (\"proposer\"), so it is bonus-tier.",
+    "Draft: Spanish *oblea* and French *oublie* (\"wafer\") come from *oblāta* (\"offering\")."
+  ]
+}

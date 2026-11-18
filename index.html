@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Roots</title>
+  <meta name="description" content="Find every word that grows from one ancient root.">
+  <link rel="stylesheet" href="src/ui/game.css">
+  <style>html, body { margin: 0; height: 100%; } body { background: #f7f3ea; } @media (prefers-color-scheme: dark) { body { background: #1c1a17; } }</style>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module">
+    import { mountGame } from './src/ui/game.js';
+    mountGame(document.getElementById('app'), { keysUrl: './keys/' });
+  </script>
+</body>
+</html>

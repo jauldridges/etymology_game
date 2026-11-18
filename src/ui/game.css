@@ -1,0 +1,166 @@
+/* Roots game. Every rule is scoped under .roots-game so the game can sit
+   inside a host page (the practice app) without leaking styles. */
+.roots-game {
+  --paper: #f7f3ea;
+  --card: #fffdf8;
+  --ink: #2a2620;
+  --ink-soft: #5f574b;
+  --ink-faint: #8a8172;
+  --rule: #ddd4c3;
+  --accent: #6b4a2b;
+  --accent-ink: #fffdf8;
+  --found: #2f5d3a;
+  --found-bg: #e6efe4;
+  --warn: #8a4b14;
+  --warn-bg: #f6e9d8;
+  --focus: #b07a3c;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Noto Serif", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.5;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+@media (prefers-color-scheme: dark) {
+  .roots-game:not([data-theme="light"]) {
+    --paper: #1c1a17; --card: #24211d; --ink: #ece5d8; --ink-soft: #bdb3a3; --ink-faint: #8f8676;
+    --rule: #3a352e; --accent: #d9b48a; --accent-ink: #1c1a17; --found: #9fd0a6; --found-bg: #23332a;
+    --warn: #e6b37c; --warn-bg: #3a2c1e; --focus: #d9b48a;
+  }
+}
+.roots-game[data-theme="dark"] {
+  --paper: #1c1a17; --card: #24211d; --ink: #ece5d8; --ink-soft: #bdb3a3; --ink-faint: #8f8676;
+  --rule: #3a352e; --accent: #d9b48a; --accent-ink: #1c1a17; --found: #9fd0a6; --found-bg: #23332a;
+  --warn: #e6b37c; --warn-bg: #3a2c1e; --focus: #d9b48a;
+}
+
+.roots-game *, .roots-game *::before, .roots-game *::after { box-sizing: border-box; }
+.roots-game .rg-wrap { max-width: 560px; margin: 0 auto; padding: 20px 16px 48px; }
+.roots-game h1, .roots-game h2, .roots-game h3 { font-weight: 500; line-height: 1.2; margin: 0; }
+.roots-game p { margin: 0; }
+.roots-game button { font: inherit; color: inherit; cursor: pointer; }
+.roots-game :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.roots-game .rg-muted { color: var(--ink-soft); }
+.roots-game .rg-small { font-size: 15px; }
+.roots-game .rg-sans { font-family: var(--sans); }
+.roots-game .rg-visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Header */
+.roots-game .rg-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 20px; }
+.roots-game .rg-brand { font-size: 20px; letter-spacing: 0.04em; font-variant: small-caps; }
+.roots-game .rg-link { background: none; border: 0; padding: 4px 0; color: var(--accent); text-decoration: underline; text-underline-offset: 3px; font-size: 16px; }
+
+/* Buttons */
+.roots-game .rg-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; padding: 10px 20px; border-radius: 10px;
+  border: 1px solid var(--accent); background: var(--accent); color: var(--accent-ink);
+  font-family: var(--sans); font-size: 16px; font-weight: 600;
+}
+.roots-game .rg-btn.rg-ghost { background: transparent; color: var(--accent); }
+.roots-game .rg-btn:disabled { opacity: 0.5; cursor: default; }
+.roots-game .rg-btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.roots-game .rg-btn-row .rg-btn { flex: 1 1 140px; }
+
+/* Root card */
+.roots-game .rg-card { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 22px 20px; }
+.roots-game .rg-kicker { font-family: var(--sans); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); }
+.roots-game .rg-root { font-size: 52px; line-height: 1.1; margin: 8px 0 2px; font-style: italic; overflow-wrap: anywhere; }
+.roots-game .rg-root[lang="grc"] { font-style: normal; }
+.roots-game .rg-translit { font-size: 20px; color: var(--ink-soft); font-style: italic; }
+.roots-game .rg-meaning { font-size: 22px; margin-top: 8px; }
+.roots-game .rg-parts { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 16px; color: var(--ink-soft); }
+.roots-game .rg-parts i { color: var(--ink); }
+.roots-game .rg-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; padding: 0; list-style: none; }
+.roots-game .rg-tag { font-family: var(--sans); font-size: 14px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--rule); }
+.roots-game .rg-draft { margin-top: 16px; font-family: var(--sans); font-size: 13px; color: var(--warn); background: var(--warn-bg); border-radius: 8px; padding: 8px 10px; }
+.roots-game .rg-section { margin-top: 24px; }
+.roots-game .rg-settings { margin-top: 28px; border-top: 1px solid var(--rule); padding-top: 16px; font-size: 16px; }
+.roots-game .rg-settings label { display: block; margin-bottom: 6px; }
+.roots-game select { font: inherit; font-family: var(--sans); font-size: 16px; padding: 8px; border-radius: 8px; border: 1px solid var(--rule); background: var(--card); color: var(--ink); max-width: 100%; }
+
+/* Play */
+.roots-game .rg-play-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
+.roots-game .rg-play-root { font-size: 26px; font-style: italic; }
+.roots-game .rg-play-root small { font-size: 16px; font-style: normal; color: var(--ink-soft); margin-left: 6px; }
+.roots-game .rg-timer { font-family: var(--sans); font-variant-numeric: tabular-nums; font-weight: 700; font-size: 20px; }
+.roots-game .rg-timer.rg-low { color: var(--warn); }
+.roots-game .rg-form { display: flex; gap: 8px; }
+.roots-game .rg-input {
+  flex: 1; min-width: 0; font: inherit; font-size: 22px; padding: 10px 14px; min-height: 54px;
+  border-radius: 10px; border: 2px solid var(--rule); background: var(--card); color: var(--ink);
+}
+.roots-game .rg-input:focus { border-color: var(--focus); outline: none; }
+.roots-game .rg-accents { display: flex; gap: 6px; margin-top: 10px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: thin; align-items: center; }
+.roots-game .rg-accents-note { flex: none; font-family: var(--sans); font-size: 12px; color: var(--ink-faint); width: 58px; line-height: 1.2; }
+.roots-game .rg-key {
+  flex: none; min-width: 40px; min-height: 40px; border-radius: 8px; border: 1px solid var(--rule);
+  background: var(--card); font-size: 19px; padding: 0 6px;
+}
+.roots-game .rg-feedback { min-height: 52px; margin-top: 10px; font-size: 16px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.roots-game .rg-feedback .rg-mark { font-family: var(--sans); font-weight: 700; }
+.roots-game .rg-feedback.rg-good { color: var(--found); }
+.roots-game .rg-feedback.rg-close { color: var(--warn); }
+.roots-game .rg-feedback .rg-link { font-size: 15px; }
+
+/* Rank bar */
+.roots-game .rg-rank { margin: 8px 0 18px; }
+.roots-game .rg-result .rg-rank { margin-top: 16px; }
+.roots-game .rg-rank-line { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; }
+.roots-game .rg-rank-name { font-size: 20px; }
+.roots-game .rg-bar { position: relative; height: 10px; border-radius: 999px; background: var(--rule); margin-top: 8px; overflow: hidden; }
+.roots-game .rg-bar-fill { position: absolute; inset: 0 auto 0 0; background: var(--accent); border-radius: 999px; transition: width 0.3s ease; }
+.roots-game .rg-ticks { position: relative; height: 18px; font-family: var(--sans); font-size: 11px; color: var(--ink-faint); }
+.roots-game .rg-ticks span { position: absolute; top: 3px; transform: translateX(-50%); }
+.roots-game .rg-ticks span::before { content: ""; position: absolute; left: 50%; top: -3px; width: 1px; height: 3px; background: var(--ink-faint); }
+
+/* Tabs and found list */
+.roots-game .rg-tabs { display: flex; border-bottom: 1px solid var(--rule); overflow-x: auto; }
+.roots-game .rg-tab {
+  flex: 1 0 auto; border: 0; background: none; padding: 8px 6px; min-height: 48px; font-family: var(--sans); font-size: 14px;
+  color: var(--ink-soft); border-bottom: 3px solid transparent; white-space: nowrap; display: flex; flex-direction: column; align-items: center;
+}
+.roots-game .rg-tab-count { font-size: 13px; font-variant-numeric: tabular-nums; color: var(--ink-faint); }
+.roots-game .rg-tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); font-weight: 600; }
+.roots-game .rg-found { list-style: none; padding: 12px 0 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.roots-game .rg-found li { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 3px 10px; font-size: 17px; }
+.roots-game .rg-found li.rg-new { border-color: var(--found); }
+.roots-game .rg-badge { font-family: var(--sans); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin-left: 6px; }
+.roots-game .rg-empty { color: var(--ink-faint); font-style: italic; padding-top: 12px; font-size: 16px; }
+.roots-game .rg-finish { margin-top: 28px; display: flex; justify-content: center; }
+
+/* Reveal */
+.roots-game .rg-result { text-align: center; }
+.roots-game .rg-result .rg-rank-name { font-size: 34px; display: block; margin: 4px 0; }
+.roots-game .rg-share { margin-top: 18px; text-align: left; }
+.roots-game .rg-share pre { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 15px; background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; white-space: pre-wrap; margin: 0 0 10px; }
+.roots-game .rg-lang-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--rule); padding-bottom: 6px; margin-top: 28px; }
+.roots-game .rg-lang-head h2 { font-size: 24px; }
+.roots-game .rg-words { list-style: none; padding: 0; margin: 0; }
+.roots-game .rg-words li { padding: 10px 0; border-bottom: 1px dashed var(--rule); display: grid; grid-template-columns: 76px 1fr; gap: 2px 10px; }
+.roots-game .rg-status { font-family: var(--sans); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding-top: 4px; }
+.roots-game .rg-status.rg-is-found { color: var(--found); }
+.roots-game .rg-status.rg-is-missed { color: var(--ink-faint); }
+.roots-game .rg-word { font-size: 19px; }
+.roots-game li.rg-was-found .rg-word { font-weight: 600; }
+.roots-game .rg-gloss { color: var(--ink-soft); font-size: 15px; font-style: italic; margin-left: 4px; }
+.roots-game .rg-path { grid-column: 2; font-size: 15px; color: var(--ink-soft); }
+.roots-game .rg-context { margin-top: 20px; font-size: 16px; color: var(--ink-soft); border-left: 3px solid var(--rule); padding-left: 12px; }
+.roots-game .rg-nr li { grid-template-columns: 1fr; }
+.roots-game .rg-nr .rg-path { grid-column: 1; }
+.roots-game .rg-suggest { margin-top: 28px; }
+.roots-game .rg-suggest form { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.roots-game .rg-suggest .rg-input { font-size: 18px; min-height: 48px; flex: 1 1 180px; }
+
+/* Archive */
+.roots-game .rg-archive { list-style: none; padding: 0; margin: 16px 0 0; }
+.roots-game .rg-archive li { border-bottom: 1px solid var(--rule); }
+.roots-game .rg-archive button { width: 100%; text-align: left; background: none; border: 0; padding: 14px 4px; display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.roots-game .rg-archive .rg-ar-root { font-style: italic; font-size: 20px; }
+
+.roots-game .rg-toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--ink); color: var(--paper); font-family: var(--sans); font-size: 15px; padding: 10px 16px; border-radius: 10px; z-index: 10; }
+@media (prefers-reduced-motion: reduce) { .roots-game .rg-bar-fill { transition: none; } }
