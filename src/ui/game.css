@@ -295,3 +295,11 @@
   .roots-game .rg-fb, .roots-game .rg-fb-plus, .roots-game .rg-shake, .roots-game .rg-found li.rg-new,
   .roots-game .rg-rank-up .rg-rank-name, .roots-game .rg-kw.rg-flash { animation: none !important; }
 }
+
+/* ---------- Testing tools ---------- */
+.roots-game .rg-tester { margin-top: 28px; padding: 16px; border: 2px dashed var(--rule); border-radius: 14px; font-size: 16px; }
+.roots-game .rg-tester h2 { font-size: 20px; }
+.roots-game .rg-tester label { display: block; margin-top: 12px; margin-bottom: 6px; }
+.roots-game .rg-tester-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.roots-game .rg-tester-row select { flex: 1 1 200px; min-height: 48px; }
+.roots-game .rg-tester-row .rg-btn { flex: 1 1 140px; min-height: 44px; padding: 8px 12px; font-size: 15px; }

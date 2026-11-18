@@ -12,6 +12,8 @@
 //   puzzle      a puzzle id to play outside the schedule (for testing)
 //   shareUrl    a link added to the end of the share text
 //   theme       'light' | 'dark' to force a theme (default: follows the device)
+//   testTools   true/false to show or hide the testing tools (default: shown
+//               while the puzzle's word list is a draft)
 //   data        { schedule, puzzles: { <id>: <key file> } } to skip fetching (play.html uses this)
 //
 // The page's own URL may also set ?puzzle=<id> and ?date=YYYY-MM-DD for testing.
@@ -55,6 +57,19 @@ function makeStore(custom) {
         const raw = backing ? backing.getItem(STORE + key) : memory.get(key);
         return raw == null ? fallback : JSON.parse(raw);
       } catch { return fallback; }
+    },
+    // Erases everything this game saved (progress, results, settings, flags).
+    clearAll() {
+      memory.clear();
+      try {
+        if (!backing) return;
+        const keys = [];
+        for (let i = 0; i < backing.length; i++) {
+          const k = backing.key(i);
+          if (k?.startsWith(STORE)) keys.push(k);
+        }
+        keys.forEach((k) => backing.removeItem(k));
+      } catch { /* storage blocked: nothing to erase */ }
     },
     set(key, value) {
       const raw = JSON.stringify(value);
@@ -219,7 +234,9 @@ export async function mountGame(container, options = {}) {
           <label for="rg-bonus">Bonus words (real but indirect descendants)</label>
           <select id="rg-bonus">${BONUS_MODES.map((m) => `<option value="${m}" ${m === settings.bonusMode ? 'selected' : ''}>${h(BONUS_LABELS[m])}</option>`).join('')}</select>
         </section>
+        ${testing() ? testToolsHtml() : ''}
       </main>`);
+    if (testing()) bindTestTools();
 
     container.querySelector('#rg-bonus').addEventListener('change', (e) => {
       settings.bonusMode = e.target.value;
@@ -236,6 +253,60 @@ export async function mountGame(container, options = {}) {
         progress.blitzEndsAt = Date.now() + BLITZ_SECONDS * 1000;
         saveProgress();
         renderPlay();
+      },
+    });
+  }
+
+  // ---------- Testing tools ----------
+  // Shown while the word lists are drafts, so testers can play any puzzle
+  // and replay one without waiting a day or clearing browser data.
+  function testing() {
+    return options.testTools ?? game?.puzzle?.status !== 'ready';
+  }
+
+  function puzzleLabel(id) {
+    const raw = data?.puzzles?.[id];
+    return raw ? `${raw.root?.transliteration ?? id} “${raw.root?.meaning ?? ''}”` : id;
+  }
+
+  function testToolsHtml() {
+    const days = numberedDays(schedule);
+    return `
+      <section class="rg-tester">
+        <h2>Testing tools</h2>
+        <p class="rg-muted rg-small">Shown while the word lists are drafts.</p>
+        <label for="rg-test-puzzle">Play any puzzle, even future ones</label>
+        <div class="rg-tester-row">
+          <select id="rg-test-puzzle">${days.map((d) => `<option value="${h(d.date)}" ${d.date === game.day.date ? 'selected' : ''}>No. ${d.number} · ${h(puzzleLabel(d.puzzle))}</option>`).join('')}</select>
+          <button type="button" class="rg-btn rg-ghost" data-act="test-go">Open</button>
+        </div>
+        <div class="rg-tester-row">
+          <button type="button" class="rg-btn rg-ghost" data-act="test-replay">Replay this puzzle</button>
+          <button type="button" class="rg-btn rg-ghost" data-act="test-wipe">Erase all saved progress</button>
+        </div>
+      </section>`;
+  }
+
+  function replayPuzzle() {
+    game.progress = { found: [], mode: null, blitzEndsAt: null, finished: false };
+    saveProgress();
+    store.set(`result:${game.day.date ?? 'free'}:${game.puzzle.id}`, null);
+    renderToday();
+    toast('Progress cleared for this puzzle');
+  }
+
+  function bindTestTools() {
+    bind({
+      'test-go': () => {
+        const date = container.querySelector('#rg-test-puzzle').value;
+        const day = numberedDays(schedule).find((d) => d.date === date);
+        if (day) openDay(day);
+      },
+      'test-replay': replayPuzzle,
+      'test-wipe': () => {
+        store.clearAll();
+        Object.assign(settings, { bonusMode: 'off' });
+        openToday().then(() => toast('All saved progress erased'));
       },
     });
   }
@@ -636,7 +707,10 @@ export async function mountGame(container, options = {}) {
           </form>
           ${myFlags.length ? `<p class="rg-muted rg-small" style="margin-top:10px">You have suggested ${myFlags.length} ${myFlags.length === 1 ? 'word' : 'words'} for this puzzle. ${options.onFlag ? '' : '<button class="rg-link" data-act="export">Copy suggestions</button>'}</p>` : ''}
         </section>
-        <div class="rg-finish"><button class="rg-btn rg-ghost" data-act="archive">Past puzzles</button></div>
+        <div class="rg-finish rg-btn-row rg-narrow">
+          ${testing() ? '<button class="rg-btn rg-ghost" data-act="test-replay">Replay (testing)</button>' : ''}
+          <button class="rg-btn rg-ghost" data-act="archive">Past puzzles</button>
+        </div>
       </main>`, 'rg-wide');
 
     setupZoom(columnLangs);
@@ -650,6 +724,7 @@ export async function mountGame(container, options = {}) {
     });
     bind({
       archive: renderArchive,
+      'test-replay': replayPuzzle,
       copy: async () => toast((await copyText(share)) ? 'Result copied' : 'Could not copy; select the text instead'),
       export: async () => {
         const text = JSON.stringify(store.get('flags', []), null, 2);
