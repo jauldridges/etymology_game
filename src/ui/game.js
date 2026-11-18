@@ -178,16 +178,16 @@ export async function mountGame(container, options = {}) {
   }
 
   // ---------- Today ----------
-  function formsHtml(root) {
+  function formsHtml(root, cls = 'rg-parts') {
     if (root.family === 'germanic') {
-      return `<p class="rg-parts">Written as ${root.writtenForms.map((f) =>
+      return `<p class="${cls}">Written as ${root.writtenForms.map((f) =>
         `${h(f.language)} <i lang="${ROOT_LANG_ATTR.germanic}">${h(f.form)}</i>${f.note ? ` (${h(f.note)})` : ''}`).join(' · ')}</p>`;
     }
     if (root.family === 'greek') {
-      return `<p class="rg-parts">Forms: ${root.principalParts.map((p, i) =>
+      return `<p class="${cls}">Forms: ${root.principalParts.map((p, i) =>
         `<i lang="grc">${h(p)}</i> <span class="rg-muted">(${h(root.principalPartsTransliterated?.[i] ?? '')})</span>`).join(', ')}</p>`;
     }
-    return `<p class="rg-parts">Forms: <i lang="la">${root.principalParts.map(h).join(', ')}</i></p>`;
+    return `<p class="${cls}">Forms: <i lang="la">${root.principalParts.map(h).join(', ')}</i></p>`;
   }
 
   function renderToday() {
@@ -348,6 +348,7 @@ export async function mountGame(container, options = {}) {
         <span class="rg-play-root" lang="${ROOT_LANG_ATTR[puzzle.roots[0].family] ?? ''}">${h(puzzle.roots[0].form)}<small>“${h(puzzle.roots[0].meaning)}”</small></span>
         ${progress.mode === 'blitz' ? '<span class="rg-timer" aria-live="off"></span>' : '<button class="rg-link" data-act="home">Puzzle info</button>'}
       </div>
+      <div class="rg-play-forms">${puzzle.roots.map((r) => formsHtml(r, 'rg-play-parts')).join('')}</div>
       <div class="rg-rank"></div>
       <form class="rg-form" autocomplete="off">
         <label class="rg-visually-hidden" for="rg-word">Type a word</label>

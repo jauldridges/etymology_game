@@ -84,7 +84,10 @@
 .roots-game select { font: inherit; font-family: var(--sans); font-size: 16px; padding: 8px; border-radius: 8px; border: 1px solid var(--rule); background: var(--card); color: var(--ink); max-width: 100%; }
 
 /* Play */
-.roots-game .rg-play-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
+.roots-game .rg-play-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 4px; }
+.roots-game .rg-play-forms { margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--rule); }
+.roots-game .rg-play-parts { font-size: 16px; line-height: 1.45; color: var(--ink-soft); }
+.roots-game .rg-play-parts i { color: var(--ink); font-size: 18px; }
 .roots-game .rg-play-root { font-size: 26px; font-style: italic; }
 .roots-game .rg-play-root small { font-size: 16px; font-style: normal; color: var(--ink-soft); margin-left: 6px; }
 .roots-game .rg-timer { font-family: var(--sans); font-variant-numeric: tabular-nums; font-weight: 700; font-size: 20px; }
