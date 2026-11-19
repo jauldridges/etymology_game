@@ -310,3 +310,12 @@
 .roots-game .rg-tester-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
 .roots-game .rg-tester-row select { flex: 1 1 200px; min-height: 48px; }
 .roots-game .rg-tester-row .rg-btn { flex: 1 1 140px; min-height: 44px; padding: 8px 12px; font-size: 15px; }
+
+/* ---------- Stems-first play header ---------- */
+.roots-game .rg-stemhead { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
+.roots-game .rg-stemhead-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.roots-game .rg-stems { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 18px; margin-top: 2px; }
+.roots-game .rg-stem { font-size: 40px; line-height: 1.1; font-weight: 600; color: var(--accent); letter-spacing: 0.01em; }
+.roots-game .rg-stem-meaning { font-size: 20px; color: var(--ink-soft); }
+.roots-game .rg-stem-forms { font-size: 16px; color: var(--ink); margin-top: 8px; line-height: 1.4; }
+.roots-game .rg-stem-translit { font-size: 15px; color: var(--ink-soft); font-style: italic; line-height: 1.4; }

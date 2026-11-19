@@ -130,7 +130,9 @@ export async function mountGame(container, options = {}) {
     if (r.ok) schedule = await r.json();
   } catch { /* the game still works with ?puzzle= */ }
 
-  const settings = { bonusMode: 'off', ...store.get('settings', {}) };
+  // header: what the play screen leads with. 'root' = the dictionary form
+  // (γράφω), 'stems' = the stems as they show up in modern words (-graph-, -gram-).
+  const settings = { bonusMode: 'off', header: 'root', ...store.get('settings', {}) };
   let timer = null;
   let game = null; // { day, puzzle, saveKey, progress }
 
@@ -280,6 +282,13 @@ export async function mountGame(container, options = {}) {
           <select id="rg-test-puzzle">${days.map((d) => `<option value="${h(d.date)}" ${d.date === game.day.date ? 'selected' : ''}>No. ${d.number} · ${h(puzzleLabel(d.puzzle))}</option>`).join('')}</select>
           <button type="button" class="rg-btn rg-ghost" data-act="test-go">Open</button>
         </div>
+        <label for="rg-test-header">Puzzle screen leads with</label>
+        <div class="rg-tester-row">
+          <select id="rg-test-header">
+            <option value="root" ${settings.header === 'root' ? 'selected' : ''}>The root word (γράφω)</option>
+            <option value="stems" ${settings.header === 'stems' ? 'selected' : ''}>The stems in modern words (-graph-, -gram-)</option>
+          </select>
+        </div>
         <div class="rg-tester-row">
           <button type="button" class="rg-btn rg-ghost" data-act="test-replay">Replay this puzzle</button>
           <button type="button" class="rg-btn rg-ghost" data-act="test-wipe">Erase all saved progress</button>
@@ -296,6 +305,11 @@ export async function mountGame(container, options = {}) {
   }
 
   function bindTestTools() {
+    container.querySelector('#rg-test-header')?.addEventListener('change', (e) => {
+      settings.header = e.target.value;
+      store.set('settings', settings);
+      toast('Saved. Start or continue the puzzle to see it.');
+    });
     bind({
       'test-go': () => {
         const date = container.querySelector('#rg-test-puzzle').value;
@@ -305,7 +319,7 @@ export async function mountGame(container, options = {}) {
       'test-replay': replayPuzzle,
       'test-wipe': () => {
         store.clearAll();
-        Object.assign(settings, { bonusMode: 'off' });
+        Object.assign(settings, { bonusMode: 'off', header: 'root' });
         openToday().then(() => toast('All saved progress erased'));
       },
     });
@@ -336,6 +350,38 @@ export async function mountGame(container, options = {}) {
       </div>${bar}`;
   }
 
+  // The stems-first header: the stems players will spot inside modern words
+  // are the focal point; the original forms sit underneath in smaller type.
+  const stemLabel = (stem) => `-${stem.replace(/^-+|-+$/g, '')}-`;
+
+  function stemHeaderHtml(puzzle, progress) {
+    const corner = progress.mode === 'blitz'
+      ? '<span class="rg-timer" aria-live="off"></span>'
+      : '<button class="rg-link" data-act="home">Puzzle info</button>';
+    return `
+      <div class="rg-stemhead">
+        <div class="rg-stemhead-top">
+          <p class="rg-kicker">Look for</p>
+          ${corner}
+        </div>
+        ${puzzle.roots.map((r) => {
+          let forms;
+          if (r.family === 'germanic') {
+            forms = `<p class="rg-stem-forms">${r.writtenForms.map((f) => `${h(f.language)} <i lang="ang">${h(f.form)}</i>`).join(' · ')}</p>`;
+          } else if (r.family === 'greek') {
+            forms = `<p class="rg-stem-forms" lang="grc">${r.principalParts.map(h).join(', ')}</p>
+              <p class="rg-stem-translit">${(r.principalPartsTransliterated ?? []).map(h).join(', ')}</p>`;
+          } else {
+            forms = `<p class="rg-stem-forms" lang="la"><i>${r.principalParts.map(h).join(', ')}</i></p>`;
+          }
+          return `
+            <p class="rg-stems">${r.stems.map((st) => `<span class="rg-stem">${h(stemLabel(st))}</span>`).join('')}
+              <span class="rg-stem-meaning">“${h(r.meaning)}”</span></p>
+            ${forms}`;
+        }).join('')}
+      </div>`;
+  }
+
   function renderPlay() {
     const { puzzle, progress } = game;
     if (progress.finished) return renderReveal();
@@ -344,11 +390,12 @@ export async function mountGame(container, options = {}) {
     const freshIds = new Set();
 
     wrap(`
+      ${settings.header === 'stems' ? stemHeaderHtml(puzzle, progress) : `
       <div class="rg-play-head">
         <span class="rg-play-root" lang="${ROOT_LANG_ATTR[puzzle.roots[0].family] ?? ''}">${h(puzzle.roots[0].form)}<small>“${h(puzzle.roots[0].meaning)}”</small></span>
         ${progress.mode === 'blitz' ? '<span class="rg-timer" aria-live="off"></span>' : '<button class="rg-link" data-act="home">Puzzle info</button>'}
       </div>
-      <div class="rg-play-forms">${puzzle.roots.map((r) => formsHtml(r, 'rg-play-parts')).join('')}</div>
+      <div class="rg-play-forms">${puzzle.roots.map((r) => formsHtml(r, 'rg-play-parts')).join('')}</div>`}
       <div class="rg-rank"></div>
       <form class="rg-form" autocomplete="off">
         <label class="rg-visually-hidden" for="rg-word">Type a word</label>
