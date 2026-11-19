@@ -18,6 +18,7 @@ npm test             # matching, scoring, share, schedule and checker tests
 npm run check        # checks every key file
 npm run e2e          # phone-sized play-through (needs Playwright + Chromium)
 npm run build        # rebuild play.html
+node tools/build-standalone.mjs --hosted out.html   # page content only, for a host that adds its own <head> (e.g. a claude.ai artifact)
 ```
 
 For testing, the URL accepts `?date=2026-11-19` to pretend it is that day, and `?puzzle=ferre` to play any key outside the schedule.
