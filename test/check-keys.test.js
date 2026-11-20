@@ -43,3 +43,11 @@ test('unreviewed entries in a puzzle marked ready', () => {
   p.entries[0].reviewed = false;
   assert.ok(errs(p).some((m) => m.includes('unreviewed')));
 });
+
+test('display stems must appear in some key word', () => {
+  const p = base();
+  p.root.displayStems = ['alph'];
+  assert.deepEqual(errs(p), []);
+  p.root.displayStems = ['zzz'];
+  assert.ok(errs(p).some((m) => m.includes('display stem "zzz"')));
+});

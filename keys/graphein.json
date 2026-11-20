@@ -25,6 +25,11 @@
     "stems": [
       "graph-",
       "gram-"
+    ],
+    "displayStems": [
+      "graph",
+      "gram",
+      "graf"
     ]
   },
   "languages": [

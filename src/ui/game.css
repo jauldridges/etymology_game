@@ -319,3 +319,6 @@
 .roots-game .rg-stem-meaning { font-size: 20px; color: var(--ink-soft); }
 .roots-game .rg-stem-forms { font-size: 16px; color: var(--ink); margin-top: 8px; line-height: 1.4; }
 .roots-game .rg-stem-translit { font-size: 15px; color: var(--ink-soft); font-style: italic; line-height: 1.4; }
+.roots-game .rg-stems-4 .rg-stem { font-size: 34px; }
+.roots-game .rg-stems-many { gap: 2px 14px; }
+.roots-game .rg-stems-many .rg-stem { font-size: 29px; }

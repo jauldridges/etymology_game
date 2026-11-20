@@ -60,6 +60,7 @@ For testing, the URL accepts `?date=2026-11-19` to pretend it is that day, and `
 ```
 
 - **status**: `draft` or `ready`. The checker fails a `ready` puzzle that has any unreviewed entry.
+- **displayStems**: the stems shown big on the play screen, chosen for the shapes players actually see in modern words (*caput*: `capit, chef, chief, cab, chap`). The scholarly `stems` stay for reference. The checker fails a display stem that appears in no key word. Some words are left uncovered on purpose as surprises for the reveal (*precipice*, *biceps*).
 - **tiers**: each puzzle names its own tiers. `scoring: "always"` counts like core, and `scoring: "bonus"` follows the player's bonus setting. *dare* has a `compounds` tier, *graphō* has `technical`, and *bonus* has `bene`. All three count as core for now; change one word in the file to try them as bonus.
 - **gloss / sense**: tell apart two words with the same spelling (*cape* the headland counts; *cape* the cloak does not).
 - **variants**: extra accepted spellings and endings. Matching already ignores capitals, accents, hyphens and apostrophes, but it never guesses endings, so *chefs* is accepted only if it is listed.

@@ -130,9 +130,10 @@ export async function mountGame(container, options = {}) {
     if (r.ok) schedule = await r.json();
   } catch { /* the game still works with ?puzzle= */ }
 
-  // header: what the play screen leads with. 'root' = the dictionary form
-  // (γράφω), 'stems' = the stems as they show up in modern words (-graph-, -gram-).
-  const settings = { bonusMode: 'off', header: 'root', ...store.get('settings', {}) };
+  // headerStyle: what the play screen leads with. 'stems' = the stems as they
+  // show up in modern words (-graph-, -gram-); 'root' = the dictionary form (γράφω).
+  const settings = { bonusMode: 'off', headerStyle: 'stems', ...store.get('settings', {}) };
+  delete settings.header; // the older setting's name, from before stems-first was the default
   let timer = null;
   let game = null; // { day, puzzle, saveKey, progress }
 
@@ -285,8 +286,8 @@ export async function mountGame(container, options = {}) {
         <label for="rg-test-header">Puzzle screen leads with</label>
         <div class="rg-tester-row">
           <select id="rg-test-header">
-            <option value="root" ${settings.header === 'root' ? 'selected' : ''}>The root word (γράφω)</option>
-            <option value="stems" ${settings.header === 'stems' ? 'selected' : ''}>The stems in modern words (-graph-, -gram-)</option>
+            <option value="stems" ${settings.headerStyle === 'stems' ? 'selected' : ''}>The stems in modern words (-graph-, -gram-)</option>
+            <option value="root" ${settings.headerStyle === 'root' ? 'selected' : ''}>The root word (γράφω)</option>
           </select>
         </div>
         <div class="rg-tester-row">
@@ -306,7 +307,7 @@ export async function mountGame(container, options = {}) {
 
   function bindTestTools() {
     container.querySelector('#rg-test-header')?.addEventListener('change', (e) => {
-      settings.header = e.target.value;
+      settings.headerStyle = e.target.value;
       store.set('settings', settings);
       toast('Saved. Start or continue the puzzle to see it.');
     });
@@ -319,7 +320,7 @@ export async function mountGame(container, options = {}) {
       'test-replay': replayPuzzle,
       'test-wipe': () => {
         store.clearAll();
-        Object.assign(settings, { bonusMode: 'off', header: 'root' });
+        Object.assign(settings, { bonusMode: 'off', headerStyle: 'stems' });
         openToday().then(() => toast('All saved progress erased'));
       },
     });
@@ -374,8 +375,12 @@ export async function mountGame(container, options = {}) {
           } else {
             forms = `<p class="rg-stem-forms" lang="la"><i>${r.principalParts.map(h).join(', ')}</i></p>`;
           }
+          // displayStems: the shapes players actually see in modern words
+          // (caput: -capit- -chef- -cab-); the scholarly stems are the fallback.
+          const shown = r.displayStems?.length ? r.displayStems : r.stems;
+          const size = shown.length <= 3 ? '' : shown.length <= 4 ? ' rg-stems-4' : ' rg-stems-many';
           return `
-            <p class="rg-stems">${r.stems.map((st) => `<span class="rg-stem">${h(stemLabel(st))}</span>`).join('')}
+            <p class="rg-stems${size}">${shown.map((st) => `<span class="rg-stem">${h(stemLabel(st))}</span>`).join('')}
               <span class="rg-stem-meaning">“${h(r.meaning)}”</span></p>
             ${forms}`;
         }).join('')}
@@ -390,7 +395,7 @@ export async function mountGame(container, options = {}) {
     const freshIds = new Set();
 
     wrap(`
-      ${settings.header === 'stems' ? stemHeaderHtml(puzzle, progress) : `
+      ${settings.headerStyle === 'stems' ? stemHeaderHtml(puzzle, progress) : `
       <div class="rg-play-head">
         <span class="rg-play-root" lang="${ROOT_LANG_ATTR[puzzle.roots[0].family] ?? ''}">${h(puzzle.roots[0].form)}<small>“${h(puzzle.roots[0].meaning)}”</small></span>
         ${progress.mode === 'blitz' ? '<span class="rg-timer" aria-live="off"></span>' : '<button class="rg-link" data-act="home">Puzzle info</button>'}

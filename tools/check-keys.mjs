@@ -48,6 +48,15 @@ export function checkPuzzle(p, file = p?.id ?? '?') {
     } else if (!Array.isArray(r.principalParts) || !r.principalParts.length) {
       err(`${where}missing principalParts`);
     }
+    if (r.displayStems !== undefined) {
+      if (!Array.isArray(r.displayStems) || !r.displayStems.length || r.displayStems.some((d) => typeof d !== 'string' || !d.trim()))
+        err(`${where}displayStems must be a list of non-empty strings`);
+      else for (const d of r.displayStems) {
+        const core = normalize(d.replace(/^-+|-+$/g, ''));
+        const used = (p.entries ?? []).some((e) => (!e.root || e.root === r.id || roots.length === 1) && normalize(e.word).includes(core));
+        if (!used) err(`${where}display stem "${d}" appears in no key word`);
+      }
+    } else warn(`${where}no displayStems; the play screen falls back to the stems`);
     if (r.family === 'greek' && r.principalPartsTransliterated?.length !== r.principalParts?.length)
       err(`${where}principalPartsTransliterated must match principalParts one for one`);
   }
